@@ -1,1 +1,14 @@
-
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.aihaejwo.cashping",
+      "sha256_cert_fingerprints": [
+        "19:D0:BF:E1:2E:9B:F7:85:6A:7E:80:C5:21:51:E1:E4:32:05:12:F1:9D:CC:AE:00:C4:4A:48:59:90:AD:24:E6"
+      ]
+    }
+  }
+]
