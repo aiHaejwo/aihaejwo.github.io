@@ -97,14 +97,6 @@
           'https://play.google.com/store/apps/details?id=com.aihaejwo.cashping';
 
         function extractToken() {
-          const pathSegments = window.location.pathname
-            .split('/')
-            .filter(Boolean);
-          const joinIndex = pathSegments.indexOf('join');
-          if (joinIndex !== -1 && pathSegments.length > joinIndex + 1) {
-            return pathSegments[joinIndex + 1];
-          }
-
           const params = new URLSearchParams(window.location.search);
           return params.get('token') || params.get('t') || null;
         }
@@ -136,11 +128,24 @@
           .getElementById('openAppButton')
           .addEventListener('click', openApp);
 
-        // 기본적으로 자동 실행 시도 + 1.5초 후 스토어 안내
+        let redirectedToStore = false;
+        function redirectToStore() {
+          if (!redirectedToStore) {
+            redirectedToStore = true;
+            window.location.href = playStoreUrl;
+          }
+        }
+
+        document.getElementById('openStoreButton').addEventListener(
+          'click',
+          (event) => {
+            event.preventDefault();
+            redirectToStore();
+          },
+        );
+
+        // 기본적으로 자동 실행 시도만 하고, 설치가 안 되어 있는 경우에만 버튼으로 스토어 이동
         openApp();
-        setTimeout(() => {
-          window.location.href = playStoreUrl;
-        }, 1500);
       })();
     </script>
   </body>
