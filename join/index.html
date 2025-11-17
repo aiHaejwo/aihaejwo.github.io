@@ -91,62 +91,7 @@
       </div>
     </main>
 
-    <script>
-      (function () {
-        const playStoreUrl =
-          'https://play.google.com/store/apps/details?id=com.aihaejwo.cashping';
-
-        function extractToken() {
-          const params = new URLSearchParams(window.location.search);
-          return params.get('token') || params.get('t') || null;
-        }
-
-        const token = extractToken();
-        const tokenBadge = document.getElementById('tokenBadge');
-        if (token) {
-          tokenBadge.hidden = false;
-          tokenBadge.textContent = `초대 코드: ${token}`;
-        }
-
-        function buildAppUrls() {
-          const query = token ? `?token=${encodeURIComponent(token)}` : '';
-          const schemeUrl = `cashping://invite${query}`;
-          const intentUrl =
-            `intent://invite${query}` +
-            '#Intent;scheme=cashping;package=com.aihaejwo.cashping;end';
-          return { schemeUrl, intentUrl };
-        }
-
-        function openApp() {
-          const { schemeUrl, intentUrl } = buildAppUrls();
-          const isAndroid = /Android/i.test(navigator.userAgent);
-          const targetUrl = isAndroid ? intentUrl : schemeUrl;
-          window.location.href = targetUrl;
-        }
-
-        document
-          .getElementById('openAppButton')
-          .addEventListener('click', openApp);
-
-        let redirectedToStore = false;
-        function redirectToStore() {
-          if (!redirectedToStore) {
-            redirectedToStore = true;
-            window.location.href = playStoreUrl;
-          }
-        }
-
-        document.getElementById('openStoreButton').addEventListener(
-          'click',
-          (event) => {
-            event.preventDefault();
-            redirectToStore();
-          },
-        );
-
-        // 기본적으로 자동 실행 시도만 하고, 설치가 안 되어 있는 경우에만 버튼으로 스토어 이동
-        openApp();
-      })();
-    </script>
+    <!-- 딥링크(App Link)는 OS가 직접 처리하므로
+         이 페이지에서는 별도의 스킴 호출을 하지 않습니다. -->
   </body>
 </html>
