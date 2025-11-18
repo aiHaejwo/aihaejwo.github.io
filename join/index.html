@@ -1,97 +1,90 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>캐시핑 초대 링크</title>
-    <style>
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Noto Sans',
-          'Apple SD Gothic Neo', sans-serif;
-        margin: 0;
-        padding: 24px;
-        background: #f8fafc;
-        color: #0f172a;
-      }
-      main {
-        max-width: 600px;
-        margin: 0 auto;
-        background: #fff;
-        border-radius: 18px;
-        padding: 28px 24px;
-        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-      }
-      h1 {
-        font-size: 1.5rem;
-        margin-bottom: 12px;
-      }
-      p {
-        line-height: 1.5;
-        color: #475569;
-      }
-      .actions {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 20px;
-      }
-      button,
-      a.button {
-        border: none;
-        border-radius: 12px;
-        padding: 14px 18px;
-        font-size: 1rem;
-        font-weight: 700;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-      }
-      button.primary,
-      a.button.primary {
-        background: #f97316;
-        color: #fff;
-      }
-      button.secondary,
-      a.button.secondary {
-        background: #e2e8f0;
-        color: #0f172a;
-      }
-      .token-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        background: #f1f5f9;
-        border-radius: 999px;
-        padding: 6px 14px;
-        font-family: 'Roboto Mono', 'Noto Sans Mono', monospace;
-        font-size: 0.85rem;
-        color: #334155;
-        margin-top: 10px;
-        word-break: break-all;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>캐시핑 앱에서 열고 있어요</h1>
-      <p>
-        잠시만 기다려 주세요. 자동으로 캐시핑 앱이 열리지 않으면 아래
-        버튼으로 직접 실행하거나, Google Play에서 앱을 설치해 주세요.
-      </p>
-      <div id="tokenBadge" class="token-badge" hidden></div>
-      <div class="actions">
-        <button class="primary" id="openAppButton">앱에서 계속하기</button>
-        <a
-          class="button secondary"
-          id="openStoreButton"
-          href="https://play.google.com/store/apps/details?id=com.aihaejwo.cashping"
-        >
-          앱이 없어요 · 설치하기
-        </a>
-      </div>
-    </main>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>캐시핑 초대</title>
+  <style>
+    body {
+      font-family: -apple-system, sans-serif;
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      min-height: 100vh;
+    }
+    .loading {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+    .button {
+      display: inline-block;
+      background: white;
+      color: #667eea;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 12px;
+      margin: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">🪙</div>
+  <h1>캐시핑 앱으로 이동 중...</h1>
+  <p id="status">잠시만 기다려주세요</p>
+  
+  <div id="fallback" style="display:none;">
+    <p>앱이 자동으로 열리지 않나요?</p>
+    <a href="#" id="openApp" class="button">앱 열기</a>
+    <br>
+    <a href="https://play.google.com/store/apps/details?id=com.aihaejwo.cashping" class="button">
+      앱 설치하기
+    </a>
+  </div>
 
-    <!-- 딥링크(App Link)는 OS가 직접 처리하므로
-         이 페이지에서는 별도의 스킴 호출을 하지 않습니다. -->
-  </body>
+  <script>
+    // URL에서 토큰 추출
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token') || 'default';
+    
+    // Intent URL (안드로이드 전용 - 강제로 앱 열기)
+    const intentUrl = 
+      `intent://invite?token=${token}#Intent;` +
+      `scheme=cashping;` +
+      `package=com.aihaejwo.cashping;` +
+      `end;`;
+    
+    // URI Scheme (fallback)
+    const schemeUrl = `cashping://invite?token=${token}`;
+    
+    // 즉시 실행
+    function openApp() {
+      // 안드로이드: Intent URL 사용
+      if (/android/i.test(navigator.userAgent)) {
+        window.location.href = intentUrl;
+      } 
+      // iOS 또는 기타: URI Scheme
+      else {
+        window.location.href = schemeUrl;
+      }
+    }
+    
+    // 페이지 로드 시 자동 실행
+    openApp();
+    
+    // 2.5초 후 앱이 안 열렸으면 fallback 표시
+    setTimeout(() => {
+      document.getElementById('fallback').style.display = 'block';
+      document.getElementById('status').textContent = '';
+    }, 2500);
+    
+    // 수동 버튼
+    document.getElementById('openApp').addEventListener('click', (e) => {
+      e.preventDefault();
+      openApp();
+    });
+  </script>
+</body>
 </html>
