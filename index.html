@@ -1,216 +1,190 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="aiHaejwo - 혁신적인 모바일 앱 서비스를 제공합니다">
-    <title>aiHaejwo - 모바일 앱 개발</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #5DD7D3 0%, #4ECDC4 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-        }
-
-        /* Main Content */
-        main {
-            padding: 60px 0;
-        }
-
-        .section {
-            margin-bottom: 80px;
-        }
-
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #2c3e50;
-            text-align: center;
-        }
-
-        .section p {
-            font-size: 1.1rem;
-            color: #555;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 40px;
-        }
-
-        /* App Card */
-        .app-card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .app-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #5DD7D3 0%, #4ECDC4 100%);
-            border-radius: 25px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-        }
-
-        .app-card h3 {
-            font-size: 2rem;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-
-        .app-card p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #5DD7D3 0%, #4ECDC4 100%);
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(93, 215, 211, 0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(93, 215, 211, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        footer p {
-            margin-bottom: 10px;
-            opacity: 0.8;
-        }
-
-        footer a {
-            color: #5DD7D3;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1.1rem;
-            }
-
-            .section h2 {
-                font-size: 1.5rem;
-            }
-
-            .app-card {
-                padding: 30px 20px;
-            }
-
-            .app-icon {
-                width: 100px;
-                height: 100px;
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <title data-i18n="page_title">Cashping - 미션하고 현금받자 | 앱테크의 새로운 기준</title>
+    <meta name="description" content="간단한 미션으로 포인트를 적립하고 현금으로 교환하세요! 캐시핑은 사용자의 일상을 더 편리하고 즐겁게 만드는 최고의 리워드 앱입니다.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cashping - 미션하고 현금받자">
+    <meta property="og:description" content="간단한 미션으로 포인트를 적립하고 현금으로 교환하세요!">
+    <meta property="og:image" content="assets/images/hero_mockup.png">
+    <meta property="og:url" content="https://aihaejwo.site">
 </head>
+
 <body>
-    <header>
+
+    <!-- Header -->
+    <header id="navbar">
         <div class="container">
-            <h1>aiHaejwo</h1>
-            <p>혁신적인 모바일 앱 서비스를 제공합니다</p>
+            <div class="logo">
+                <span class="logo-text">Cashping</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features" data-i18n="nav_features">특징</a></li>
+                    <li><a href="#how-it-works" data-i18n="nav_how_to">이용방법</a></li>
+                    <li>
+                        <div class="lang-switch">
+                            <button id="lang-btn" class="lang-btn">
+                                <span id="current-lang">KO</span>
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <ul class="lang-dropdown">
+                                <li data-lang="ko">Korean</li>
+                                <li data-lang="en">English</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.aihaejwo.cashping"
+                            class="btn-download sm" data-i18n="btn_download">다운로드</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <section class="section">
-                <h2>우리의 서비스</h2>
-                <p>aiHaejwo는 사용자 중심의 모바일 앱을 개발하여 더 나은 디지털 경험을 제공합니다.</p>
-                
-                <div class="app-card">
-                    <div class="app-icon">💰</div>
-                    <h3>캐시핑</h3>
-                    <p>간단한 미션으로 포인트를 적립하고 현금으로 교환하세요!</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.aihaejwo.cashping" class="btn" target="_blank">앱 다운로드</a>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container hero-content">
+            <div class="hero-text" data-scroll>
+                <h1 data-i18n="hero_title_html">캐시가 핑! <span class="highlight">혜택이 핑!</span><br>터치만 해도 포인트가 쌓인다</h1>
+                <p data-i18n="hero_subtitle">동전을 터치하고 미니게임으로 포인트 적립!<br>지금 가입하고 쏟아지는 혜택을 받아보세요.</p>
+                <div class="hero-btns">
+                    <a href="https://play.google.com/store/apps/details?id=com.aihaejwo.cashping"
+                        class="btn-download lg">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path
+                                d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                        </svg>
+                        <span data-i18n="btn_google_play">Google Play에서 받기</span>
+                    </a>
                 </div>
-            </section>
-
-            <section class="section">
-                <h2>회사 소개</h2>
-                <p>aiHaejwo는 사용자의 일상을 더 편리하고 즐겁게 만드는 모바일 앱을 개발합니다.<br>
-                우리는 혁신적인 기술과 창의적인 아이디어로 최고의 서비스를 제공하기 위해 노력합니다.</p>
-            </section>
+            </div>
+            <div class="hero-image" data-scroll>
+                <!-- Image will be placed here -->
+                <img src="assets/images/hero_mockup.png" alt="Cashping App Interface" class="floating-mockup">
+            </div>
         </div>
-    </main>
+        <div class="hero-bg-shape"></div>
+    </section>
 
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <div class="section-title" data-scroll>
+                <h2><span data-i18n="features_title_pre">왜</span> <span class="text-primary">Cashping</span><span
+                        data-i18n="features_title_post">일까요?</span></h2>
+                <p data-i18n="features_subtitle">매일매일 쌓이는 포인트, 확실한 행복</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card" data-scroll>
+                    <div class="icon-box">
+                        <img src="assets/images/feature_icon_mission.png" alt="Mission Icon">
+                    </div>
+                    <h3 data-i18n="feature_1_title">동전 클릭 & 적립</h3>
+                    <p data-i18n="feature_1_desc">화면의 동전을 터치할 때마다 포인트가 차곡차곡.<br>제한 없이 클릭하고 모아보세요.</p>
+                </div>
+                <div class="feature-card" data-scroll>
+                    <div class="icon-box">
+                        <img src="assets/images/feature_icon_fast.png" alt="Fast Icon">
+                    </div>
+                    <h3 data-i18n="feature_2_title">즐거운 미니게임</h3>
+                    <p data-i18n="feature_2_desc">동전잡기, 복권긁기, 타이밍 게임 등<br>게임을 즐기면서 보너스 포인트를 획득하세요.</p>
+                </div>
+                <div class="feature-card" data-scroll>
+                    <div class="icon-box">
+                        <img src="assets/images/feature_icon_cash.png" alt="Cash Icon">
+                    </div>
+                    <h3 data-i18n="feature_3_title">다양한 상품 교환</h3>
+                    <p data-i18n="feature_3_desc">모은 포인트로 네이버페이, 상품권 등<br>원하는 상품으로 즉시 교환하세요.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works / App Showcase -->
+    <section id="how-it-works">
+        <div class="container">
+            <div class="showcase-wrapper">
+                <div class="showcase-text" data-scroll>
+                    <h2 data-i18n="how_it_works_title">누구나 쉽게<br>즐기는 앱테크</h2>
+                    <ul class="steps-list">
+                        <li>
+                            <span class="step-num">1</span>
+                            <div class="step-info">
+                                <h4 data-i18n="step_1_title">간편한 시작</h4>
+                                <p data-i18n="step_1_desc">Google 계정으로 3초 만에 가입하고<br>바로 포인트 적립을 시작하세요.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">2</span>
+                            <div class="step-info">
+                                <h4 data-i18n="step_2_title">매일매일 미션</h4>
+                                <p data-i18n="step_2_desc">출석체크, 퀘스트, 광고 시청으로<br>추가 보상까지 챙기세요.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">3</span>
+                            <div class="step-info">
+                                <h4 data-i18n="step_3_title">실시간 혜택</h4>
+                                <p data-i18n="step_3_desc">쌓인 포인트는 언제든지<br>내 폰 안의 지갑처럼 사용하세요.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="showcase-image" data-scroll>
+                    <!-- Restored YouTube Short Embed with cookie-less domain for better compatibility -->
+                    <div class="phone-frame video-frame">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube-nocookie.com/embed/doBMNkYKHw4?autoplay=1&mute=1&loop=1&playlist=doBMNkYKHw4&controls=0&playsinline=1"
+                            title="Cashping Promo Video" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 aiHaejwo. All rights reserved.</p>
-            <p>
-                <a href="privacy-policy.html">개인정보처리방침</a>
-            </p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>aiHaejwo</h3>
+                    <p data-i18n="footer_desc_html">혁신적인 모바일 앱 서비스를 제공합니다.<br>사용자의 일상을 더 편리하고 즐겁게.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_service">서비스</h4>
+                    <ul>
+                        <li><a href="#">Cashping</a></li>
+                        <li><a href="https://aihaejwo.site/privacy-policy.html" data-i18n="privacy_policy">개인정보처리방침</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>support@aihaejwo.site</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 aiHaejwo. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
