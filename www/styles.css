@@ -366,8 +366,8 @@ nav a:not(.btn-download):hover {
 .phone-frame {
     position: relative;
     width: 100%;
-    max-width: 360px;
-    /* Optimal Desktop Size (Not too small, not too huge) */
+    max-width: 500px;
+    /* Restored larger size per user request */
     margin: 0 auto;
 }
 
