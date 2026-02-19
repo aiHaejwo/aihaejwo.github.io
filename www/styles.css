@@ -365,13 +365,34 @@ nav a:not(.btn-download):hover {
 
 .phone-frame {
     position: relative;
-    width: 320px;
+    width: 100%;
+    max-width: 360px;
+    /* Optimal Desktop Size (Not too small, not too huge) */
+    margin: 0 auto;
 }
 
 .phone-frame img {
     width: 100%;
     display: block;
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+}
+
+/* Video Frame Global (Desktop) */
+.video-frame {
+    aspect-ratio: 9 / 16;
+    background: #000;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 10px solid #333;
+}
+
+.video-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Footer */
@@ -516,6 +537,16 @@ footer {
         padding: 0 20px;
     }
 
+    /* Hide Header Download Button on Mobile/Tablet */
+    nav .btn-download {
+        display: none !important;
+    }
+
+    /* Adjust Nav gap since button is gone */
+    nav ul {
+        gap: 20px;
+    }
+
     .hero-text h1 {
         font-size: 2.8rem;
     }
@@ -560,10 +591,24 @@ footer {
         gap: 30px;
     }
 
+    /* Responsive Video Frame - Maximize on Mobile/Tablet */
     .video-frame {
-        width: 280px;
-        height: 560px;
+        width: 100%;
+        /* Full availability width */
+        max-width: 400px;
+        /* Limit max width on tablets */
+        height: auto;
+        aspect-ratio: 9 / 16;
+        /* Standard Shorts Ratio */
+        border-width: 4px;
         margin: 0 auto;
+        border-radius: 20px;
+        background: #000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-frame iframe {
+        border-radius: 16px;
     }
 }
 
@@ -577,18 +622,28 @@ footer {
         font-size: 1.2rem;
     }
 
-    /* Hide text links on mobile to save space */
-    nav a:not(.btn-download) {
-        display: none;
+    /* Hide Navigation Links & Header Button */
+    nav ul {
+        gap: 15px;
     }
 
+    /* Hide all links except language switcher */
+    nav a,
+    nav .btn-download,
+    nav ul li:not(:last-child) {
+        display: none !important;
+    }
+
+    /* Ensure Language Switcher Stays Visible */
+    nav ul li:last-child,
     .lang-switch {
-        margin-right: 10px;
+        display: flex !important;
+        margin-right: 0;
     }
 
-    .btn-download {
-        padding: 8px 16px;
-        font-size: 0.85rem;
+    .lang-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
     }
 
     .hero-text h1 {
@@ -607,11 +662,32 @@ footer {
         font-size: 2rem;
     }
 
+    /* Responsive Video Frame - Maximize on Mobile */
     .video-frame {
-        width: 260px;
-        /* Smaller video frame for small phones */
-        height: 520px;
-        border-width: 5px;
+        width: 100%;
+        /* Full availability width */
+        max-width: none;
+        /* Remove restriction */
+        height: auto;
+        aspect-ratio: 9 / 16;
+        /* Standard Shorts Ratio */
+        border-width: 4px;
+        /* Thinner bezel */
+        margin: 0 auto;
+        border-radius: 20px;
+        /* Thinner radius */
+        background: #000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-frame iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        /* Match inner radius */
     }
 
     .showcase-text h2 {
@@ -622,6 +698,49 @@ footer {
         width: 32px;
         height: 32px;
         font-size: 1rem;
+    }
+
+    /* Mobile Bottom CTA */
+    .mobile-bottom-cta {
+        display: flex;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        z-index: 2000;
+        animation: slideUp 0.5s ease-out;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        border-radius: 50px;
+    }
+
+    .mobile-bottom-cta .btn-download {
+        display: flex !important;
+        width: 100%;
+        padding: 16px;
+        font-size: 1.1rem;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        color: #000;
+        font-weight: 800;
+    }
+}
+
+@media (min-width: 481px) {
+    .mobile-bottom-cta {
+        display: none;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
     }
 }
 
