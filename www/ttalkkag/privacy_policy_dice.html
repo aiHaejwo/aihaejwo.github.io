@@ -3,58 +3,495 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>개인정보 처리방침 - 캐시펑</title>
+  <title>개인정보 처리방침 | 캐시주사위</title>
   <style>
-    body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; padding: 20px; line-height: 1.8; color: #333; background: #f9f9f9; }
-    h1 { color: #2c3e50; font-size: 22px; border-bottom: 2px solid #8EC5FC; padding-bottom: 10px; }
-    h2 { color: #34495e; font-size: 18px; margin-top: 30px; }
-    p, li { font-size: 14px; }
-    ul { padding-left: 20px; }
+    :root {
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --panel-soft: #f7f9fc;
+      --text: #18212f;
+      --muted: #5f6b7a;
+      --line: #d9e1ec;
+      --primary: #0f7cff;
+      --primary-soft: #eaf3ff;
+      --accent: #0d1b2a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(15, 124, 255, 0.08), transparent 32%),
+        linear-gradient(180deg, #f9fbff 0%, var(--bg) 100%);
+      color: var(--text);
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75;
+      word-break: keep-all;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0d1b2a 0%, #133a67 52%, #0f7cff 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 28px 24px;
+      box-shadow: 0 18px 42px rgba(13, 27, 42, 0.18);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 16px 0 10px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .meta-card {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .meta-card strong,
+    .meta-card span {
+      display: block;
+    }
+
+    .meta-card strong {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.72);
+      margin-bottom: 4px;
+    }
+
+    .meta-card span {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .quick-nav a {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 20px rgba(20, 36, 58, 0.06);
+    }
+
+    .content {
+      display: grid;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid rgba(217, 225, 236, 0.92);
+      border-radius: 22px;
+      padding: 24px 22px;
+      box-shadow: 0 10px 24px rgba(20, 36, 58, 0.05);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0 0 12px;
+      font-size: 15px;
+    }
+
+    p:last-child,
+    ul:last-child,
+    ol:last-child,
+    .table-wrap:last-child {
+      margin-bottom: 0;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 12px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .notice,
+    .callout {
+      border-radius: 18px;
+      padding: 16px 18px;
+    }
+
+    .notice {
+      background: #fff4e8;
+      border: 1px solid #ffd6a8;
+      color: #7a4813;
+    }
+
+    .callout {
+      background: var(--primary-soft);
+      border: 1px solid #cfe2ff;
+      color: #174a8b;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-bottom: 12px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 640px;
+      border-collapse: collapse;
+      border-spacing: 0;
+      background: var(--panel-soft);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 14px 14px;
+      vertical-align: top;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    th {
+      width: 24%;
+      background: #eef4fb;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    tr:last-child th,
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .foot {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 18px 14px 40px;
+      }
+
+      .hero,
+      section {
+        border-radius: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      .quick-nav a {
+        font-size: 12px;
+        padding: 9px 12px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>개인정보 처리방침</h1>
-  <p><strong>시행일:</strong> 2026년 3월 10일</p>
-  <p>캐시펑(이하 "앱")은 개인정보보호법에 따라 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">캐시주사위 Android 앱 기준</div>
+      <h1>개인정보 처리방침</h1>
+      <p>
+        본 개인정보 처리방침은 캐시주사위 앱에서 제공하는 로그인, 포인트 적립, 광고 보상, 상점 교환 신청,
+        공지, 푸시 알림 및 고객 문의 기능 전반에 적용됩니다.
+      </p>
+      <div class="meta">
+        <div class="meta-card">
+          <strong>시행일</strong>
+          <span>2026년 4월 2일</span>
+        </div>
+        <div class="meta-card">
+          <strong>앱 이름</strong>
+          <span>캐시주사위</span>
+        </div>
+        <div class="meta-card">
+          <strong>패키지명</strong>
+          <span>com.ttalkkag.cashdice</span>
+        </div>
+      </div>
+    </header>
 
-  <h2>1. 수집하는 개인정보 항목</h2>
-  <ul>
-    <li><strong>필수 항목:</strong> 카카오 계정 정보(닉네임, 프로필 사진), 기기 식별자(디바이스 토큰)</li>
-    <li><strong>자동 수집 항목:</strong> 서비스 이용 기록, 접속 로그, 광고 시청 기록, 포인트 적립/사용 내역</li>
-  </ul>
+    <ul class="quick-nav">
+      <li><a href="#overview">개요</a></li>
+      <li><a href="#items">수집 항목</a></li>
+      <li><a href="#purpose">이용 목적</a></li>
+      <li><a href="#sharing">외부 제공/위탁</a></li>
+      <li><a href="#retention">보관 기간</a></li>
+      <li><a href="#rights">이용자 권리</a></li>
+      <li><a href="#contact">문의처</a></li>
+    </ul>
 
-  <h2>2. 개인정보의 수집 및 이용 목적</h2>
-  <ul>
-    <li>회원 관리 및 본인 확인</li>
-    <li>포인트 적립·사용 서비스 제공</li>
-    <li>광고 시청 보상 처리</li>
-    <li>푸시 알림 발송</li>
-    <li>서비스 개선 및 통계 분석</li>
-  </ul>
+    <div class="content">
+      <section id="overview">
+        <h2>1. 기본 원칙</h2>
+        <p>
+          캐시주사위 운영팀(이하 "운영자")은 서비스 제공에 필요한 최소한의 정보만 처리합니다. 본 문서는
+          2026년 4월 2일 현재 프로젝트 코드에 구현된 기능과 외부 연동을 기준으로 작성되었습니다.
+        </p>
+        <div class="callout">
+          로그인 없이 게스트로 둘러보기는 가능하지만, 포인트 적립, 포인트 내역 조회, 상점 교환 신청, 개인화된
+          알림 등 일부 기능은 로그인 이용자에게만 제공됩니다.
+        </div>
+      </section>
 
-  <h2>3. 개인정보의 보유 및 이용 기간</h2>
-  <p>이용자의 개인정보는 회원 탈퇴 시까지 보유하며, 탈퇴 즉시 파기합니다. 단, 관계 법령에 의해 보존할 필요가 있는 경우 해당 법령에서 정한 기간 동안 보존합니다.</p>
-  <ul>
-    <li>전자상거래법에 따른 거래 기록: 5년</li>
-    <li>통신비밀보호법에 따른 접속 기록: 3개월</li>
-  </ul>
+      <section id="items">
+        <h2>2. 처리하는 개인정보 항목</h2>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>구분</th>
+              <th>항목</th>
+              <th>수집 시점</th>
+              <th>비고</th>
+            </tr>
+            <tr>
+              <th>계정 및 인증 정보</th>
+              <td>Supabase 사용자 ID, 로그인 제공자 정보, 제공자가 전달한 식별값</td>
+              <td>카카오 로그인 또는 외부 로그인 완료 시</td>
+              <td>계정 식별, 로그인 상태 유지, 재가입 제한 계정 확인에 사용됩니다.</td>
+            </tr>
+            <tr>
+              <th>프로필 정보</th>
+              <td>닉네임, 표시 이름, 이메일 주소(제공된 경우), 프로필 이미지 URL(제공된 경우)</td>
+              <td>로그인 후 프로필 생성 및 동기화 시</td>
+              <td>모든 항목이 항상 수집되는 것은 아니며, 로그인 제공자와 이용자 동의 범위에 따라 달라질 수 있습니다.</td>
+            </tr>
+            <tr>
+              <th>서비스 이용 정보</th>
+              <td>총 포인트, 포인트 적립/차감 내역, 주사위 이용 기록, 광고 보상 검증 상태, 상점 교환 신청 정보, 공지 읽음 여부</td>
+              <td>서비스 이용 중 자동 생성</td>
+              <td>포인트 서비스 운영과 부정 이용 방지, 내역 조회 제공을 위해 처리됩니다.</td>
+            </tr>
+            <tr>
+              <th>알림 정보</th>
+              <td>FCM 디바이스 토큰, 기기 구분값(android), 알림 동기화 시각</td>
+              <td>이용자가 알림을 허용한 경우</td>
+              <td>푸시 알림 발송과 토큰 관리에 사용됩니다.</td>
+            </tr>
+            <tr>
+              <th>광고 관련 정보</th>
+              <td>광고 시청/보상 검증에 필요한 광고 식별 정보, 광고 요청/응답 정보, 광고 식별자(AD_ID 등)</td>
+              <td>광고 로드 및 보상 검증 시</td>
+              <td>Google Mobile Ads 및 연동 광고 네트워크 정책에 따라 처리될 수 있습니다.</td>
+            </tr>
+            <tr>
+              <th>기기 내 저장 정보</th>
+              <td>알림 설정 여부, 사운드 설정 여부</td>
+              <td>설정 변경 시</td>
+              <td>SharedPreferences를 이용해 기기 내부에 저장됩니다.</td>
+            </tr>
+            <tr>
+              <th>문의 정보</th>
+              <td>이용자가 이메일로 직접 작성한 문의 내용, 앱 버전, 회원 ID</td>
+              <td>문의하기 기능 사용 시</td>
+              <td>이용자가 메일 앱에서 발송한 내용 기준으로 처리됩니다.</td>
+            </tr>
+          </table>
+        </div>
+      </section>
 
-  <h2>4. 개인정보의 제3자 제공</h2>
-  <p>앱은 원칙적으로 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만, 법령에 의해 요구되는 경우는 예외로 합니다.</p>
+      <section id="purpose">
+        <h2>3. 개인정보 처리 목적</h2>
+        <ul>
+          <li>로그인, 계정 식별, 프로필 생성 및 회원 상태 확인</li>
+          <li>주사위 게임, 광고 보상, 포인트 적립/차감, 포인트 내역 조회 제공</li>
+          <li>상점 상품 표시, 교환 신청 접수, 교환 이력 처리</li>
+          <li>공지사항 제공 및 읽음 상태 관리</li>
+          <li>푸시 알림 발송 및 알림 수신 설정 동기화</li>
+          <li>부정 이용, 중복 보상 요청, 비정상 접근 탐지 및 서비스 보호</li>
+          <li>고객 문의 대응, 오류 확인, 서비스 운영 및 개선</li>
+        </ul>
+      </section>
 
-  <h2>5. 개인정보의 파기 절차 및 방법</h2>
-  <p>이용 목적이 달성된 개인정보는 지체 없이 파기합니다. 전자적 파일 형태의 정보는 복구 불가능한 방법으로 삭제합니다.</p>
+      <section id="sharing">
+        <h2>4. 개인정보의 외부 제공 및 처리위탁</h2>
+        <p>
+          운영자는 원칙적으로 이용자의 개인정보를 판매하지 않으며, 법령상 근거가 있거나 서비스 제공에 필요한
+          범위에서만 외부 서비스를 이용합니다.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>구분</th>
+              <th>외부 서비스</th>
+              <th>주요 처리 목적</th>
+              <th>관련 정보 예시</th>
+            </tr>
+            <tr>
+              <th>백엔드/인증</th>
+              <td>Supabase</td>
+              <td>로그인 세션 관리, 사용자 프로필/포인트/공지/교환 데이터 저장 및 조회</td>
+              <td>사용자 ID, 프로필 정보, 포인트 데이터, 공지 읽음 데이터, 디바이스 토큰</td>
+            </tr>
+            <tr>
+              <th>소셜 로그인</th>
+              <td>카카오 로그인 연동</td>
+              <td>외부 계정 인증</td>
+              <td>로그인 제공자가 허용 범위 내에서 전달한 계정 식별 정보, 닉네임, 이메일, 프로필 이미지 등</td>
+            </tr>
+            <tr>
+              <th>푸시 알림</th>
+              <td>Firebase Cloud Messaging</td>
+              <td>푸시 토큰 발급 및 알림 전달</td>
+              <td>디바이스 토큰, 알림 수신 관련 기술 정보</td>
+            </tr>
+            <tr>
+              <th>광고</th>
+              <td>Google Mobile Ads 및 연동 광고 네트워크</td>
+              <td>광고 송출, 보상 검증, 광고 성과 및 부정 이용 방지</td>
+              <td>광고 식별 정보, 광고 응답/보상 처리 정보, 기기 및 앱 상호작용 정보</td>
+            </tr>
+          </table>
+        </div>
+        <div class="notice">
+          광고 및 푸시 기능은 외부 사업자의 SDK를 사용하므로, 실제 데이터 처리 범위는 각 사업자의 정책과 사용자의
+          기기 설정에 따라 달라질 수 있습니다.
+        </div>
+      </section>
 
-  <h2>6. 이용자의 권리와 행사 방법</h2>
-  <p>이용자는 언제든지 자신의 개인정보에 대한 열람, 수정, 삭제, 처리 정지를 요청할 수 있으며, 회원 탈퇴를 통해 개인정보 처리에 대한 동의를 철회할 수 있습니다.</p>
+      <section id="retention">
+        <h2>5. 개인정보 보관 및 파기</h2>
+        <ul>
+          <li>계정 정보와 서비스 이용 정보는 서비스 이용 기간 동안 보관합니다.</li>
+          <li>이용자가 삭제를 요청하거나 계정이 탈퇴 처리되면, 법령상 보관 의무가 없는 범위에서 지체 없이 파기 또는 비식별 처리합니다.</li>
+          <li>기기 내부 설정값(알림/사운드 설정)은 앱 삭제 또는 기기 데이터 초기화 시 제거될 수 있습니다.</li>
+          <li>법령에 따라 보관이 필요한 경우에는 해당 기간 동안 별도로 보관할 수 있습니다.</li>
+        </ul>
+        <p>
+          전자적 파일은 복구 또는 재생이 어렵도록 합리적인 방법으로 삭제하며, 더 이상 필요하지 않은 출력물은
+          분쇄 또는 소각 등 적절한 방법으로 파기합니다.
+        </p>
+      </section>
 
-  <h2>7. 개인정보 보호 책임자</h2>
-  <p>
-    성명: 캐시펑 운영팀<br>
-    이메일: support@cashpung.co.kr
-  </p>
+      <section>
+        <h2>6. 이용자 권리와 행사 방법</h2>
+        <ul>
+          <li>이용자는 자신의 개인정보에 대해 열람, 정정, 삭제, 처리정지 요청을 할 수 있습니다.</li>
+          <li>현재 앱 내 회원탈퇴 기능은 안내 단계이며, 실제 삭제 요청은 아래 문의 이메일을 통해 접수할 수 있습니다.</li>
+          <li>알림 수신과 사운드 설정은 앱 내 설정 화면에서 직접 변경할 수 있습니다.</li>
+          <li>외부 로그인 제공자 계정 정보는 각 제공자 정책에 따라 별도로 관리될 수 있습니다.</li>
+        </ul>
+      </section>
 
-  <h2>8. 개인정보 처리방침 변경</h2>
-  <p>본 방침은 시행일로부터 적용되며, 변경 사항이 있을 경우 앱 내 공지를 통해 안내합니다.</p>
+      <section>
+        <h2>7. 안전성 확보 조치</h2>
+        <p>
+          운영자는 인증 세션 기반 접근 제어, 외부 백엔드 접근 제한, 최소 권한 원칙에 따른 기능 구성 등 합리적인
+          보호조치를 적용하기 위해 노력합니다. 다만, 인터넷 기반 서비스의 특성상 모든 위험을 완전히 배제할 수는 없습니다.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. 정책 변경</h2>
+        <p>
+          본 개인정보 처리방침은 서비스 내용, 법령, 외부 연동 변경에 따라 수정될 수 있으며, 중요한 변경이 있는 경우
+          앱 내 화면 또는 공지사항을 통해 안내합니다.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>9. 문의처</h2>
+        <p>
+          개인정보 처리와 관련한 문의, 열람/정정/삭제 요청, 불만 접수는 아래 연락처로 보내실 수 있습니다.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>담당</th>
+              <td>캐시주사위 운영팀</td>
+            </tr>
+            <tr>
+              <th>이메일</th>
+              <td><a href="mailto:aiHaejwo@gmail.com">aiHaejwo@gmail.com</a></td>
+            </tr>
+            <tr>
+              <th>적용 범위</th>
+              <td>캐시주사위 Android 앱 및 이에 연결된 운영 백엔드</td>
+            </tr>
+          </table>
+        </div>
+        <p class="foot">
+          참고: 본 문서는 앱 코드에서 확인된 기능을 기준으로 작성된 운영용 초안입니다. 사업자명, 주소, 보관기간,
+          국외이전 고지 등 법적 필수 고지사항은 실제 배포 형태와 운영 주체에 맞게 최종 검토가 필요할 수 있습니다.
+        </p>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
