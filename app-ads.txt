@@ -983,3 +983,5 @@ zetaglobal.net, 630, RESELLER
 Media.net, 8CUH46N56, RESELLER
 mars.media, 1010442, RESELLER
 smartadserver.com, 4456, RESELLER
+pangleglobal.com, 5033676, DIRECT
+pubmatic.com, 161490, RESELLER, 5d62403b186f2ace
