@@ -530,6 +530,7 @@ zmaticoo.com,5135063,RESELLER
 zmaticoo.com,5135224,RESELLER
 zmaticoo.com,5135302,RESELLER
 zoomd.com,88478941,RESELLER
+ogury.com, 065d4ff5-a269-44be-9634-9d4d7af2dfc3, RESELLER
 
 # InMobi
 inmobi.com, 670b6cc6b0c6463b9971b0076176f5ee, DIRECT, 83e75a7ae333ca9d
