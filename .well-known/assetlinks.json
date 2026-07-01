@@ -24,7 +24,9 @@
       "namespace": "android_app",
       "package_name": "com.ttalkkag.cashring3",
       "sha256_cert_fingerprints": [
-        "19:D0:BF:E1:2E:9B:F7:85:6A:7E:80:C5:21:51:E1:E4:32:05:12:F1:9D:CC:AE:00:C4:4A:48:59:90:AD:24:E6"
+        "C0:34:E4:16:CC:38:24:F4:C4:E7:E5:B2:D4:12:E5:D5:CC:80:A7:99:30:EB:DD:7E:D1:7D:FA:77:8D:25:5A:67",
+        "19:D0:BF:E1:2E:9B:F7:85:6A:7E:80:C5:21:51:E1:E4:32:05:12:F1:9D:CC:AE:00:C4:4A:48:59:90:AD:24:E6",
+        "05:6B:A0:AF:DC:98:99:3F:ED:97:87:2E:47:B5:AF:41:82:D9:5F:5E:28:DA:F7:08:8E:89:1B:55:23:10:92:8C"
       ]
     }
   }
