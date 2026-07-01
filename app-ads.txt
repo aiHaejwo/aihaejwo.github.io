@@ -1016,7 +1016,7 @@ admixer.co.kr, 1317, RESELLER
 admixer.net, 2f833c20-7378-4b86-9b73-a2b56263d4d4, RESELLER
 admixer.net, 6453e352-f022-471f-ae8e-e1ff54183704, RESELLER
 adsinteractive.com, 39993, RESELLER
-adtonos.com.PUB927721623.RESELLER
+adtonos.com, PUB927721623, RESELLER
 advertising.com, 23089, RESELLER
 advertising.com, 28246, RESELLER
 advertising.com, 28605, RESELLER
@@ -1115,7 +1115,7 @@ kubient.com, 5e2cb089c866, RESELLER, 4f12311e6ed900a3
 liftoff.io, 7f6945815e6, RESELLER
 lijit.com, 258880, RESELLER, fafdf38b16bf6b2b
 lijit.com, 273644, RESELLER, fafdf38b16bf6b2b
-lijit.com, 411121, RESELLER, fafdf38b16bf6b2b#SOVRN
+lijit.com, 411121, RESELLER, fafdf38b16bf6b2b
 lijit.com, 502284, RESELLER, fafdf38b16bf6b2b
 lijit.com, 580374, RESELLER, fafdf38b16bf6b2b
 lkqd.net, 647, RESELLER, 59c49fa9598a0117
@@ -1152,7 +1152,7 @@ pokkt.com, 7606, RESELLER, c45702d9311e25fd
 prequel.tv, 513, RESELLER
 prequel.tv, 515, RESELLER
 pubmatic.com, 156425, RESELLER, 5d62403b186f2ace
-pubmatic.com, 159277, RESELLER, 
+pubmatic.com, 159277, RESELLER
 pubmatic.com, 160993, RESELLER, 5d62403b186f2ace
 pubmatic.com, 161058, RESELLER, 5d62403b186f2ace
 pubmatic.com, 161335, RESELLER, 5d62403b186f2ace
@@ -1188,7 +1188,7 @@ rubiconproject.com, 26584, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 26694, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 27052, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 27692, RESELLER, 0bfd66d529a55807
-rubiconproject.com, 27945, RESELLER, 
+rubiconproject.com, 27945, RESELLER
 rubiconproject.com, 27945, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 28175, RESELLER, 0bfd66d529a55807
 sabio.us, 100032, RESELLER, 96ed93aaa9795702
@@ -1200,7 +1200,6 @@ sharethrough.com, tZy9X0vy, RESELLER, d53b998a7bd4ecd2
 sharethrough.com, zMvLLpo1, RESELLER, d53b998a7bd4ecd2
 showheroes.com, 6596, RESELLER
 silvermob.com, 464, RESELLER
-singularads, 548745, RESELLER
 sipo-inc.com, 122558, RESELLER
 smaato.com, 1100044156, RESELLER, 07bcf65f187117b4
 smaato.com, 1100057444, RESELLER, 07bcf65f187117b4
@@ -1218,6 +1217,7 @@ spotx.tv, 117872, RESELLER, 7842df1d2fe2db34
 spotxchange.com, 117872, RESELLER, 7842df1d2fe2db34
 ssp.e-volution.ai, AJxF6R118a9M6CaTvK, RESELLER
 ssp.e-volution.ai, AJxF6R119a9M6CaTvK, RESELLER
+taurusx.com, 80654, RESELLER
 ssp.e-volution.ai, AJxF6R674a9M6CaTvK, RESELLER
 ssp.logan.ai, LG15, RESELLER
 synacor.com, 82171, RESELLER, e108f11b2cdf7d5b
@@ -1271,7 +1271,7 @@ lijit.com, 524160-eb, RESELLER, fafdf38b16bf6b2b
 loopme.com, 11524, RESELLER, 6c8d5f95897a5a3b
 loopme.com, 15601, RESELLER, 6c8d5f95897a5a3b
 pubmatic.com, 166385, RESELLER, 5d62403b186f2ace
-sharethrough.com.4024, RESELLER, D53B998A7BD4ECD2
+sharethrough.com, 4024, RESELLER, d53b998a7bd4ecd2
 smartadserver.com, 4024, RESELLER, 060d053dcf45cbf3
 sonobi.com, 97e60f3067, RESELLER, d1a215d9eb5aee9e
 triplelift.com, 14709, RESELLER, 6c33edb13117fd86
