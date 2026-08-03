@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="걷고 보상받는 Android 걸음 리워드 앱, 스탭핑 서비스 소개">
+  <meta property="og:title" content="스탭핑 | 걸음이 포인트가 되는 시간">
+  <meta property="og:description" content="오늘의 걸음을 확인하고, 달성 보상과 시간형 선물을 받아보세요.">
+  <meta property="og:image" content="https://aihaejwo.site/assets/stepping/feature.png">
+  <meta property="og:url" content="https://aihaejwo.site/stepping.html">
+  <title>스탭핑 | 걸음이 포인트가 되는 시간</title>
+  <style>
+    :root {
+      --orange: #ff7800;
+      --orange-deep: #df5900;
+      --ink: #2f231c;
+      --muted: #776a61;
+      --cream: #fff9f1;
+      --line: #f2ddc7;
+      --mint: #e8f4e8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+      word-break: keep-all;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 249, 241, .9);
+      border-bottom: 1px solid rgba(223, 89, 0, .1);
+      backdrop-filter: blur(16px);
+    }
+    .nav { height: 72px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 11px; font-size: 22px; font-weight: 900; }
+    .brand img { width: 42px; height: 42px; border-radius: 13px; box-shadow: 0 7px 18px rgba(181, 82, 0, .18); }
+    .nav-links { display: flex; align-items: center; gap: 24px; font-size: 14px; font-weight: 700; color: #5f5148; }
+    .status {
+      padding: 9px 14px;
+      border: 1px solid #efc9a8;
+      border-radius: 999px;
+      color: var(--orange-deep);
+      background: #fff;
+    }
+    .hero { position: relative; overflow: hidden; padding: 80px 0 84px; }
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(2px);
+      pointer-events: none;
+    }
+    .hero::before { width: 470px; height: 470px; right: -170px; top: -210px; background: #e7f3e5; }
+    .hero::after { width: 300px; height: 300px; left: -180px; bottom: -180px; background: #fff0df; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.02fr .98fr; gap: 64px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--orange-deep); font-weight: 800; font-size: 15px; }
+    .eyebrow::before { content: ""; width: 30px; height: 3px; border-radius: 99px; background: var(--orange); }
+    h1 { margin: 18px 0 22px; font-size: clamp(44px, 6vw, 76px); line-height: 1.08; letter-spacing: -.055em; }
+    h1 span { color: var(--orange); }
+    .hero-copy { max-width: 570px; margin: 0; color: var(--muted); font-size: 19px; line-height: 1.8; }
+    .hero-notice { display: inline-flex; margin-top: 30px; padding: 12px 16px; border-radius: 14px; background: #fff; border: 1px solid var(--line); box-shadow: 0 12px 36px rgba(88, 52, 18, .07); color: #66574d; font-size: 14px; }
+    .hero-visual { display: flex; justify-content: center; }
+    .phone {
+      position: relative;
+      width: min(340px, 82vw);
+      padding: 9px;
+      border-radius: 44px;
+      background: #211c19;
+      box-shadow: 0 30px 70px rgba(96, 49, 10, .22);
+      transform: rotate(2.2deg);
+    }
+    .phone::before { content: ""; position: absolute; top: 15px; left: 50%; width: 82px; height: 22px; transform: translateX(-50%); border-radius: 99px; background: #211c19; z-index: 2; }
+    .phone img { display: block; width: 100%; border-radius: 36px; }
+    section { padding: 92px 0; }
+    .section-head { max-width: 690px; margin: 0 auto 50px; text-align: center; }
+    .section-head span { color: var(--orange-deep); font-weight: 800; font-size: 14px; letter-spacing: .04em; }
+    .section-head h2 { margin: 12px 0 14px; font-size: clamp(32px, 4.5vw, 48px); letter-spacing: -.045em; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.75; }
+    .features { background: #fff; border-top: 1px solid #f4e5d8; border-bottom: 1px solid #f4e5d8; }
+    .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .feature {
+      min-height: 210px;
+      padding: 28px 24px;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: linear-gradient(155deg, #fff 0%, #fff9f2 100%);
+      box-shadow: 0 16px 36px rgba(93, 50, 12, .06);
+    }
+    .feature .num { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 14px; background: #fff0df; color: var(--orange-deep); font-weight: 900; }
+    .feature h3 { margin: 22px 0 9px; font-size: 19px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .screens { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; align-items: start; }
+    .shot { margin: 0; }
+    .shot img { display: block; width: 100%; border-radius: 24px; border: 1px solid #edd9c7; box-shadow: 0 22px 50px rgba(76, 43, 15, .12); }
+    .shot figcaption { margin-top: 15px; text-align: center; font-size: 14px; font-weight: 700; color: #5f5148; }
+    .login { padding-top: 40px; }
+    .login-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr .85fr;
+      gap: 50px;
+      align-items: center;
+      padding: 54px;
+      border-radius: 34px;
+      background: #2c241f;
+      color: #fff;
+      box-shadow: 0 26px 70px rgba(60, 34, 14, .18);
+    }
+    .login-card::after { content: ""; position: absolute; width: 330px; height: 330px; border-radius: 50%; right: -100px; bottom: -160px; background: rgba(255, 120, 0, .24); }
+    .login-card h2 { margin: 0 0 14px; font-size: 38px; letter-spacing: -.04em; }
+    .login-card p { margin: 0; color: #d7cdc6; line-height: 1.8; }
+    .login-detail { position: relative; z-index: 1; padding: 26px; border-radius: 22px; background: #fff; color: var(--ink); }
+    .kakao-button { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 58px; border-radius: 15px; background: #fee500; font-weight: 800; color: #191919; }
+    .kakao-mark { display: grid; width: 27px; height: 27px; place-items: center; border-radius: 50%; background: #191919; color: #fee500; font-size: 13px; }
+    .login-detail ul { padding: 0; margin: 20px 0 0; list-style: none; color: var(--muted); font-size: 14px; line-height: 1.8; }
+    footer { padding: 38px 0; border-top: 1px solid var(--line); background: #fff; }
+    .footer { display: flex; justify-content: space-between; align-items: center; gap: 24px; color: #75675e; font-size: 13px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; font-weight: 700; }
+    .footer-links a { color: #4b3c33; }
+    @media (max-width: 880px) {
+      .hero-grid, .login-card { grid-template-columns: 1fr; }
+      .hero { padding-top: 52px; }
+      .hero-grid { gap: 48px; }
+      .hero-text { text-align: center; }
+      .eyebrow { justify-content: center; }
+      .hero-copy { margin-inline: auto; }
+      .feature-grid, .screens { grid-template-columns: repeat(2, 1fr); }
+      .login-card { padding: 38px 30px; gap: 28px; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 28px, 1120px); }
+      .nav-links { display: none; }
+      .hero { padding-bottom: 64px; }
+      h1 { font-size: 42px; }
+      .hero-copy { max-width: 330px; font-size: 16px; }
+      section { padding: 68px 0; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .screens { gap: 12px; }
+      .shot img { border-radius: 16px; }
+      .shot figcaption { font-size: 12px; }
+      .login-card h2 { font-size: 30px; }
+      .footer { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="스탭핑 홈">
+        <img src="assets/stepping/icon.png" alt="">
+        <span>스탭핑</span>
+      </a>
+      <nav class="nav-links" aria-label="주요 메뉴">
+        <a href="#features">주요 기능</a>
+        <a href="#screens">서비스 화면</a>
+        <span class="status">Android 출시 준비 중</span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <div class="eyebrow">Android 걸음 리워드 서비스</div>
+          <h1>걷는 시간이<br><span>혜택이 되는 순간</span></h1>
+          <p class="hero-copy">스탭핑은 오늘의 걸음을 확인하고, 목표 달성 보상과 시간형 선물을 받아 포인트를 모으는 Android 앱입니다.</p>
+          <div class="hero-notice">Google Play 출시를 준비하고 있습니다.</div>
+        </div>
+        <div class="hero-visual">
+          <div class="phone">
+            <img src="assets/stepping/promo-home.jpg" alt="스탭핑 홈 화면: 오늘의 걸음과 보상 버튼">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <span>HOW IT WORKS</span>
+          <h2>걸음부터 상품 교환까지</h2>
+          <p>신체 활동 권한으로 걸음을 측정하고, 달성한 목표의 보상을 받아 포인트로 이용합니다.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><div class="num">01</div><h3>오늘의 걸음 측정</h3><p>Android 신체 활동 권한을 이용해 오늘 걸은 수를 앱과 알림에서 확인합니다.</p></article>
+          <article class="feature"><div class="num">02</div><h3>걸음 목표 보상</h3><p>500걸음 단위 목표를 달성한 뒤 광고를 시청하고 포인트 보상을 받습니다.</p></article>
+          <article class="feature"><div class="num">03</div><h3>시간형 선물</h3><p>일정 시간이 지나면 준비되는 선물을 열어 추가 포인트를 받을 수 있습니다.</p></article>
+          <article class="feature"><div class="num">04</div><h3>포인트 사용</h3><p>적립한 포인트는 앱 내 상점에서 제공되는 상품 교환에 사용할 수 있습니다.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="screens">
+      <div class="wrap">
+        <div class="section-head">
+          <span>SERVICE SCREENS</span>
+          <h2>스탭핑 서비스 화면</h2>
+          <p>걷기 현황, 걸음 보상, 시간형 선물, 포인트 상점으로 이어지는 주요 이용 흐름입니다.</p>
+        </div>
+        <div class="screens">
+          <figure class="shot"><img src="assets/stepping/promo-home.jpg" alt="오늘의 걸음 화면"><figcaption>오늘의 걸음</figcaption></figure>
+          <figure class="shot"><img src="assets/stepping/promo-reward.jpg" alt="걸음 보상 화면"><figcaption>걸음 보상</figcaption></figure>
+          <figure class="shot"><img src="assets/stepping/promo-gift.jpg" alt="시간형 선물 화면"><figcaption>시간형 선물</figcaption></figure>
+          <figure class="shot"><img src="assets/stepping/promo-store.jpg" alt="포인트 상점 화면"><figcaption>포인트 상점</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="login" id="login">
+      <div class="wrap">
+        <div class="login-card">
+          <div>
+            <h2>카카오톡으로 간편하게 시작</h2>
+            <p>스탭핑은 Android 앱에서 카카오톡 네이티브 로그인을 제공합니다. 카카오 회원번호로 계정을 식별하고, 동의한 이메일과 닉네임을 회원 정보 및 서비스 화면에 사용합니다.</p>
+          </div>
+          <div class="login-detail">
+            <div class="kakao-button"><span class="kakao-mark">K</span>카카오톡으로 시작하기</div>
+            <ul>
+              <li>• 카카오톡이 설치된 기기에서 네이티브 로그인</li>
+              <li>• 수집 항목: 카카오 회원번호, 이메일, 닉네임</li>
+              <li>• 이용 목적: 회원 식별, 계정 관리, 프로필 표시</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer">
+      <div>© 2026 aiHaejwo · 문의 support@aihaejwo.site</div>
+      <div class="footer-links">
+        <a href="privacy-policy_stepping.html">개인정보 처리방침</a>
+        <a href="terms-stepping.html">서비스 이용약관</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

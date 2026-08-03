@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1600, initial-scale=1">
+  <title>스탭핑 서비스 화면</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1600px; height: 1000px; margin: 0; overflow: hidden; }
+    body {
+      padding: 54px 60px;
+      color: #30231c;
+      background:
+        radial-gradient(circle at 95% 8%, #e4f2e3 0 150px, transparent 151px),
+        radial-gradient(circle at 4% 100%, #ffead3 0 180px, transparent 181px),
+        #fff9f1;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+      word-break: keep-all;
+    }
+    .header { display: flex; justify-content: space-between; align-items: center; height: 88px; }
+    .brand { display: flex; align-items: center; gap: 16px; }
+    .brand img { width: 64px; height: 64px; border-radius: 20px; box-shadow: 0 12px 28px rgba(134, 66, 12, .18); }
+    .title h1 { margin: 0; font-size: 35px; letter-spacing: -.04em; }
+    .title p { margin: 6px 0 0; color: #776a61; font-size: 16px; }
+    .badge { padding: 12px 18px; border-radius: 999px; border: 1px solid #efc39d; background: rgba(255,255,255,.82); color: #d85c00; font-weight: 800; }
+    .content { display: grid; grid-template-columns: 940px 1fr; gap: 40px; height: 732px; margin-top: 28px; }
+    .screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: start; }
+    figure { margin: 0; display: flex; flex-direction: column; min-width: 0; }
+    figure img { width: 100%; aspect-ratio: 9 / 16; object-fit: contain; border: 6px solid #2a2420; border-radius: 30px; box-shadow: 0 18px 36px rgba(74, 39, 10, .15); }
+    figcaption { margin-top: 12px; text-align: center; font-weight: 800; font-size: 15px; }
+    .info { padding: 34px; border-radius: 30px; border: 1px solid #efd9c4; background: rgba(255,255,255,.88); box-shadow: 0 20px 46px rgba(77, 42, 11, .09); }
+    .info h2 { margin: 0 0 12px; font-size: 29px; letter-spacing: -.04em; }
+    .info > p { margin: 0; color: #74665d; font-size: 16px; line-height: 1.7; }
+    .flow { margin: 28px 0; display: grid; gap: 10px; }
+    .flow-item { display: flex; align-items: center; gap: 15px; padding: 15px 16px; border-radius: 17px; background: #fff8ef; border: 1px solid #f1dec9; }
+    .flow-item b { display: grid; width: 34px; height: 34px; flex: 0 0 auto; place-items: center; border-radius: 12px; background: #ff7800; color: white; }
+    .flow-item span { font-size: 15px; font-weight: 750; }
+    .login { margin-top: 22px; padding-top: 22px; border-top: 1px solid #ead8c8; }
+    .login h3 { margin: 0 0 13px; font-size: 19px; }
+    .kakao { display: flex; justify-content: center; align-items: center; gap: 10px; height: 56px; border-radius: 15px; background: #fee500; color: #191919; font-weight: 850; }
+    .kakao i { display: grid; width: 26px; height: 26px; place-items: center; border-radius: 50%; background: #191919; color: #fee500; font-style: normal; font-size: 12px; }
+    .login small { display: block; margin-top: 12px; color: #7c6f66; font-size: 13px; line-height: 1.55; }
+    .footer { display: flex; justify-content: space-between; align-items: center; height: 64px; margin-top: 22px; padding: 0 22px; border-radius: 18px; background: #312821; color: #fff; }
+    .footer strong { color: #ff9a3d; }
+    .footer span { color: #d7cdc6; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <img src="assets/stepping/icon.png" alt="">
+      <div class="title"><h1>스탭핑 서비스 화면</h1><p>걸음 측정부터 포인트 상품 교환까지 이어지는 Android 리워드 앱</p></div>
+    </div>
+    <div class="badge">Google Play 출시 준비 중</div>
+  </div>
+  <main class="content">
+    <section class="screens" aria-label="주요 서비스 화면">
+      <figure><img src="assets/stepping/promo-home.jpg" alt="오늘의 걸음"><figcaption>오늘의 걸음</figcaption></figure>
+      <figure><img src="assets/stepping/promo-reward.jpg" alt="걸음 보상"><figcaption>걸음 보상</figcaption></figure>
+      <figure><img src="assets/stepping/promo-store.jpg" alt="포인트 상점"><figcaption>포인트 상점</figcaption></figure>
+    </section>
+    <aside class="info">
+      <h2>서비스 이용 흐름</h2>
+      <p>사용자는 걸음 수와 달성 현황을 확인하고 보상을 받은 뒤, 적립 포인트를 앱 안에서 사용합니다.</p>
+      <div class="flow">
+        <div class="flow-item"><b>1</b><span>신체 활동 권한으로 오늘의 걸음 측정</span></div>
+        <div class="flow-item"><b>2</b><span>500걸음 단위 목표 달성 및 보상</span></div>
+        <div class="flow-item"><b>3</b><span>시간형 선물로 추가 포인트 획득</span></div>
+        <div class="flow-item"><b>4</b><span>포인트로 앱 내 상품 교환</span></div>
+      </div>
+      <div class="login">
+        <h3>카카오톡 네이티브 로그인</h3>
+        <div class="kakao"><i>K</i>카카오톡으로 시작하기</div>
+        <small>카카오 회원번호로 계정을 식별하며, 동의한 이메일과 닉네임을 회원 정보 및 프로필 표시에 사용합니다.</small>
+      </div>
+    </aside>
+  </main>
+  <div class="footer"><strong>STEPPING</strong><span>개인정보가 포함되지 않은 심사용 서비스 화면입니다.</span><span>support@aihaejwo.site</span></div>
+</body>
+</html>
