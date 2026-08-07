@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -35,6 +36,22 @@ class Service:
 
 
 SERVICES = (
+    Service(
+        korean_name="캐시딸깍",
+        english_name="Tree",
+        package="com.ttalkkag.tree",
+        policy_url="https://aihaejwo.site/www/ttalkkag/privacy-policy.html",
+        output_name="tree_kakao_phone_signup_review.pdf",
+        accent=colors.HexColor("#D99A00"),
+    ),
+    Service(
+        korean_name="캐시딸깍 라이트",
+        english_name="TreeGo",
+        package="com.ttalkkag.treelite",
+        policy_url="https://aihaejwo.site/www/ttalkkag/privacy-policy_.html",
+        output_name="treego_kakao_phone_signup_review.pdf",
+        accent=colors.HexColor("#5B8A45"),
+    ),
     Service(
         korean_name="캐시펑",
         english_name="CashPub",
@@ -347,10 +364,24 @@ def generate(service: Service, output_dir: Path) -> Path:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--service",
+        choices=[service.english_name.lower() for service in SERVICES],
+        action="append",
+        help="Generate only the selected service; repeat to generate more than one.",
+    )
+    args = parser.parse_args()
     register_font()
     output_dir = Path(__file__).resolve().parents[1] / "output" / "pdf"
     output_dir.mkdir(parents=True, exist_ok=True)
-    for service in SERVICES:
+    selected_services = SERVICES
+    if args.service:
+        selected_names = set(args.service)
+        selected_services = tuple(
+            service for service in SERVICES if service.english_name.lower() in selected_names
+        )
+    for service in selected_services:
         print(generate(service, output_dir))
 
 
