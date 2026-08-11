@@ -33,9 +33,19 @@ class Service:
     policy_url: str
     output_name: str
     accent: colors.Color
+    effective_date: str = "2026년 8월 7일"
 
 
 SERVICES = (
+    Service(
+        korean_name="캐시주사위",
+        english_name="CashDiceW",
+        package="com.ttalkkag.cashdice",
+        policy_url="https://aihaejwo.site/www/ttalkkag/privacy_policy_dice.html",
+        output_name="cashdicew_kakao_phone_signup_review.pdf",
+        accent=colors.HexColor("#C65A45"),
+        effective_date="2026년 8월 11일",
+    ),
     Service(
         korean_name="캐시딸깍",
         english_name="Tree",
@@ -222,7 +232,7 @@ def page_one(pdf: canvas.Canvas, service: Service) -> None:
     )
 
     set_font(pdf, 7.8, MUTED)
-    pdf.drawString(52, 101, "적용 기준: 2026년 8월 7일 시행 개인정보처리방침")
+    pdf.drawString(52, 101, f"적용 기준: {service.effective_date} 시행 개인정보처리방침")
 
 
 def flow_step(pdf: canvas.Canvas, service: Service, number: int, y: float, title: str, body: str) -> None:
