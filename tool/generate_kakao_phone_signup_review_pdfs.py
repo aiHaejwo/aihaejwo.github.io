@@ -38,6 +38,15 @@ class Service:
 
 SERVICES = (
     Service(
+        korean_name="낚시캐시",
+        english_name="CashLoop2",
+        package="com.ttalkkag.cashloop2",
+        policy_url="https://aihaejwo.site/www/ttalkkag/privacy_policy_loop2.html",
+        output_name="cashloop2_kakao_phone_signup_review.pdf",
+        accent=colors.HexColor("#2865A7"),
+        effective_date="2026년 8월 14일",
+    ),
+    Service(
         korean_name="캐시주사위",
         english_name="CashDiceW",
         package="com.ttalkkag.cashdice",
