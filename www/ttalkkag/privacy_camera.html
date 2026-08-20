@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — 딸깍 무음카메라 (Silent Snap)</title>
+<meta name="description" content="딸깍 무음카메라(Silent Snap) 개인정보처리방침. 촬영한 사진은 기기에만 저장되며 외부로 전송되지 않습니다.">
+<style>
+  :root{
+    --bg:#0a0a0c; --panel:#16161a; --panel2:#1d1d22;
+    --line:#2c2c33; --text:#e9e9ee; --muted:#9a9aa4; --accent:#ffd54f;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",
+      "Noto Sans KR",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.75; font-size:16px;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:32px 20px 80px}
+  header{padding:28px 0 20px; border-bottom:1px solid var(--line); margin-bottom:28px}
+  .badge{
+    display:inline-block; font-size:12px; font-weight:700; letter-spacing:.04em;
+    color:var(--accent); border:1px solid #4a4130; background:#1e1a10;
+    padding:4px 10px; border-radius:999px; margin-bottom:14px;
+  }
+  h1{font-size:26px; line-height:1.35; margin:0 0 8px; letter-spacing:-.02em}
+  .sub{color:var(--muted); font-size:14px; margin:0}
+  h2{
+    font-size:19px; margin:38px 0 12px; padding-left:12px;
+    border-left:3px solid var(--accent); letter-spacing:-.01em;
+  }
+  h3{font-size:16px; margin:22px 0 8px; color:#d6d6de}
+  p{margin:10px 0}
+  ul{margin:10px 0; padding-left:20px}
+  li{margin:6px 0}
+  strong{color:#fff}
+  .card{
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:12px; padding:16px 18px; margin:16px 0;
+  }
+  .card.warn{border-color:#4a4130; background:#1a1710}
+  .card h3{margin-top:0}
+  .tbl{width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch}
+  table{width:100%; border-collapse:collapse; font-size:14px; min-width:520px}
+  th,td{border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top}
+  th{background:var(--panel2); color:#fff; font-weight:700; white-space:nowrap}
+  td.no{color:#8ad48a} td.yes{color:var(--accent)}
+  .kv{display:grid; grid-template-columns:120px 1fr; gap:6px 14px; font-size:14px}
+  .kv dt{color:var(--muted)} .kv dd{margin:0}
+  footer{
+    margin-top:48px; padding-top:20px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:13px;
+  }
+  a{color:var(--accent)}
+  @media (max-width:520px){
+    h1{font-size:22px} h2{font-size:17px} body{font-size:15px}
+    .kv{grid-template-columns:96px 1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="badge">PRIVACY POLICY</div>
+  <h1>딸깍 무음카메라 개인정보처리방침</h1>
+  <p class="sub">최종 개정일: 2026년 8월 20일 · 앱 패키지: com.ttalkkag.silent_snap</p>
+</header>
+
+<p>
+  본 방침은 <strong>딸깍 무음카메라(Silent Snap)</strong>(이하 "본 앱")가 이용자의 정보를
+  어떻게 취급하는지 설명합니다. 본 앱은 <strong>회원가입이 없고, 촬영한 사진을 외부 서버로
+  전송하지 않습니다.</strong> 다만 앱 운영을 위해 <strong>Google AdMob 광고를 포함</strong>하며,
+  광고 제공 과정에서 광고 식별자가 사용됩니다. 아래에서 정확히 구분해 안내합니다.
+</p>
+
+<h2>1. 촬영한 사진의 처리</h2>
+<div class="card">
+  <h3>사진은 기기에만 저장됩니다</h3>
+  <ul>
+    <li>촬영된 사진은 기기의 <strong>사진 앨범(갤러리)</strong>에만 저장됩니다.</li>
+    <li>본 앱은 사진을 외부 서버로 <strong>업로드·수집·백업하지 않습니다.</strong></li>
+    <li>미리보기를 빠르게 보여주기 위해 <strong>가장 최근 1장</strong>의 사본을 앱 내부
+        저장영역에 보관하며, 새로 촬영하면 이전 사본은 삭제됩니다.
+        앱을 삭제하면 이 사본도 함께 영구 삭제됩니다.</li>
+    <li>사진에 포함된 촬영 정보(EXIF)는 기기 카메라가 기록한 것으로, 본 앱은 이를
+        읽어 화면 표시에만 사용하고 외부로 보내지 않습니다.</li>
+  </ul>
+</div>
+
+<h2>2. 마이크와 오디오</h2>
+<p>
+  본 앱은 <strong>마이크 권한을 요청하지 않으며</strong>, 촬영 시 오디오 세션을 열지 않습니다.
+  Android 매니페스트에서 <code>RECORD_AUDIO</code> 권한을 명시적으로 제거했습니다.
+  따라서 음성·주변 소리를 녹음하거나 수집하는 기능이 존재하지 않습니다.
+</p>
+
+<h2>3. 광고 (중요)</h2>
+<div class="card warn">
+  <h3>본 앱에는 광고가 포함되어 있습니다</h3>
+  <ul>
+    <li>광고 제공자: <strong>Google AdMob</strong> (Google Mobile Ads Next-Gen SDK)</li>
+    <li>형식: <strong>전면 광고</strong> — 최근 사진 미리보기 화면에 진입하는 시점에 표시됩니다.
+        촬영 동작 자체를 가로막지 않습니다.</li>
+    <li>광고 제공을 위해 <strong>네트워크 연결</strong>과 <strong>광고 식별자(Advertising ID)</strong>가
+        사용됩니다.</li>
+    <li>Google 및 광고 파트너는 광고 게재·측정·사기 방지를 위해 기기 정보와 광고 ID를
+        처리할 수 있습니다. 자세한 내용은
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 파트너 사이트 정책</a>과
+        <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob 데이터 처리 안내</a>를 참고하십시오.</li>
+    <li>광고 맞춤설정은 기기 설정에서 조정할 수 있습니다:
+        <em>설정 → Google → 광고 → 광고 개인 최적화 해제 / 광고 ID 재설정</em></li>
+  </ul>
+  <p style="margin-bottom:0">
+    광고 SDK는 <strong>촬영한 사진에 접근하지 않습니다.</strong> 사진과 광고는 서로 분리된
+    경로로 처리됩니다.
+  </p>
+</div>
+
+<h2>4. 요청하는 권한</h2>
+<div class="tbl">
+<table>
+  <thead>
+    <tr><th>권한</th><th>목적</th><th>외부 전송</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>카메라<br><code>CAMERA</code></td><td>사진 촬영 및 미리보기 표시</td><td class="no">없음</td></tr>
+    <tr><td>사진/미디어<br><code>READ_MEDIA_IMAGES</code> 등</td><td>촬영물 갤러리 저장 및 최근 사진 표시</td><td class="no">없음</td></tr>
+    <tr><td>진동<br><code>VIBRATE</code></td><td>소리 대신 촬영 완료를 알리는 햅틱 피드백</td><td class="no">없음</td></tr>
+    <tr><td>오디오 설정<br><code>MODIFY_AUDIO_SETTINGS</code></td><td>촬영 순간 시스템 셔터음 억제 시도</td><td class="no">없음</td></tr>
+    <tr><td>인터넷<br><code>INTERNET</code></td><td><strong>광고 로드 전용</strong></td><td class="yes">광고 요청</td></tr>
+    <tr><td>광고 ID<br><code>AD_ID</code></td><td>Android 13+ 광고 식별자 접근</td><td class="yes">광고 요청</td></tr>
+  </tbody>
+</table>
+</div>
+<p style="color:var(--muted); font-size:14px">
+  위치·연락처·통화기록·마이크·저장소 전체 접근 권한은 요청하지 않습니다.
+</p>
+
+<h2>5. 아동 보호</h2>
+<p>
+  본 앱은 특정 연령층을 대상으로 하지 않으며, 만 14세 미만 아동의 개인정보를 고의로
+  수집하지 않습니다. 보호자가 아동의 사진 촬영에 본 앱을 사용하는 경우, 촬영물은 기기에만
+  저장되며 외부로 전송되지 않습니다.
+</p>
+
+<h2>6. 데이터 보관 및 파기</h2>
+<ul>
+  <li>촬영 사진: 이용자가 직접 삭제할 때까지 기기 갤러리에 보관됩니다. 본 앱은 삭제 권한을
+      갖지 않습니다.</li>
+  <li>미리보기 사본(최근 1장): 새 촬영 시 자동 삭제되며, 앱 삭제 시 함께 제거됩니다.</li>
+  <li>광고 식별자: 본 앱이 저장하지 않습니다. 기기 설정에서 언제든 초기화할 수 있습니다.</li>
+</ul>
+
+<h2>7. 제3자 제공</h2>
+<p>
+  본 앱은 이용자의 사진, 파일, 연락처 등 개인 콘텐츠를 제3자에게 제공하거나 판매하지
+  않습니다. 광고 게재에 필요한 범위에서 Google AdMob이 기기 정보와 광고 ID를 처리하는 것이
+  유일한 외부 처리입니다.
+</p>
+
+<h2>8. 촬영 관련 법적 유의사항</h2>
+<div class="card warn">
+  <p style="margin:0">
+    타인의 동의 없는 촬영은 관련 법령에 따라 처벌될 수 있습니다. 본 앱은 도서관·강의실
+    등에서의 조용한 자료 촬영, 아기·반려동물 촬영을 목적으로 제공되며,
+    <strong>불법 촬영 목적의 사용을 금지합니다.</strong> 이용자의 위법한 사용에 대한 책임은
+    이용자 본인에게 있습니다.
+  </p>
+</div>
+
+<h2>9. 셔터음에 관한 고지</h2>
+<p>
+  셔터음은 <strong>운영체제가 재생하는 소리</strong>로, 서드파티 앱이 이를 강제로 제거할 수
+  있는 공식적인 방법은 없습니다. 본 앱은 오디오 세션을 열지 않고 시스템 셔터음 억제를
+  시도하지만, <strong>일부 국가(한국·일본 등) 출고 기기와 일부 제조사 펌웨어, 그리고
+  iOS에서는 셔터음이 그대로 재생될 수 있습니다.</strong> 이는 앱의 결함이 아니라 플랫폼
+  정책에 따른 제약입니다.
+</p>
+
+<h2>10. 방침 변경</h2>
+<p>
+  본 방침이 변경되는 경우 본 페이지의 최종 개정일을 갱신하며, 중요한 변경은 앱 업데이트
+  설명을 통해 안내합니다.
+</p>
+
+<h2>11. 문의</h2>
+<div class="card">
+  <dl class="kv">
+    <dt>이메일</dt><dd>support@ttalkkag.app <em style="color:var(--muted)">(실제 주소로 교체 필요)</em></dd>
+    <dt>앱 패키지</dt><dd>com.ttalkkag.silent_snap</dd>
+    <dt>플랫폼</dt><dd>Android (iOS 별도 고지)</dd>
+  </dl>
+</div>
+
+<footer>
+  © 2026 딸깍 무음카메라 (Silent Snap). 본 문서는 앱 내 기능 구현을 기준으로 작성되었으며,
+  기능 변경 시 함께 갱신되어야 합니다.
+</footer>
+
+</div>
+</body>
+</html>
