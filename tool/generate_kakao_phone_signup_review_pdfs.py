@@ -211,17 +211,17 @@ def page_one(pdf: canvas.Canvas, service: Service) -> None:
     set_font(pdf, 8.7, MUTED)
     pdf.drawRightString(PAGE_WIDTH - 70, 565, "카카오 로그인 및 리워드 회원 가입 시")
 
-    panel(pdf, 52, 349, PAGE_WIDTH - 104, 164)
+    # Kakao review attachments must not contain actual contact information.
+    panel(pdf, 52, 369, PAGE_WIDTH - 104, 144)
     set_font(pdf, 11, service.accent)
     pdf.drawString(70, 486, "서비스 및 공개 방침")
     label_value(pdf, "서비스", f"{service.korean_name} ({service.english_name})", 70, 459, PAGE_WIDTH - 140)
     label_value(pdf, "패키지명", service.package, 70, 429, PAGE_WIDTH - 140)
     label_value(pdf, "운영자", "에이아이해줘(aiHaejwo)", 70, 399, PAGE_WIDTH - 140)
-    label_value(pdf, "개인정보 문의", "aihaejwo@gmail.com", 70, 369, PAGE_WIDTH - 140)
     set_font(pdf, 8.3, MUTED)
-    pdf.drawString(70, 339, "공개 개인정보처리방침")
+    pdf.drawString(70, 382, "공개 개인정보처리방침")
     set_font(pdf, 7.7, service.accent)
-    pdf.drawString(170, 339, service.policy_url)
+    pdf.drawString(170, 382, service.policy_url)
 
     panel(pdf, 52, 168, PAGE_WIDTH - 104, 154, fill=PANEL)
     set_font(pdf, 11, service.accent)
