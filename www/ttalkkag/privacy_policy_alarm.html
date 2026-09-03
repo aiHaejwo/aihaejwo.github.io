@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>똑딱알람 개인정보처리방침</title>
+  <style>
+    :root {
+      --primary: #6C63FF;
+      --text: #1f2937;
+      --text-muted: #6b7280;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 32px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      border: 1px solid var(--border);
+    }
+    h1 {
+      color: var(--primary);
+      font-size: 26px;
+      margin-bottom: 8px;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 12px;
+    }
+    .date {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+    p, li {
+      font-size: 15px;
+      color: #374151;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .table-box {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+    .table-box th, .table-box td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 14px;
+    }
+    .table-box th {
+      background-color: #f3f4f6;
+      font-weight: 600;
+    }
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>똑딱알람 개인정보처리방침</h1>
+    <div class="date">최종 수정일: 2026년 9월 3일 | 시행일: 2026년 9월 3일</div>
+
+    <p>
+      '똑딱알람'(이하 "앱" 또는 "서비스")은 이용자의 개인정보를 중요시하며, 「개인정보 보호법」 및 관련 법령을 준수합니다. 본 방침은 똑딱알람이 이용자의 정보를 어떻게 처리하고 보호하는지 안내합니다.
+    </p>
+
+    <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+    <p>
+      똑딱알람은 <strong>별도의 회원가입이나 로그인을 요구하지 않으며, 서버로 이용자의 식별 정보를 전송하지 않는 로컬 기반 애플리케이션</strong>입니다.
+    </p>
+    <ul>
+      <li><strong>로컬 저장 정보:</strong> 알람 설정 시간, 반복 요일, 라벨, 기상 미션 설정값, 볼륨 및 이어폰 모드 설정 등 (모두 기기 내부 SQLite 데이터베이스에만 저장되며 외부로 전송되지 않습니다.)</li>
+      <li><strong>수집하지 않는 정보:</strong> 성명, 주민등록번호, 전화번호, 이메일, 위치 정보, 금융 정보 등 일체의 개인 식별 정보</li>
+    </ul>
+
+    <h2>2. 기기 접근 권한 및 사용 목적</h2>
+    <p>앱 기능의 정상적인 동작을 위해 다음과 같은 기기 권한을 필요로 합니다:</p>
+    <table class="table-box">
+      <thead>
+        <tr>
+          <th>권한</th>
+          <th>필수/선택</th>
+          <th>이용 목적</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>알림 (POST_NOTIFICATIONS)</strong></td>
+          <td>필수</td>
+          <td>설정된 시간에 정시 알람 알림을 수신하고 발화하기 위함</td>
+        </tr>
+        <tr>
+          <td><strong>정밀 알람 (USE_EXACT_ALARM)</strong></td>
+          <td>필수</td>
+          <td>절전 모드에서도 1초의 오차 없이 정시에 알람을 발화하기 위함</td>
+        </tr>
+        <tr>
+          <td><strong>카메라 (CAMERA)</strong></td>
+          <td>선택</td>
+          <td>'QR/바코드 스캔 미션' 이용 시 코드 인식을 위한 카메라 화면 표시 (촬영된 사진이나 영상은 저장되거나 전송되지 않습니다)</td>
+        </tr>
+        <tr>
+          <td><strong>신체 동작/가속도 센서</strong></td>
+          <td>선택</td>
+          <td>'스마트폰 흔들기 미션' 이용 시 기기 흔들림 횟수 감지</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. 개인정보의 보유 및 파기</h2>
+    <p>
+      앱 내의 모든 알람 설정 데이터는 이용자의 기기 내부 저장소에만 보관됩니다. 이용자가 알람을 삭제하거나 앱을 삭제(제거)하는 경우, 기기 내에 저장된 모든 데이터는 즉시 영구 파기됩니다.
+    </p>
+
+    <h2>4. 제3자 제공 및 외부 위탁</h2>
+    <p>
+      똑딱알람은 이용자의 개인정보를 제3자에게 제공하거나 외부에 위탁하여 처리하지 않습니다.
+    </p>
+
+    <h2>5. 아동의 개인정보보호</h2>
+    <p>
+      똑딱알람은 만 14세 미만 아동의 개인식별정보를 직접 수집하지 않으며, 모든 연령대의 사용자가 안전하게 이용할 수 있도록 설계되었습니다.
+    </p>
+
+    <h2>6. 이용자의 권리 및 행사 방법</h2>
+    <p>
+      이용자는 언제든지 앱 내 설정을 통해 알람 데이터를 수정하거나 삭제할 수 있으며, 기기 설정을 통해 앱의 권한 허용 여부를 변경할 수 있습니다.
+    </p>
+
+    <h2>7. 개인정보 보호책임자 및 문의처</h2>
+    <p>서비스 이용 중 발생하는 개인정보 관련 문의사항은 아래 연락처로 문의해 주시기 바랍니다.</p>
+    <ul>
+      <li><strong>서비스명:</strong> 똑딱알람 (Ttalkkag Alarm)</li>
+      <li><strong>문의 이메일:</strong> support@ttalkkag.com</li>
+    </ul>
+
+    <div class="footer">
+      본 개인정보처리방침은 관계 법령이나 서비스의 변경 사항에 따라 개정될 수 있으며, 개정 시 앱 내 또는 스토어 등록 정보를 통해 공지합니다.
+    </div>
+  </div>
+</body>
+</html>
