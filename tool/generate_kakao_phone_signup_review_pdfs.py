@@ -38,6 +38,15 @@ class Service:
 
 SERVICES = (
     Service(
+        korean_name="뚜벅캐시",
+        english_name="TubukCash",
+        package="com.aihaejwo.cashstep",
+        policy_url="https://aihaejwo.site/www/ttalkkag/privacy_policy_tubukcash.html",
+        output_name="tubukcash_kakao_phone_signup_review.pdf",
+        accent=colors.HexColor("#F36F00"),
+        effective_date="2026년 9월 3일",
+    ),
+    Service(
         korean_name="낚시캐시",
         english_name="CashLoop2",
         package="com.ttalkkag.cashloop2",
@@ -229,7 +238,7 @@ def page_one(pdf: canvas.Canvas, service: Service) -> None:
     draw_text(
         pdf,
         "• 카카오 로그인 동의 화면에서 카카오계정 전화번호를 필수로 제공합니다.\n"
-        "• 카카오 회원번호와 카카오계정 전화번호는 회원 식별, 계정 관리, 중복·부정 이용 방지에만 사용합니다.\n"
+        "• 카카오계정 전화번호는 회원 가입, 계정 관리, 중복·부정 이용 방지에만 사용합니다.\n"
         "• 카카오계정에 전화번호가 없거나 필수 제공에 동의하지 않으면 리워드 회원 가입을 완료할 수 없습니다.\n"
         "• 앱은 단말 전화 권한으로 번호를 읽거나 이용자에게 전화번호를 직접 입력받지 않습니다.",
         x=70,
@@ -270,7 +279,7 @@ def page_two(pdf: canvas.Canvas, service: Service) -> None:
     steps = (
         ("카카오로 시작", "이용자가 앱 로그인 화면에서 카카오 로그인을 선택합니다."),
         ("카카오 동의 화면 표시", "카카오계정(전화번호)이 회원 가입을 위한 필수 동의항목으로 표시됩니다."),
-        ("필수 제공 동의", "이용자가 전화번호 제공에 동의하면 카카오 회원번호와 카카오계정 전화번호가 카카오 로그인 연동을 통해 제공됩니다."),
+        ("필수 제공 동의", "이용자가 전화번호 제공에 동의하면 카카오계정 전화번호가 카카오 로그인 연동을 통해 제공됩니다."),
         ("리워드 회원 식별", "제공받은 정보는 회원 가입, 계정 관리 및 중복·부정 이용 방지를 위해 처리됩니다."),
         ("회원 가입 완료", "필수 동의를 완료한 이용자만 리워드 적립·사용 기능을 이용할 수 있습니다."),
         ("미동의 또는 미보유", "카카오계정에 전화번호가 없거나 제공에 동의하지 않으면 회원 가입을 완료하지 않습니다."),
@@ -339,8 +348,7 @@ def page_three(pdf: canvas.Canvas, service: Service) -> None:
         cursor += width
 
     rows = (
-        ("카카오 회원번호", "필수", "회원 가입, 로그인, 계정 관리", "회원 탈퇴 시까지"),
-        ("카카오계정 전화번호", "필수", "리워드 계정 식별 및 중복·부정 이용 방지", "회원 탈퇴 시까지"),
+        ("카카오계정 전화번호", "필수", "회원 가입, 계정 관리 및 중복·부정 이용 방지", "회원 탈퇴 시까지"),
         ("동의하지 않거나 전화번호가 없는 경우", "가입 제한", "필수 회원 가입 요건 확인", "리워드 회원 가입 미완료"),
         ("단말 전화번호", "미수집", "단말 전화 권한·직접 입력 방식 미사용", "해당 없음"),
     )
@@ -349,22 +357,22 @@ def page_three(pdf: canvas.Canvas, service: Service) -> None:
         table_row(pdf, row, y, 70, widths)
         y -= 70
 
-    panel(pdf, 52, 144, PAGE_WIDTH - 104, 93, fill=PANEL)
+    panel(pdf, 52, 180, PAGE_WIDTH - 104, 93, fill=PANEL)
     set_font(pdf, 10, service.accent)
-    pdf.drawString(70, 211, "공개 방침의 핵심 문구")
+    pdf.drawString(70, 247, "공개 방침의 핵심 문구")
     draw_text(
         pdf,
         "“카카오계정에 전화번호가 없거나 필수 제공에 동의하지 않는 경우 리워드 회원 가입을 완료할 수 없습니다.”",
         x=70,
-        top=186,
+        top=222,
         width=PAGE_WIDTH - 140,
         size=9,
         leading=14,
     )
     set_font(pdf, 7.8, MUTED)
-    pdf.drawString(52, 101, "공개 개인정보처리방침")
+    pdf.drawString(52, 137, "공개 개인정보처리방침")
     set_font(pdf, 7.5, service.accent)
-    pdf.drawString(145, 101, service.policy_url)
+    pdf.drawString(145, 137, service.policy_url)
 
 
 def generate(service: Service, output_dir: Path) -> Path:
