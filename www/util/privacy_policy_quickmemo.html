@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>무음 퀵 메모 개인정보처리방침</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #3730a3;
+      --primary-light: #eef2ff;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      line-height: 1.75;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+    .header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .meta {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+    p, ul {
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .highlight-box {
+      background: #f5f3ff;
+      border: 1px solid #ddd6fe;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 24px 0;
+      font-size: 14.5px;
+      color: #4338ca;
+      line-height: 1.65;
+    }
+    .permission-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .permission-table th, .permission-table td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    .permission-table th {
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="badge">Google Play 개인정보처리방침</span>
+      <h1>무음 퀵 메모 개인정보처리방침</h1>
+      <div class="meta">
+        패키지명: com.quickmemo.silent.quickmemo &nbsp;|&nbsp; 시행일자: 2026년 9월 9일
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <strong>핵심 원칙 요약:</strong> "무음 퀵 메모"는 <strong>사용자의 어떠한 개인 식별 정보나 메모 내용을 외부 서버로 수집하거나 전송하지 않습니다.</strong> 사용자가 작성하는 모든 임시 메모와 보관함 데이터는 오직 사용자의 기기 내부(Local Device Storage)에만 안전하게 보관됩니다.
+    </div>
+
+    <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+    <p>본 앱은 회원가입, 로그인, 계정 생성을 요구하지 않으며, 자체적인 백엔드 서버를 운영하지 않습니다.</p>
+    <ul>
+      <li><strong>메모 본문 및 작성 데이터:</strong> 사용자가 작성한 임시 메모, 보관된 메모, 고정 메모 등 모든 메모 콘텐츠는 외부로 전송되지 않으며, 사용자 기기의 암호화된 로컬 저장소(SharedPreferences)에만 저장됩니다.</li>
+      <li><strong>개인 식별 정보 미수집:</strong> 이름, 이메일 주소, 전화번호, 연락처, 기기 고유 식별자(IMEI), 위치 정보 등 어떠한 개인정보도 수집하지 않습니다.</li>
+    </ul>
+
+    <h2>2. 개인정보의 처리 목적</h2>
+    <p>본 앱은 수집된 사용자 데이터를 외부에 제공하지 않으며, 기기 내에서 다음 목적만을 위해 활용합니다:</p>
+    <ul>
+      <li><strong>실시간 플로팅 메모 편집 및 복원:</strong> 플로팅 버블과 메인 앱 간의 실시간 메모 내용 동기화 및 앱 재실행 시 이전 작성 메모 복원.</li>
+      <li><strong>메모 보관함 관리:</strong> 사용자가 보관 버튼을 누른 메모의 기기 내 저장, 검색, 고정, 수정 및 삭제 기능 제공.</li>
+    </ul>
+
+    <h2>3. 앱 사용 권한 안내 (Device Permissions)</h2>
+    <p>본 앱은 플로팅 버블 오버레이 기능을 제공하기 위해 필요한 최소한의 시스템 권한만을 요청하며, 본래 목적 이외의 용도로 권한을 사용하지 않습니다:</p>
+    
+    <table class="permission-table">
+      <thead>
+        <tr>
+          <th>권한 명칭</th>
+          <th>구분</th>
+          <th>이용 목적</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>다른 앱 위에 표시<br>(SYSTEM_ALERT_WINDOW)</strong></td>
+          <td>필수</td>
+          <td>유튜브, 웹 브라우저, 게임 등 다른 앱 사용 중에도 화면 위에 플로팅 버블 아이콘 및 퀵 메모 입력창을 띄우기 위해 사용됩니다.</td>
+        </tr>
+        <tr>
+          <td><strong>포그라운드 서비스<br>(FOREGROUND_SERVICE)</strong></td>
+          <td>필수</td>
+          <td>사용자가 다른 앱을 이용하는 동안 플로팅 버블이 안드로이드 시스템에 의해 임의로 종료되지 않고 화면에 유지되도록 하기 위해 사용됩니다.</td>
+        </tr>
+        <tr>
+          <td><strong>알림 권한<br>(POST_NOTIFICATIONS)</strong></td>
+          <td>선택</td>
+          <td>안드로이드 13 이상에서 포그라운드 서비스가 원활히 유지될 수 있도록 상단바 알림을 표시하는 데 사용됩니다.</td>
+        </tr>
+        <tr>
+          <td><strong>배터리 최적화 제외<br>(REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)</strong></td>
+          <td>선택</td>
+          <td>화면 꺼짐 또는 다른 고용량 앱 실행 시 안드로이드 OS의 배터리 절전 정책으로 인해 버블이 강제 종료되는 것을 방지하기 위해 사용됩니다.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. 개인정보의 제3자 제공 및 위탁</h2>
+    <p>본 앱은 어떠한 경우에도 사용자의 개인정보나 메모 내용을 제3자에게 판매, 대여, 공유 또는 위탁하지 않습니다.</p>
+    <ul>
+      <li>앱 내 광고 SDK 미탑재: 현재 버전은 광고 SDK(AdMob 등)를 포함하지 않아 광고 식별자 추적이 발생하지 않습니다.</li>
+      <li>외부 분석 도구 미탑재: 외부 분석 툴(Google Analytics, Firebase 등)을 통한 행동 데이터 수집을 일절 수행하지 않습니다.</li>
+    </ul>
+
+    <h2>5. 개인정보의 보유 및 파기 절차</h2>
+    <p>사용자의 모든 데이터는 기기 내부에만 존재하므로, 데이터의 보유 및 파기는 전적으로 이용자의 통제하에 있습니다:</p>
+    <ul>
+      <li>앱 내 '지우기' 버튼 또는 보관함 '삭제' 기능을 통해 언제든지 개별 메모를 즉시 영구 파기할 수 있습니다.</li>
+      <li>사용자가 스마트폰에서 본 앱을 삭제(앱 제거)하거나 애플리케이션 데이터/캐시를 삭제할 경우, 기기 내에 저장된 모든 메모 데이터는 복구 불가능하게 즉시 완전 파기됩니다.</li>
+    </ul>
+
+    <h2>6. 이용자의 권리 및 행사 방법</h2>
+    <p>이용자는 언제든지 앱 내 설정을 통해 플로팅 오버레이 기능을 비활성화할 수 있으며, 기기 [설정] > [애플리케이션] > [무음 퀵 메모] 메뉴에서 부여된 권한을 철회하거나 앱 데이터를 초기화할 수 있습니다.</p>
+
+    <h2>7. 개인정보 보호책임자 및 문의처</h2>
+    <p>개인정보 처리와 관련하여 문의사항, 의견, 불만 처리가 필요하신 경우 아래로 문의해 주시면 신속하게 답변해 드리겠습니다:</p>
+    <ul>
+      <li>담당 부서: 퀵메모 고객지원팀</li>
+      <li>이메일: <a href="mailto:support@ttalkkag.com">support@ttalkkag.com</a></li>
+    </ul>
+
+    <div class="footer">
+      &copy; 2026 무음 퀵 메모. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
