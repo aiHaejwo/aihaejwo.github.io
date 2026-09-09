@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보 처리방침 - 다시봄</title>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --primary-light: #EFF6FF;
+      --text: #1F2937;
+      --text-muted: #4B5563;
+      --bg: #F9FAFB;
+      --card-bg: #FFFFFF;
+      --border: #E5E7EB;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      border: 1px solid var(--border);
+    }
+    header {
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+    .date-info {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1F2937;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    p, ul {
+      margin-bottom: 14px;
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+    ul {
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .highlight-card {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+    }
+    .highlight-card p {
+      color: #1E40AF;
+      font-weight: 500;
+      margin: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background: #F3F4F6;
+      font-weight: 600;
+      color: #374151;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: #9CA3AF;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Google Play 개발자 정책 준수</span>
+      <h1>개인정보 처리방침 (Privacy Policy)</h1>
+      <div class="date-info">
+        <span>애플리케이션: <strong>다시봄 (DasiBom)</strong></span><br>
+        <span>시행일자: 2026년 9월 4일 (최종 개정: 2026년 9월 7일)</span>
+      </div>
+    </header>
+
+    <div class="highlight-card">
+      <p>🛡️ <strong>핵심 요약:</strong> 본 앱은 사용자의 기기 내부(On-Device)에서만 100% 동작합니다. 수신된 알림, 메시지 내용, 사진 파일 등 어떠한 데이터도 외부 개발자 서버나 제3자에게 전송·수집·공유되지 않습니다.</p>
+    </div>
+
+    <h2>1. 개요 및 개인정보의 처리 목적</h2>
+    <p>
+      '다시봄'(이하 '앱')은 사용자가 놓치거나 삭제된 메신저 알림을 기기 내에서 안전하게 다시 확인하고 백업할 수 있도록 돕는 로컬 유틸리티 소프트웨어입니다.
+    </p>
+    <p>
+      앱은 오직 사용자가 지정한 메신저의 알림 히스토리를 사용자 본인의 스마트폰에 영구 보존하여 보여주는 목적으로만 동작하며, 상업적 마케팅 또는 광고 타겟팅 등의 목적으로 개인정보를 활용하지 않습니다.
+    </p>
+
+    <h2>2. 수집 및 처리하는 정보의 항목</h2>
+    <p>본 앱이 사용자의 스마트폰 로컬 저장소(SQLite DB 및 내부 샌드박스)에 저장하는 데이터 항목은 다음과 같습니다:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>처리 항목</th>
+          <th>처리 목적</th>
+          <th>저장 위치</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>알림 메타데이터</td>
+          <td>패키지명, 발신자 이름, 수신 일시, 읽음 여부</td>
+          <td>발신자별 대화 목록 분류 및 타임라인 정렬</td>
+          <td>기기 내부 SQLite DB (외부 접근 불가)</td>
+        </tr>
+        <tr>
+          <td>메시지 내용</td>
+          <td>수신된 텍스트 메시지 내용</td>
+          <td>앱 내 알림 다시보기 기능 제공</td>
+          <td>기기 내부 SQLite DB</td>
+        </tr>
+        <tr>
+          <td>알림 사진/이미지</td>
+          <td>알림에 포함된 사진 미리보기 비트맵</td>
+          <td>대화방 내 고화질 사진 다시보기 제공</td>
+          <td>기기 내부 앱 전용 디렉터리 (샌드박스)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. 안드로이드 시스템 특수 권한 사용 안내</h2>
+    <p>앱의 핵심 기능을 수행하기 위해 다음과 같은 안드로이드 권한을 사용합니다:</p>
+    <ul>
+      <li>
+        <strong>알림 접근 권한 (BIND_NOTIFICATION_LISTENER_SERVICE):</strong><br>
+        사용자가 활성화한 메신저(카카오톡 등)에서 상태 표시줄에 띄우는 알림 텍스트와 사진 데이터를 감지하여 로컬 데이터베이스에 저장하기 위한 필수 권한입니다. 본 권한으로 읽어 들인 모든 정보는 외부 서버로 유출되지 않고 스마트폰 내부에만 머뭅니다.
+      </li>
+      <li>
+        <strong>배터리 최적화 예외 요청 (REQUEST_IGNORE_BATTERY_OPTIMIZATIONS):</strong><br>
+        화면이 꺼져 있거나 백그라운드 상태에서도 중요한 알림이 누락 없이 기록될 수 있도록 백그라운드 프로세스 유지를 위해 요청됩니다.
+      </li>
+      <li>
+        <strong>부팅 완료 수신 (RECEIVE_BOOT_COMPLETED):</strong><br>
+        스마트폰 재부팅 후에도 백업 서비스가 자동으로 안전하게 재가동되도록 하기 위해 사용됩니다.
+      </li>
+    </ul>
+
+    <h2>4. 외부 전송 및 제3자 제공 금지 원칙</h2>
+    <p>
+      본 앱은 <strong>어떠한 형태의 원격 백엔드 서버도 보유하거나 운영하지 않습니다.</strong>
+    </p>
+    <ul>
+      <li>수집된 모든 메시지 및 사진은 100% 사용자의 휴대폰 내부 암호화 샌드박스에만 기록됩니다.</li>
+      <li>Google Analytics, Firebase, 광고 SDK, 데이터 브로커 등 외부 트래킹 라이브러리를 일절 탑재하지 않았습니다.</li>
+      <li>따라서 제3자(Third-party)에게 개인정보가 제공되거나 위탁되는 일은 절대 발생하지 않습니다.</li>
+    </ul>
+
+    <h2>5. 개인정보의 보관 기간 및 파기 절차</h2>
+    <ul>
+      <li>
+        <strong>자동 보관 기간 관리:</strong> 사용자는 앱 내 [설정] ➔ [보관 기간] 메뉴에서 7일, 14일, 30일, 60일, 90일 또는 무제한을 선택할 수 있으며, 설정된 기한이 지난 알림과 이미지 파일은 기기 내에서 자동으로 영구 파기됩니다.
+      </li>
+      <li>
+        <strong>수동 즉시 파기:</strong> 앱 내 [설정] ➔ [전체 데이터 삭제] 버튼을 터치하면 로컬 DB와 모든 이미지 파일이 즉각 영구 삭제됩니다.
+      </li>
+      <li>
+        <strong>앱 삭제 시 파기:</strong> 사용자가 스마트폰에서 본 앱을 삭제(제거)하면 안드로이드 OS의 앱 샌드박스 정책에 따라 저장된 모든 알림 데이터와 사진 파일이 즉시 자동 소멸됩니다.
+      </li>
+    </ul>
+
+    <h2>6. 아동의 개인정보 보호</h2>
+    <p>
+      본 앱은 만 14세 미만 아동을 포함한 모든 사용자의 개인 식별 정보를 수집하지 않으며, 전자기기 내에서만 독립적으로 실행되는 안전한 유틸리티입니다.
+    </p>
+
+    <h2>7. 개인정보 보호책임자 및 문의처</h2>
+    <p>앱의 개인정보 처리와 관련된 문의, 의견 제시, 권리 행사 등은 아래로 연락해 주시면 신속하게 조치해 드리겠습니다.</p>
+    <ul>
+      <li>담당 부서: 개발팀 (AiHaejwo Developer Support)</li>
+      <li>이메일: support@aihaejwo.com</li>
+    </ul>
+
+    <h2>8. 방침의 변경</h2>
+    <p>
+      본 개인정보 처리방침은 법령 또는 구글 플레이스토어 개발자 정책의 변경에 따라 수정될 수 있으며, 개정 시 앱 내 공지사항 또는 스토어 업데이트 페이지를 통해 고지합니다.
+    </p>
+
+    <footer>
+      &copy; 2026 다시봄 (AiHaejwo). All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
