@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 - AI 짤깍</title>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --text: #1F2937;
+      --bg: #F9FAFB;
+      --card-bg: #FFFFFF;
+      --border: #E5E7EB;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #F3F4F6;
+        --bg: #111827;
+        --card-bg: #1F2937;
+        --border: #374151;
+      }
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Roboto, "Noto Sans KR", sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 36px 28px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-top: 0;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 14px;
+    }
+    h2 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+    p, li {
+      font-size: 15px;
+      color: var(--text);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .highlight-box {
+      background: rgba(37, 99, 235, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-size: 14.5px;
+    }
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: #9CA3AF;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>개인정보처리방침 (Privacy Policy)</h1>
+    <p><strong>앱 명칭:</strong> AI 짤깍 - 초간단 사진 용량 압축기 (이하 "앱")</p>
+    <p><strong>시행일자:</strong> 2026년 9월 3일</p>
+
+    <div class="highlight-box">
+      <strong>핵심 원칙:</strong> 본 앱은 <strong>100% 온디바이스(On-Device)</strong>로 동작하며, 사용자의 사진, 이미지 또는 어떠한 개인정보도 외부 서버로 전송, 수집, 저장하지 않습니다.
+    </div>
+
+    <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+    <p>본 앱은 회원가입이나 계정 연동을 요구하지 않으며, 다음과 같은 개인정보를 일절 수집하지 않습니다.</p>
+    <ul>
+      <li>개인 식별 정보 (이름, 전화번호, 이메일 주소, 주민등록번호 등 수집 안 함)</li>
+      <li>위치 정보, 연락처, 기기 식별자(IMEI, ADID 등 수집 안 함)</li>
+      <li>결제 및 금융 정보 (수집 안 함)</li>
+    </ul>
+
+    <h2>2. 사진 및 미디어 데이터 처리 (온디바이스 처리)</h2>
+    <ul>
+      <li><strong>사진 접근:</strong> 사용자가 압축을 위해 시스템 Photo Picker를 통해 명시적으로 선택한 사진 파일에만 접근합니다.</li>
+      <li><strong>오프라인 처리:</strong> 모든 이미지 해상도 변경 및 압축 알고리즘은 사용자의 기기 내부 프로세서(Native Engine)에서만 안전하게 실행됩니다.</li>
+      <li><strong>임시 캐시 삭제:</strong> 압축 과정에서 생성되는 임시 캐시 파일은 저장 또는 공유 작업 완료 시, 그리고 앱 종료 시 시스템 임시 디렉토리에서 자동 삭제됩니다.</li>
+    </ul>
+
+    <h2>3. 기기 접근 권한 안내 (Google Play 정책 준수)</h2>
+    <p>본 앱은 Google Play의 <strong>사진 및 동영상 권한(Photo and Video Permissions) 정책</strong>을 엄격히 준수합니다.</p>
+    <ul>
+      <li><strong>안드로이드 13 이상 (API 33+ / Target SDK 35):</strong> 시스템 기본 Photo Picker를 활용하여 별도의 광범위한 저장소 읽기 권한(READ_MEDIA_IMAGES 등) 없이 동작합니다.</li>
+      <li><strong>갤러리 저장:</strong> 안드로이드 최신 표준인 MediaStore API를 사용하여 불필요한 전체 저장소 권한 없이 사용자가 승인한 결과물만을 사진 앨범에 안전하게 기록합니다.</li>
+    </ul>
+
+    <h2>4. 개인정보의 제3자 제공 및 위탁</h2>
+    <p>본 앱은 어떠한 개인정보도 외부에 제공하거나 위탁하여 처리하지 않습니다.</p>
+
+    <h2>5. 이용자의 권리 및 행사 방법</h2>
+    <p>사용자는 언제든지 앱을 삭제함으로써 앱 내 임시 생성된 모든 데이터를 즉시 영구 삭제할 수 있습니다.</p>
+
+    <h2>6. 문의처</h2>
+    <p>본 앱의 개인정보 보호와 관련된 문의사항은 아래의 개발자 연락처로 접수해 주시기 바랍니다.</p>
+    <ul>
+      <li><strong>이메일:</strong> support@aihaejwo.com</li>
+      <li><strong>운영팀:</strong> AI해줘 (aiHaejwo) 개발팀</li>
+    </ul>
+
+    <div class="footer">
+      &copy; 2026 AI 짤깍 (aiHaejwo). All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
