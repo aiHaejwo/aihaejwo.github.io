@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - NoBrakes</title>
+    <title>개인정보처리방침 - 노브레이크: 폰 던짐 주의 러닝 액션</title>
     <style>
         :root {
             --primary: #2563eb;
+            --primary-light: #dbeafe;
             --text-main: #1f2937;
             --text-muted: #4b5563;
             --bg-page: #f8fafc;
             --bg-card: #ffffff;
             --border: #e2e8f0;
+            --code-bg: #f1f5f9;
         }
         * {
             box-sizing: border-box;
@@ -19,14 +21,14 @@
             padding: 0;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
             background-color: var(--bg-page);
             color: var(--text-main);
-            line-height: 1.65;
+            line-height: 1.7;
             padding: 24px 16px;
         }
         .container {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
             background: var(--bg-card);
             padding: 40px 32px;
@@ -40,32 +42,60 @@
             margin-bottom: 32px;
         }
         h1 {
-            font-size: 1.875rem;
+            font-size: 1.75rem;
             color: #111827;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            word-break: keep-all;
         }
         .meta {
             color: var(--text-muted);
             font-size: 0.875rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 4px;
+        }
+        .meta-item {
+            display: inline-flex;
+            align-items: center;
         }
         h2 {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: #1e293b;
             margin-top: 32px;
             margin-bottom: 12px;
             padding-left: 10px;
             border-left: 4px solid var(--primary);
+            word-break: keep-all;
         }
-        p, ul {
+        p, ul, ol {
             color: var(--text-muted);
-            margin-bottom: 16px;
-            font-size: 0.975rem;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+            word-break: keep-all;
         }
-        ul {
-            padding-left: 20px;
+        ul, ol {
+            padding-left: 22px;
         }
         li {
             margin-bottom: 6px;
+        }
+        code {
+            background-color: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.875rem;
+            color: #d946ef;
+        }
+        .highlight-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 16px;
+            color: #1e40af;
+            font-size: 0.925rem;
         }
         a {
             color: var(--primary);
@@ -75,16 +105,25 @@
             text-decoration: underline;
         }
         .contact-box {
-            background: #f1f5f9;
+            background: #f8fafc;
+            border: 1px solid var(--border);
             padding: 20px;
-            border-radius: 10px;
-            margin-top: 24px;
+            border-radius: 12px;
+            margin-top: 28px;
+        }
+        .contact-box h2 {
+            margin-top: 0;
+            border-left: none;
+            padding-left: 0;
+            color: #0f172a;
         }
         footer {
             margin-top: 40px;
             text-align: center;
             font-size: 0.85rem;
             color: #9ca3af;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
         }
     </style>
 </head>
@@ -92,76 +131,108 @@
 
 <div class="container">
     <header>
-        <h1>Privacy Policy for NoBrakes</h1>
+        <h1>개인정보처리방침</h1>
         <div class="meta">
-            <span><strong>App Name:</strong> NoBrakes</span> | 
-            <span><strong>Package:</strong> com.ttalkkag.nobrakes</span> | 
-            <span><strong>Effective Date:</strong> September 3, 2026</span>
+            <span class="meta-item"><strong>앱 이름:</strong>&nbsp;노브레이크: 폰 던짐 주의 러닝 액션 (NoBrakes)</span>
+            <span class="meta-item"><strong>패키지명:</strong>&nbsp;com.ttalkkag.nobrakes</span>
+            <span class="meta-item"><strong>시행일자:</strong>&nbsp;2026년 9월 9일</span>
         </div>
     </header>
 
     <section>
-        <p>This Privacy Policy explains how <strong>NoBrakes</strong> ("we", "our", or "the App") handles your information when you use our mobile application. We are committed to protecting your privacy and ensuring transparency regarding any data collected or processed through the App.</p>
+        <p><strong>Ttalkkag</strong>(이하 "개발사")는 <strong>노브레이크: 폰 던짐 주의 러닝 액션</strong>(영문명 NoBrakes, 이하 "본 앱") 이용자의 개인정보를 소중히 보호하며, 「개인정보 보호법」 및 관련 법령, Google Play 개발자 정책을 준수합니다.</p>
+        <p>본 앱은 별도의 회원가입이나 자체 백엔드 서버 없이 구동되는 오프라인 플레이 지원 캐주얼 아케이드 레이싱 게임입니다. 본 방침은 게임 이용 과정에서 데이터가 어떻게 처리되는지 투명하게 알리기 위해 마련되었습니다.</p>
     </section>
 
     <section>
-        <h2>1. Information We Collect</h2>
-        <p><strong>NoBrakes does not collect or store any personally identifiable information (PII)</strong> such as your name, address, phone number, or email address directly on our own servers.</p>
+        <h2>1. 개인 식별 정보(PII) 미수집 원칙</h2>
+        <div class="highlight-box">
+            <strong>알림:</strong> 본 앱은 사용자의 이름, 주민등록번호, 전화번호, 이메일 주소, 실제 상세 위치 등 <strong>어떠한 개인 식별 정보도 자체 서버에 수집하거나 저장하지 않습니다.</strong>
+        </div>
+        <ul>
+            <li><strong>회원가입 및 자체 서버 미운영:</strong> 본 앱은 계정 가입 및 로그인 기능을 제공하지 않으며, 이용자의 개인정보를 전송받는 자체 데이터베이스 서버를 운영하지 않습니다.</li>
+            <li><strong>결제 정보 미수집:</strong> 본 앱은 인앱 유료 결제(IAP)를 포함하지 않으며, 결제 수단이나 금융 관련 정보를 일체 요구하거나 수집하지 않습니다.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. 기기 내 로컬 저장 데이터</h2>
+        <p>본 앱은 원활한 게임 진행과 사용자의 환경설정 유지를 위해 오직 이용자의 모바일 기기 내부 저장소에만 국한하여 로컬 데이터 파일(<code>save.dat</code>)을 생성하고 관리합니다.</p>
+        <ul>
+            <li><strong>게임 기록:</strong> 최고 주행 거리(m), 최고 점수(거리 및 콤보 누적 점수)</li>
+            <li><strong>레벨 및 미션:</strong> 현재 플레이어 레벨, 레벨별 주행 거리, 레벨 목표/미션 달성 현황</li>
+            <li><strong>재화 및 차량:</strong> 플레이 중 획득한 골드 코인, 해금된 차량 목록(머슬카, 랠리카, 슈퍼카, 하이퍼카 등 총 5종), 현재 선택된 차량</li>
+            <li><strong>누적 통계:</strong> 총 플레이 횟수, 아슬아슬 근접 추월(Near-Miss) 횟수, 회피한 장애물 통계(돌, 오일, 차선 변경 차량, 버스, 역주행 차량, 공사 구간 등)</li>
+            <li><strong>환경설정:</strong> 조작 방식(상대 드래그 조향), 조향 감도, 음향(Sound) 활성화 여부, 햅틱 진동(Haptics) 활성화 여부, 화면 흔들림 효과 활성화 여부</li>
+        </ul>
+        <p>※ 위 데이터는 이용자의 기기 내부에만 보관되며 외부 서버로 전송되지 않습니다. 앱을 삭제(언인스톨)하거나 앱 저장소 데이터를 초기화할 경우 즉시 영구 파기됩니다.</p>
+    </section>
+
+    <section>
+        <h2>3. 제3자 서비스 및 비식별 데이터 처리 (광고 및 업데이트)</h2>
+        <p>본 앱은 무료 게임 플레이 환경 제공, 보상형 보너스(부활, 코인 2배, 시승 등) 제공, 최신 버전 배포 확인을 위해 검증된 <strong>Google 공식 SDK</strong>를 사용합니다. 해당 제3자 서비스는 각 사의 개인정보처리방침에 따라 비식별 기술 데이터 및 진단 데이터를 자동으로 처리할 수 있습니다.</p>
         
-        <p><strong>Locally Stored Data:</strong></p>
         <ul>
-            <li><strong>Game Progress & Settings:</strong> Your high scores, accumulated coins, unlocked cars, current level, sound/vibration toggles, and steering sensitivity are saved locally on your device storage (<code>save.dat</code>). This data remains on your device and is never transmitted to our servers.</li>
-        </ul>
-
-        <p><strong>Automatically Collected Data by Third-Party Services:</strong></p>
-        <p>The App integrates third-party advertising services (Google AdMob). These services may automatically collect certain non-personally identifiable diagnostic and advertising data in accordance with their respective privacy policies, including:</p>
-        <ul>
-            <li>Device advertising identifier (Google Advertising ID / GAID)</li>
-            <li>IP address (for coarse geographic location and fraud prevention)</li>
-            <li>Device type, operating system version, and performance metrics</li>
-            <li>Ad interaction metrics (impressions, clicks, rewarded ad completions)</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>2. Third-Party Services</h2>
-        <p>We use trusted third-party SDKs to deliver advertisements and analyze ad performance. Please refer to their privacy policies for details on how they collect and handle data:</p>
-        <ul>
-            <li><strong>Google AdMob & Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
-            <li><strong>Google User Messaging Platform (UMP):</strong> Used to provide European Economic Area (EEA) and UK users with GDPR-compliant consent management forms.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>3. Device Permissions Used</h2>
-        <p>The App requests minimal permissions strictly necessary for game functionality:</p>
-        <ul>
-            <li><code>android.permission.INTERNET</code>: Required to fetch and display ads from Google AdMob and download consent forms via UMP.</li>
-            <li><code>android.permission.VIBRATE</code>: Required to provide haptic vibration feedback for in-game collisions and near-miss effects.</li>
+            <li>
+                <strong>Google AdMob (구글 모바일 광고)</strong>
+                <ul>
+                    <li><strong>목적:</strong> 게임 내 전면 광고 및 플레이어 선택에 따른 리워드(보상형) 광고 송출</li>
+                    <li><strong>처리 가능 항목:</strong> 구글 광고 식별자(Google Advertising ID / GAID), 대략적인 IP 주소(국가/도시 단위 및 부정클릭 방지), 기기 모델명, OS 버전, 광고 시청 및 상호작용 지표</li>
+                    <li><strong>개인정보처리방침:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+                    <li><strong>구글 파트너 기술 이용 안내:</strong> <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Google UMP (User Messaging Platform)</strong>
+                <ul>
+                    <li><strong>목적:</strong> 유럽 경제 지역(EEA) 및 영국(UK) 사용자를 위한 GDPR 규정 준수 개인정보 동의 관리 플랫폼 제공</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Google Play In-App Update (Play Core)</strong>
+                <ul>
+                    <li><strong>목적:</strong> 구글 플레이 스토어와 통신하여 최신 앱 버전 배포 여부를 확인하고 인앱 즉시 업데이트 지원</li>
+                </ul>
+            </li>
         </ul>
     </section>
 
     <section>
-        <h2>4. User Choices & Consent Management (GDPR / CCPA)</h2>
-        <p><strong>EEA & UK Users:</strong> If you are located in the European Economic Area or the United Kingdom, you are presented with a consent dialog powered by Google's User Messaging Platform (UMP) upon initial startup. You can customize or withdraw your consent for personalized ads at any time.</p>
-        <p><strong>Opting Out of Personalized Ads:</strong> You can reset or opt out of personalized ads at any time through your Android device settings: <em>Settings &gt; Google &gt; Ads &gt; Delete advertising ID</em> or <em>Opt out of Ads Personalization</em>.</p>
+        <h2>4. 사용하는 기기 권한 안내</h2>
+        <p>본 앱은 게임 구동에 반드시 필요한 최소한의 시스템 권한만을 선언하고 사용합니다. 카메라, 마이크, 연락처, 저장공간 파일 접근, 정밀 위치 등 민감한 권한은 일절 요청하지 않습니다.</p>
+        <ul>
+            <li><code>android.permission.INTERNET</code>: Google AdMob 광고 로드 및 수신, UMP 동의 폼 수신, 구글 플레이 최신 버전 확인에 사용됩니다. (인터넷이 연결되지 않은 오프라인 상태에서도 광고를 제외한 기본 게임 플레이는 정상 이용 가능합니다.)</li>
+            <li><code>android.permission.VIBRATE</code>: 차량 충돌 및 아슬아슬 근접 추월(Near-Miss) 발생 시 생생한 햅틱 진동 피드백을 전달하기 위해 사용됩니다. 게임 내 설정 메뉴(SETTING)에서 언제든지 진동을 켜거나 끌 수 있습니다.</li>
+        </ul>
     </section>
 
     <section>
-        <h2>5. Children's Privacy (COPPA Compliance)</h2>
-        <p>NoBrakes is designed for general audiences. We do not knowingly collect personal information from children under the age of 13. If you believe that a child has provided personal information to any third party through our App, please contact us so we can take appropriate measures.</p>
+        <h2>5. 맞춤형 광고 거부 및 광고 식별자 제어</h2>
+        <p>이용자는 안드로이드 기기 설정을 통해 언제든지 맞춤형(개인화) 광고 수신을 거부하거나 광고 식별자를 재설정할 수 있습니다.</p>
+        <ul>
+            <li><strong>안드로이드 기기 설정:</strong> 기기 [설정] &gt; [Google] &gt; [광고] &gt; <em>"광고 ID 재설정"</em> 또는 <em>"광고 ID 삭제"</em> 선택</li>
+            <li><strong>유럽 경제 지역(EEA) 및 영국 이용자:</strong> 최초 실행 시 제공되는 UMP 동의 팝업을 통해 광고 개인화 동의 여부를 언제든 재설정할 수 있습니다.</li>
+        </ul>
     </section>
 
     <section>
-        <h2>6. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy periodically to reflect updates in game features or legal regulations. The updated version will be posted here with a revised "Effective Date".</p>
+        <h2>6. 어린이 개인정보 보호 (COPPA 준수)</h2>
+        <p>본 앱은 전 연령이 이용할 수 있는 전체 이용가 게임입니다. 본 앱은 만 14세 미만(또는 해당 국가/지역의 법정 아동 연령 기준) 아동의 개인 식별 정보를 고의로 수집하지 않습니다. 아동이 부모의 동의 없이 타사 서비스에 개인정보를 제공한 것으로 의심되는 경우 아래 문의처로 연락해 주시면 즉각적인 조치를 취하겠습니다.</p>
+    </section>
+
+    <section>
+        <h2>7. 개인정보처리방침의 변경</h2>
+        <p>본 개인정보처리방침은 관련 법령, 구글 플레이 정책 변경 또는 게임 기능 업데이트에 따라 수정될 수 있습니다. 방침이 변경되는 경우 본 페이지를 통해 공지하며, 상단의 "시행일자"를 갱신합니다.</p>
     </section>
 
     <section class="contact-box">
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy or the game, please contact us at:</p>
-        <p><strong>Developer / Company:</strong> Ttalkkag</p>
-        <p><strong>Email:</strong> <a href="mailto:support@ttalkkag.com">support@ttalkkag.com</a></p>
+        <h2>8. 개발자 정보 및 문의처</h2>
+        <p>본 개인정보처리방침 및 게임 이용과 관련하여 문의사항, 의견, 불만 처리가 필요하신 경우 아래 연락처로 언제든지 문의해 주시기 바랍니다.</p>
+        <p style="margin-top: 10px;">
+            <strong>개발팀 / 개발자:</strong> Ttalkkag<br>
+            <strong>이메일:</strong> <a href="mailto:support@ttalkkag.com">support@ttalkkag.com</a><br>
+            <strong>웹사이트:</strong> <a href="https://aihaejwo.site" target="_blank" rel="noopener noreferrer">https://aihaejwo.site</a>
+        </p>
     </section>
 
     <footer>
