@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 - 글자긁 (화면 긁어오기)</title>
+  <style>
+    :root {
+      --primary: #6366F1;
+      --primary-dark: #4F46E5;
+      --bg: #0F172A;
+      --card-bg: #1E293B;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border: #334155;
+      --accent: #06B6D4;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #F8FAFC;
+        --card-bg: #FFFFFF;
+        --text-main: #0F172A;
+        --text-muted: #64748B;
+        --border: #E2E8F0;
+      }
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 32px 16px 64px 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    header {
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(99, 102, 241, 0.15);
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .date {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 32px 0 14px 0;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    p, li {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 12px;
+      word-break: keep-all;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+    .highlight-card {
+      background: rgba(6, 182, 212, 0.08);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      border-radius: 14px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .highlight-card p {
+      margin: 0;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      text-align: left;
+    }
+    th {
+      background: rgba(99, 102, 241, 0.08);
+      color: var(--text-main);
+      font-weight: 600;
+    }
+    td {
+      color: var(--text-muted);
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">글자긁 보안 정책</div>
+      <h1>개인정보처리방침</h1>
+      <div class="date">시행일자: 2026년 9월 10일 | 최종 개정일: 2026년 9월 10일</div>
+    </header>
+
+    <div class="highlight-card">
+      <p>🛡️ <strong>100% 온디바이스(On-Device) 로컬 처리 원칙</strong><br>
+      글자긁(화면 긁어오기)은 사용자의 어떠한 텍스트나 화면 캡처 데이터도 외부 서버로 전송하거나 보관하지 않습니다. 인공지능 문자 인식(OCR)을 포함한 모든 작업은 사용자 스마트폰 내부에서만 완벽히 수행됩니다.</p>
+    </div>
+
+    <h2>1. 개인정보의 수집 및 이용 목적</h2>
+    <p>본 앱은 회원가입이나 로그인 없이 동작하며, 사용자의 개인 식별 정보(이름, 전화번호, 이메일 주소, 기기 고유 식별자 등)를 <strong>일체 수집하거나 서버로 전송하지 않습니다.</strong></p>
+
+    <h2>2. 화면 캡처 데이터 및 텍스트 처리</h2>
+    <ul>
+      <li><strong>화면 캡처</strong>: 사용자가 플로팅 버블을 탭하여 직접 지정한 화면 영역만 기기 메모리상에서 1회성으로 캡처됩니다.</li>
+      <li><strong>문자 인식(OCR)</strong>: Google ML Kit 온디바이스 라이브러리를 통해 기기 자체 CPU/NPU에서 글자를 판독합니다.</li>
+      <li><strong>데이터 즉시 파기</strong>: 텍스트 추출이 완료되면 임시 비트맵은 기기 메모리에서 즉시 안전하게 파기됩니다.</li>
+    </ul>
+
+    <h2>3. 필수 안드로이드 접근 권한 안내</h2>
+    <p>본 앱은 구글 플레이 개발자 정책을 준수하며, 정상적인 앱 기능 제공을 위해 필요한 최소한의 시스템 권한만을 요청합니다:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>권한 명칭</th>
+          <th>시스템 권한</th>
+          <th>이용 목적</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>다른 앱 위에 그리기</strong></td>
+          <td>SYSTEM_ALERT_WINDOW</td>
+          <td>타 앱 이용 중 언제든 캡처할 수 있도록 플로팅 버블을 화면에 띄우기 위해 사용</td>
+        </tr>
+        <tr>
+          <td><strong>포그라운드 서비스</strong></td>
+          <td>FOREGROUND_SERVICE</td>
+          <td>백그라운드에서 서비스가 비정상 종료되지 않고 안정적으로 대기하도록 유지</td>
+        </tr>
+        <tr>
+          <td><strong>화면 캡처 권한</strong></td>
+          <td>MEDIA_PROJECTION</td>
+          <td>플로팅 버튼을 눌렀을 때 사용자가 선택한 화면 영역을 캡처하기 위해 사용</td>
+        </tr>
+        <tr>
+          <td><strong>알림 권한</strong></td>
+          <td>POST_NOTIFICATIONS</td>
+          <td>포그라운드 서비스 실행 상태를 알림창에 정상 안내하기 위해 사용</td>
+        </tr>
+        <tr>
+          <td><strong>진동 권한</strong></td>
+          <td>VIBRATE</td>
+          <td>텍스트 복사 성공 시 촉각적 햅틱 피드백 제공</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. 광고 식별자 및 제3자 모듈</h2>
+    <p>본 앱은 서비스 무료 제공 및 개발 유지를 위해 <strong>Google AdMob(구글 모바일 애즈)</strong>을 탑재하고 있습니다.</p>
+    <ul>
+      <li>구글 애드몹은 서비스 품질 개선 및 광고 게재를 위해 익명화된 구글 광고 ID(AAID)를 활용할 수 있습니다.</li>
+      <li>구글의 데이터 수집 및 처리에 대한 상세 사항은 <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--primary); text-decoration: underline;">Google 개인정보처리방침</a>에서 확인하실 수 있습니다.</li>
+    </ul>
+
+    <h2>5. 개인정보 보호책임자 및 문의처</h2>
+    <p>본 개인정보처리방침 또는 앱 이용에 관한 문의, 의견, 건의사항이 있으실 경우 아래의 연락처로 언제든지 문의해 주시기 바랍니다.</p>
+    <ul>
+      <li><strong>담당자</strong>: 글자긁 지원팀</li>
+      <li><strong>이메일</strong>: contact@aihaejwo.com</li>
+    </ul>
+
+    <footer>
+      &copy; 2026 글자긁 (화면 긁어오기). All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
