@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 - CaffeineCap</title>
+  <style>
+    :root {
+      --primary: #8D5B4C;
+      --secondary: #4A2810;
+      --text: #1F2937;
+      --bg: #F9FAFB;
+      --card-bg: #FFFFFF;
+      --border: #E5E7EB;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #F3F4F6;
+        --bg: #111827;
+        --card-bg: #1F2937;
+        --border: #374151;
+      }
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Roboto, "Noto Sans KR", sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 36px 28px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-top: 0;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 14px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+    p, li {
+      font-size: 15px;
+      color: var(--text);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .highlight-box {
+      background: rgba(141, 91, 76, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-size: 14.5px;
+    }
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: #9CA3AF;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>개인정보처리방침 (Privacy Policy)</h1>
+    <p><strong>앱 명칭:</strong> CaffeineCap - 카페인 수면 계산기 (이하 "앱")</p>
+    <p><strong>시행일자:</strong> 2026년 9월 14일</p>
+
+    <div class="highlight-box">
+      <strong>핵심 원칙:</strong> 본 앱은 <strong>제로 퍼미션(Zero-Permission) 및 100% 온디바이스(On-Device)</strong> 원칙으로 동작합니다. 사용자의 카페인 섭취 기록, 수면 설정 및 어떠한 개인정보도 외부 서버로 전송, 수집, 공유하지 않습니다.
+    </div>
+
+    <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+    <p>본 앱은 회원가입이나 계정 생성을 요구하지 않으며, 외부 서버와의 통신이 일절 없습니다. 다음 정보를 포함한 어떠한 개인정보도 수집하지 않습니다.</p>
+    <ul>
+      <li>개인 식별 정보 (이름, 주민등록번호, 전화번호, 이메일 주소 등 일절 수집하지 않음)</li>
+      <li>기기 식별자 및 하드웨어 정보 (IMEI, 광고 ID(ADID/IDFA), MAC 주소 등 수집하지 않음)</li>
+      <li>위치 정보, 연락처, 마이크, 카메라 데이터 (시스템 권한 미요청)</li>
+      <li>금융 및 결제 정보 (앱 내 결제 없음)</li>
+    </ul>
+
+    <h2>2. 데이터 저장 및 처리 방식 (온디바이스 로컬 저장)</h2>
+    <ul>
+      <li><strong>카페인 섭취 및 설정 데이터:</strong> 사용자가 입력한 음료 섭취 내역, 수면 목표 시각 등의 정보는 사용자의 기기 내부 로컬 저장소(SharedPreferences)에만 저장됩니다.</li>
+      <li><strong>외부 전송 차단:</strong> 앱은 네트워크 권한(INTERNET)을 요구하지 않으며, 기록된 모든 데이터는 기기 외부로 전송되지 않습니다.</li>
+      <li><strong>데이터 파기:</strong> 사용자가 앱 내에서 기록을 삭제하거나 앱을 삭제(제거)할 경우, 기기에 저장된 모든 로컬 데이터는 즉시 완전 파기됩니다.</li>
+    </ul>
+
+    <h2>3. 제3자 제공 및 위탁</h2>
+    <p>본 앱은 어떠한 개인정보도 수집하지 않으므로, 제3자에게 데이터를 제공하거나 위탁 처리하지 않습니다. 분석 트래커(Google Analytics 등) 및 서드파티 추적 라이브러리가 일절 포함되어 있지 않습니다.</p>
+
+    <h2>4. 이용자의 권리 및 행사 방법</h2>
+    <p>이용자는 언제든지 앱 내에서 개별 섭취 기록을 삭제하거나, 앱 캐시/데이터 삭제 또는 앱 삭제를 통해 기기에 저장된 모든 데이터를 영구적으로 삭제할 수 있습니다.</p>
+
+    <h2>5. 개인정보 보호책임자 및 문의처</h2>
+    <p>앱 이용 중 문의사항이나 제안사항이 있으신 경우 아래 연락처로 문의해 주시기 바랍니다.</p>
+    <ul>
+      <li><strong>문의 이메일:</strong> support@ttalkkag.com</li>
+    </ul>
+
+    <div class="footer">
+      본 방침은 2026년 9월 14일부터 시행됩니다. 법령이나 서비스 변경에 따라 방침이 수정될 경우 앱 업데이트를 통해 공지합니다.
+    </div>
+  </div>
+</body>
+</html>
