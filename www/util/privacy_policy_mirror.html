@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보처리방침 - MirrorCam (미러캠)</title>
+    <style>
+        :root {
+            --primary: #E94057;
+            --primary-gradient: linear-gradient(135deg, #8A2387, #E94057, #F27121);
+            --bg: #0d0f12;
+            --card-bg: #161920;
+            --border: #232936;
+            --text-primary: #f0f3f8;
+            --text-secondary: #9aa5b8;
+            --accent: #2dd4bf;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .logo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: var(--primary-gradient);
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        .highlight-banner {
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(138, 35, 135, 0.1));
+            border: 1px solid rgba(45, 212, 191, 0.3);
+            border-radius: 16px;
+            padding: 22px;
+            margin-bottom: 28px;
+        }
+        .highlight-banner h3 {
+            color: var(--accent);
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .highlight-banner p {
+            color: var(--text-primary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 26px;
+            margin-bottom: 22px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+        p, li {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        li strong {
+            color: var(--text-primary);
+        }
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+        }
+        th, td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background: rgba(255,255,255,0.04);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        td {
+            color: var(--text-secondary);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px 10px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo-badge">MirrorCam 개인정보처리방침</div>
+        <h1>100% 온디바이스 로컬 처리 & 프라이버시 보호</h1>
+        <p class="subtitle">시행일자: 2026년 9월 15일 | 최종 개정일: 2026년 9월 15일</p>
+    </div>
+
+    <div class="highlight-banner">
+        <h3>🛡️ 제로 네트워크 & 100% 로컬 프라이버시 선언</h3>
+        <p>
+            <strong>MirrorCam(미러캠)</strong>은 사용자의 얼굴과 사생활을 완벽히 보호하기 위해 인터넷 통신 권한(INTERNET Permission)을 앱 내에 일절 포함하지 않으며, 
+            어떠한 외부 서버나 클라우드로도 사진, 영상, 개인정보를 전송하지 않습니다. 
+            모든 거울 프리뷰 연산과 대칭 렌더링, 사진 저장은 100% 사용자의 기기 내부(On-Device)에서만 작동합니다.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+        <p>MirrorCam은 회원가입, 로그인, 외부 계정 연동을 요구하지 않으며 어떠한 개인정보도 수집·저장·전송하지 않습니다.</p>
+        <ul>
+            <li><strong>수집하지 않는 항목:</strong> 성명, 생년월일, 전화번호, 이메일 주소, 위치 정보, 기기 고유 식별값(ADID/IDFA), IP 주소 등 일체의 개인정보.</li>
+            <li><strong>얼굴 데이터 처리:</strong> 카메라를 통해 전달되는 얼굴 영상은 실시간 뷰포트에 거울 및 대칭 뷰를 표시하기 위한 그래픽 텍스처로만 일시 렌더링되며, 메모리에 임시 프레임으로만 머물고 외부로 전송되거나 서버에 저장되지 않습니다.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>2. 기기 접근 권한 및 사용 목적</h2>
+        <p>MirrorCam은 오직 핵심 유틸리티 기능을 제공하기 위해서만 다음의 필수 및 선택 권한을 사용합니다.</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>권한 명칭</th>
+                        <th>구분</th>
+                        <th>사용 목적</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>카메라 (CAMERA)</strong></td>
+                        <td>필수</td>
+                        <td>전면/후면 카메라 프리뷰를 통해 실시간 무반전 거울 및 좌우 대칭 화면을 사용자에게 렌더링하기 위해 사용.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>저장공간 / 사진 보관함<br>(READ_MEDIA_IMAGES / WRITE_EXTERNAL_STORAGE / NSPhotoLibraryAddUsageDescription)</strong></td>
+                        <td>선택</td>
+                        <td>사용자가 셔터 버튼을 터치했을 때 현재 렌더링된 대칭/무반전 사진을 기기 내 로컬 갤러리에 저장하기 위해 사용.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>인터넷 및 광고 ID<br>(INTERNET / ACCESS_NETWORK_STATE / AD_ID)</strong></td>
+                        <td>필수</td>
+                        <td>Google AdMob 배너 광고 및 전면 광고 송출을 위한 네트워크 통신 및 광고 식별자 확인에 사용.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="margin-top: 12px; font-size: 13px; color: var(--text-secondary);">
+            * 해당 권한은 기기 운영체제 설정에서 언제든지 허용 또는 거부할 수 있습니다.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>3. 제3자 제공 및 외부 SDK 탑재</h2>
+        <p>MirrorCam은 무료 서비스 제공 및 앱 유지 관리를 위해 아래와 같이 공인된 타사 광고 SDK를 탑재하고 있습니다. 단, 사용자의 얼굴 영상이나 사진은 광고 서버로 전송되지 않습니다.</p>
+        <ul>
+            <li><strong>Google AdMob (구글 모바일 광고 SDK):</strong>
+                <ul>
+                    <li>제공 업체: Google LLC</li>
+                    <li>사용 목적: 배너 광고 및 전면 광고 제공</li>
+                    <li>수집/처리 항목: 광고 ID(AD_ID), 기기 식별값, 대략적인 위치, 광고 상호작용 데이터 (Google 정책에 따라 암호화 처리)</li>
+                    <li>Google 개인정보처리방침: <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent);">https://policies.google.com/privacy</a></li>
+                </ul>
+            </li>
+            <li>사용자 행동 분석 트래커 (Firebase Analytics, Mixpanel 등): <strong>미탑재</strong></li>
+            <li>외부 클라우드 얼굴 사진 백업: <strong>미탑재 (100% 기기 로컬 갤러리 저장)</strong></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>4. 개인정보의 보유 및 파기</h2>
+        <p>
+            MirrorCam은 서버를 운영하지 않으므로 사용자의 데이터를 보관하지 않습니다. 
+            앱을 통해 촬영된 사진은 사용자의 스마트폰 갤러리에 직접 저장되며, 사용자가 갤러리 앱에서 해당 사진을 삭제하면 즉시 영구 파기됩니다. 
+            앱을 삭제하는 경우에도 별도의 개인정보 잔여물이 서버에 남지 않습니다.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>5. 아동의 개인정보 보호</h2>
+        <p>
+            MirrorCam은 만 14세 미만 아동을 포함한 모든 연령대의 사용자로부터 어떠한 식별 가능한 개인정보도 수집하지 않는 안전한 온디바이스 유틸리티입니다.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>6. 개인정보 보호책임자 및 문의처</h2>
+        <p>MirrorCam은 사용자의 개인정보 보호 관련 의견 및 불만 처리를 위해 아래와 같이 소통 창구를 마련하고 있습니다.</p>
+        <ul>
+            <li><strong>서비스명:</strong> MirrorCam (무반전 거울 & 좌우 대칭 카메라)</li>
+            <li><strong>담당 부서:</strong> MirrorCam 프라이버시 지원팀</li>
+            <li><strong>문의 이메일:</strong> support@aihaejwo.com</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>7. 개인정보처리방침의 변경</h2>
+        <p>
+            본 개인정보처리방침은 법령 및 서비스 변경 사항을 반영하기 위해 수정될 수 있으며, 
+            개정 시 앱 내 정보 화면 및 배포 웹페이지를 통해 사전 공지합니다.
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 MirrorCam. All rights reserved. 100% On-Device Local Privacy Guaranteed.</p>
+    </div>
+</div>
+</body>
+</html>
