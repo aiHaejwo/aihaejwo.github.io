@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>청춘두뇌 - 개인정보 처리방침</title>
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-sub: #475569;
+      --primary: #2563eb;
+      --accent: #d97706;
+      --border: #e2e8f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #0f172a;
+        --card-bg: #1e293b;
+        --text-main: #f8fafc;
+        --text-sub: #94a3b8;
+        --primary: #3b82f6;
+        --accent: #f59e0b;
+        --border: #334155;
+      }
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      margin: 0;
+      padding: 24px 16px;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background-color: var(--card-bg);
+      padding: 32px 28px;
+      border-radius: 18px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .app-badge {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      vertical-align: middle;
+    }
+    .effective-date {
+      color: var(--text-sub);
+      font-size: 14px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+    }
+    h2 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    p, li {
+      font-size: 15px;
+      color: var(--text-sub);
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+    }
+    .highlight-box {
+      background-color: rgba(37, 99, 235, 0.07);
+      border-left: 4px solid var(--primary);
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+    .highlight-box p {
+      margin: 0;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-sub);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>
+      <span>🧠</span> 청춘두뇌 개인정보 처리방침
+      <span class="app-badge">제로 퍼미션</span>
+    </h1>
+    <div class="effective-date">시행일자: 2026년 9월 15일 | 최종 수정일자: 2026년 9월 15일</div>
+
+    <div class="highlight-box">
+      <p>💡 [요약] '청춘두뇌'는 어떠한 개인 식별 정보(이름, 연락처, 기기 식별자 등)도 일체 수집하거나 외부 서버로 전송하지 않는 100% 온디바이스 오프라인 유틸리티 앱입니다.</p>
+    </div>
+
+    <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+    <p>'청춘두뇌'(이하 "앱")는 사용자에게 불필요한 회원가입, 로그인 절차를 요구하지 않으며 어떠한 형태의 개인정보도 수집하지 않습니다.</p>
+    <ul>
+      <li><strong>회원 정보:</strong> 로그인 및 계정 등록 기능이 일체 없습니다.</li>
+      <li><strong>서버 통신 데이터:</strong> 인터넷 접속 권한(INTERNET)을 요청하지 않으며, 외부 서버와의 통신이 전혀 발생하지 않습니다.</li>
+      <li><strong>기기 정보:</strong> IMEI, 광고 식별자, MAC 주소 등의 기기 고유 식별자를 수집하지 않습니다.</li>
+    </ul>
+
+    <h2>2. 앱 권한(Permission) 정책</h2>
+    <p>본 앱은 구글 플레이(Google Play)의 최소 권한 원칙을 철저히 준수합니다.</p>
+    <ul>
+      <li><strong>네트워크 권한 배제:</strong> <code>android.permission.INTERNET</code> 등 외부 통신 권한을 요청하지 않습니다.</li>
+      <li><strong>저장소 및 카메라 권한 배제:</strong> 기기 내 사진, 미디어, 연락처, 위치 정보 등 민감 권한을 요구하지 않습니다.</li>
+      <li><strong>제로 퍼미션:</strong> 비행기 탑승 모드(오프라인 상태)에서도 앱의 모든 기능을 100% 완벽하게 이용하실 수 있습니다.</li>
+    </ul>
+
+    <h2>3. 로컬 데이터 저장 및 관리</h2>
+    <p>본 앱은 일일 두뇌 운동 진행 여부 및 출석 도장 기록을 위해 사용자 기기 내 로컬 저장소(SharedPreferences)만을 활용합니다.</p>
+    <ul>
+      <li><strong>저장 항목:</strong> 훈련 완료 일자(예: 2026-09-15), 훈련 점수, 연속 출석일수, 효과음/진동 켜짐 여부.</li>
+      <li><strong>저장 위치:</strong> 사용자의 스마트폰 내부 비공개 영역에만 암호화 보관되며, 외부로 유출되거나 공유되지 않습니다.</li>
+      <li><strong>데이터 삭제:</strong> 앱을 삭제하거나 애플리케이션 정보에서 '데이터 삭제'를 진행하시면 모든 기록이 영구적으로 즉시 삭제됩니다.</li>
+    </ul>
+
+    <h2>4. 제3자 제공 및 외부 라이브러리 사용</h2>
+    <p>본 앱은 광고 SDK, 서드파티 사용자 추적기(Analytics), 외부 통계 라이브러리를 일절 탑재하지 않으며, 제3자에게 어떠한 정보도 제공하지 않습니다.</p>
+
+    <h2>5. 아동 및 시니어 보호 정책</h2>
+    <p>본 앱은 모든 연령대(시니어, 아동 포함)가 안전하게 이용할 수 있도록 유해 콘텐츠와 부적절한 광고 노출을 원천적으로 차단하고 있습니다.</p>
+
+    <h2>6. 개인정보 보호책임자 및 문의처</h2>
+    <p>앱 이용 중 문의사항이나 제안사항이 있으실 경우 아래의 지원 창구로 연락 주시면 신속하게 안내해 드리겠습니다.</p>
+    <ul>
+      <li><strong>서비스명:</strong> 청춘두뇌 (BrainFit)</li>
+      <li><strong>개발팀:</strong> aiHaejwo 모바일 웰니스 개발팀</li>
+      <li><strong>문의 이메일:</strong> support@aihaejwo.com</li>
+    </ul>
+
+    <div class="footer">
+      © 2026 청춘두뇌 (BrainFit). All rights reserved. 100% On-Device Offline Wellness Utility.
+    </div>
+  </div>
+</body>
+</html>
