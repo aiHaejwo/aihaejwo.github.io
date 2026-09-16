@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>맘스로그 (BabyFeed) - 개인정보 처리방침</title>
+  <style>
+    :root {
+      --primary: #E05A6D;
+      --secondary: #4E9F74;
+      --bg: #F9F7F2;
+      --card-bg: #FFFFFF;
+      --text: #2C3437;
+      --text-muted: #6C7A80;
+      --border: #E8E5DD;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Roboto, "Noto Sans KR", sans-serif;
+      line-height: 1.7;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #EBF7F0;
+      color: var(--secondary);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .highlight-box {
+      background: #FFF9F9;
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 16px 16px 0;
+      margin-bottom: 28px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .highlight-box strong {
+      color: var(--primary);
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 24px 0 10px 0;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 18px;
+      background: var(--primary);
+      border-radius: 3px;
+      margin-right: 10px;
+    }
+
+    p, ul {
+      font-size: 14.5px;
+      color: #444;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 13.5px;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #F8F7F3;
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">100% 온디바이스 &amp; 제로 퍼미션 (Zero-Permission)</div>
+    <h1>맘스로그 (BabyFeed) 개인정보 처리방침</h1>
+    <div class="subtitle">시행일자: 2026년 9월 16일 | 최종 수정일자: 2026년 9월 16일</div>
+
+    <div class="highlight-box">
+      <strong>핵심 보안 약속:</strong> '맘스로그 (BabyFeed)'는 아기의 소중한 건강 데이터를 보호하기 위해 
+      <strong>인터넷 권한(INTERNET Permission)을 앱 매니페스트에서 원천적으로 배제</strong>하였습니다. 
+      아기 이름, 생년월일, 수유량, 배변 및 수면 기록을 포함한 모든 데이터는 외부 서버로 일절 전송되지 않으며, 오직 부모님의 단말기 내부에만 100% 로컬 저장됩니다.
+    </div>
+
+    <h2>1. 개인정보의 수집 및 이용 목적</h2>
+    <p>
+      '맘스로그 (BabyFeed)'(이하 "앱")는 별도의 회원가입이나 로그인 절차를 요구하지 않으며, 이용자의 개인정보를 수집·저장·이용하지 않습니다.
+    </p>
+    <ul>
+      <li><strong>서버 전송 없음:</strong> 앱 내에서 입력하는 모든 정보(아기 이름, 출생일, 수유 시간, 분유량, 기저귀 교체, 수면 시간 등)는 이용자의 모바일 기기 내부 로컬 저장소(SQLite)에만 기록됩니다.</li>
+      <li><strong>네트워크 통신 차단:</strong> 앱은 네트워크 통신 모듈 및 외부 전송 API를 일절 포함하지 않습니다.</li>
+    </ul>
+
+    <h2>2. 처리하는 데이터 항목 및 보관 방식</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>처리 항목</th>
+          <th>보관 위치</th>
+          <th>외부 전송 여부</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>아기 프로필</td>
+          <td>태명/이름, 출생일자</td>
+          <td>단말기 로컬 SharedPreferences</td>
+          <td><strong>절대 없음 (0%)</strong></td>
+        </tr>
+        <tr>
+          <td>육아 기록</td>
+          <td>수유 텀, 모유 시간, 분유량, 기저귀 상태, 수면 시간, 메모</td>
+          <td>단말기 내부 SQLite 데이터베이스</td>
+          <td><strong>절대 없음 (0%)</strong></td>
+        </tr>
+        <tr>
+          <td>기기 정보</td>
+          <td>수집 안 함</td>
+          <td>-</td>
+          <td><strong>수집 안 함</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. 데이터의 보유 및 파기 절차</h2>
+    <p>
+      앱은 기기 외부에 데이터를 보관하지 않으므로 데이터 파기는 다음과 같이 전적으로 이용자의 통제 하에 이루어집니다:
+    </p>
+    <ul>
+      <li><strong>앱 삭제 시:</strong> 모바일 기기에서 앱을 삭제(제거)할 경우 기기 내 저장된 데이터베이스 및 설정 파일이 즉시 영구 파기됩니다.</li>
+      <li><strong>앱 내 직접 초기화:</strong> 앱의 [설정] &gt; [데이터 관리] &gt; [전체 기록 초기화] 메뉴를 통해 저장된 모든 기록을 즉시 일괄 삭제할 수 있습니다.</li>
+    </ul>
+
+    <h2>4. 제3자 제공 및 위탁</h2>
+    <p>
+      앱은 이용자의 어떠한 데이터도 제3자에게 제공하거나 외부에 위탁하여 처리하지 않습니다. 광고 식별자 수집 라이브러리 및 외부 분석 트래커(Analytics) 또한 탑재되어 있지 않습니다.
+    </p>
+
+    <h2>5. 이용자의 권리와 행사 방법</h2>
+    <p>
+      이용자는 앱에 입력된 모든 데이터에 대해 열람, 수정, 삭제의 완전한 통제권을 가집니다.
+    </p>
+    <ul>
+      <li>기록 수정/삭제: 메인 대시보드 및 상세 기록 화면에서 언제든지 스와이프 삭제 또는 탭하여 수정할 수 있습니다.</li>
+      <li>개인정보 열람 및 통제: 모든 데이터가 단말기에만 상주하므로 부모님의 기기 보안 환경 내에서 완벽하게 보호됩니다.</li>
+    </ul>
+
+    <h2>6. 스마트폰 권한 사용 안내 (Zero Permission)</h2>
+    <p>
+      본 앱은 구글 플레이의 사용자 데이터 정책을 준수하며, 사용자에게 불필요한 권한을 일체 요구하지 않습니다.
+    </p>
+    <ul>
+      <li><strong>인터넷 권한(android.permission.INTERNET):</strong> 사용 안 함 (원천 배제)</li>
+      <li><strong>카메라/마이크 권한:</strong> 사용 안 함</li>
+      <li><strong>위치 정보 권한:</strong> 사용 안 함</li>
+      <li><strong>연락처/저장용량 권한:</strong> 사용 안 함</li>
+    </ul>
+
+    <h2>7. 개인정보 보호책임자 및 문의처</h2>
+    <p>
+      앱의 개인정보 처리와 관련하여 문의사항이나 의견이 있으신 경우 아래의 연락처로 문의해 주시기 바랍니다.
+    </p>
+    <ul>
+      <li><strong>앱 개발자:</strong> 맘스로그 (BabyFeed) 개발팀</li>
+      <li><strong>문의 이메일:</strong> <a href="mailto:support@babyfeed.local">support@babyfeed.local</a></li>
+    </ul>
+
+    <h2>8. 고지의 의무</h2>
+    <p>
+      본 개인정보 처리방침은 관련 법령, 구글 플레이 정책 또는 앱의 기능 변경에 따라 변경될 수 있으며, 개정 시 앱 내 공지 또는 업데이트 노트를 통해 고지합니다.
+    </p>
+
+    <div class="footer">
+      &copy; 2026 맘스로그 (BabyFeed). All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
