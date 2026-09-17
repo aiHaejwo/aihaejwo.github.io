@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 - 커플사주 (CoupleSaju)</title>
+  <style>
+    :root {
+      --primary-color: #FF5376;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --bg-color: #FBF8FA;
+      --card-bg: #FFFFFF;
+      --border-color: #E2E8F0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Roboto, "Noto Sans KR", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      padding: 40px 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+    header {
+      border-bottom: 2px solid #FFF0F3;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-block;
+      background: #FFF0F3;
+      color: var(--primary-color);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .effective-date {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    section {
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 12px;
+      padding-left: 10px;
+      border-left: 4px solid var(--primary-color);
+    }
+    p, li {
+      font-size: 15px;
+      color: #334155;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .highlight-box {
+      background: #FFF7F9;
+      border: 1px solid #FFD6E0;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .highlight-box p {
+      margin: 0;
+      color: #9F1239;
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">온디바이스 제로 퍼미션 보안</span>
+      <h1>커플사주 (CoupleSaju) 개인정보처리방침</h1>
+      <div class="effective-date">시행일자: 2026년 9월 17일 | 최종 갱신일: 2026년 9월 17일</div>
+    </header>
+
+    <section>
+      <h2>1. 개요 및 원칙</h2>
+      <p>
+        '커플사주(CoupleSaju)'(이하 '앱')는 사용자의 프라이버시와 개인정보 보호를 최우선 가치로 여깁니다.
+        본 앱은 <strong>100% 로컬 온디바이스(On-Device) 오프라인</strong> 유틸리티로 개발되었으며, 어떠한 외부 통신이나 서버 연동 없이 단말기 내부에서 모든 명리학적 궁합 연산이 완료됩니다.
+      </p>
+      <div class="highlight-box">
+        <p>✓ 본 앱은 인터넷 권한(INTERNET Permission)을 요구하지 않으며, 단말기 외부 서버로 일체의 개인정보를 수집하거나 전송하지 않습니다.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. 처리하는 개인정보의 항목 및 보관 방식</h2>
+      <p>본 앱 이용 시 사용자가 입력하는 정보는 다음과 같습니다:</p>
+      <ul>
+        <li><strong>입력 항목:</strong> 본인 및 상대방의 별명(이름), 성별, 생년월일(양력/음력/윤달), 태어난 시간</li>
+        <li><strong>저장 위치:</strong> 사용자의 스마트폰 내부 안전한 로컬 저장소(SharedPreferences)</li>
+        <li><strong>보관 목적:</strong> 재입력의 번거로움을 줄이기 위한 로컬 프로필 캐싱 및 불러오기 기능 제공</li>
+        <li><strong>보유 기간:</strong> 앱 삭제(언인스톨) 또는 앱 내 데이터 삭제 시 단말기에서 즉시 영구 파기</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. 제3자 제공 및 외부 위탁 금지</h2>
+      <p>
+        본 앱은 외부 서버, 분석 도구(Analytics), 서드파티 광고 네트워크 SDK, 로그인 연동 라이브러리를 일절 탑재하지 않았습니다.
+        따라서 사용자의 개인정보나 입력 데이터가 제3자에게 제공되거나 위탁 처리되는 일은 원천적으로 발생하지 않습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. 기기 권한 및 접근 권한 안내</h2>
+      <p>본 앱은 운영체제로부터 어떠한 민감한 런타임 권한도 요구하지 않습니다.</p>
+      <ul>
+        <li>위치 정보, 연락처, 마이크, 카메라 접근 권한: <strong>요구하지 않음</strong></li>
+        <li>인터넷 통신 권한(android.permission.INTERNET): <strong>요구하지 않음</strong></li>
+        <li>결과 카드 이미지 공유: 사용자가 명시적으로 '공유'를 누른 경우에 한해, OS의 표준 시스템 공유 창(Intent)을 통해서만 처리됩니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. 아동의 개인정보 보호</h2>
+      <p>
+        본 앱은 만 14세 미만 아동을 포함하여 모든 연령층이 안심하고 이용할 수 있는 가족 친화적 유틸리티이며, 식별 가능한 어떠한 개인정보도 수집하지 않습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. 개인정보 보호책임자 및 문의처</h2>
+      <p>본 앱의 개인정보 보호 정책에 관한 문의 사항이 있으실 경우 아래로 연락해 주시기 바랍니다.</p>
+      <ul>
+        <li>개발사: ttalkkag</li>
+        <li>패키지명: com.ttalkkag.couplesaju</li>
+        <li>앱 명칭: 커플사주 (CoupleSaju)</li>
+        <li>문의 이메일: support@ttalkkag.com</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 ttalkkag. All rights reserved. 100% On-Device Zero-Permission Saju Gunghap Utility.</p>
+    </footer>
+  </div>
+</body>
+</html>
