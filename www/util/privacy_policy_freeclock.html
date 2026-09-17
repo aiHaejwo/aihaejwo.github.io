@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 처리방침 - 단식시계</title>
+    <style>
+        :root {
+            --bg-color: #081418;
+            --card-bg: #0f2329;
+            --primary-color: #00e699;
+            --secondary-color: #2dd4bf;
+            --text-color: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: #1e3a45;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.75;
+            margin: 0;
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            box-sizing: border-box;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            color: var(--primary-color);
+            font-size: 26px;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .meta {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+        }
+        h2 {
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        p, li {
+            color: var(--text-color);
+            font-size: 14.5px;
+        }
+        ul {
+            padding-left: 22px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .highlight-box {
+            background-color: rgba(0, 230, 153, 0.08);
+            border: 1px solid rgba(0, 230, 153, 0.25);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 20px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+        .badge {
+            display: inline-block;
+            background-color: var(--border-color);
+            color: var(--primary-color);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 12.5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">100% 오프라인 기기 내부 연산 · 권한 요구 없음</div>
+        <h1>단식시계 개인정보 처리방침</h1>
+        <div class="meta">
+            애플리케이션: 단식시계 (16:8 간헐적 단식 타이머) | 패키지명: com.ttalkkag.fastclock | 시행일자: 2026년 9월 16일
+        </div>
+
+        <div class="highlight-box">
+            <p>단식시계는 사용자의 어떠한 개인정보도 수집, 전송, 보관, 가공하지 않는 완전한 <strong>무권한(권한 요구 없음) 및 100% 기기 내부 연산(완전 오프라인)</strong> 간헐적 단식 타이머 애플리케이션입니다.</p>
+        </div>
+
+        <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+        <p>본 애플리케이션은 회원가입, 로그인, 클라우드 연동 등의 서버 통신 기능이 존재하지 않으며, 구글 플레이 스토어 배포 기준 <strong>인터넷 접속 권한(android.permission.INTERNET)을 일절 요구하지 않습니다.</strong></p>
+        <ul>
+            <li><strong>개인식별정보</strong>: 이름, 이메일, 전화번호, 생년월일 등 개인식별정보 일체 수집하지 않음</li>
+            <li><strong>기기 및 네트워크 정보</strong>: 기기 식별자(UUID/ADID), IP 주소, 통신사 정보, 위치 정보 등 일체 수집하지 않음</li>
+            <li><strong>행태 정보 및 쿠키</strong>: 사용자의 앱 이용 기록, 검색어, 외부 분석 도구(SDK) 일체 포함하지 않음</li>
+        </ul>
+
+        <h2>2. 로컬 데이터의 저장 및 관리</h2>
+        <p>사용자가 앱 내에서 설정한 단식 목표(예: 16:8, 직접 설정 시간), 단식 시작/종료 일시, 지난 단식 완료 기록, 오늘의 수분 섭취량 등 모든 데이터는 <strong>사용자 기기의 내부 저장소(SharedPreferences)에만 보관</strong>됩니다.</p>
+        <ul>
+            <li>기기 외부 서버나 제3자에게 어떠한 데이터도 전송되지 않습니다.</li>
+            <li>사용자가 앱을 삭제하거나 앱 데이터/캐시를 지우면 기기 내 저장된 기록은 즉시 영구 파기됩니다.</li>
+        </ul>
+
+        <h2>3. 개인정보의 제3자 제공 및 위탁</h2>
+        <p>단식시계는 외부 서버와 통신하지 않으므로 사용자의 데이터를 제3자에게 제공하거나 외부 업체에 처리를 위탁하는 행위가 원천적으로 불가능합니다.</p>
+
+        <h2>4. 앱 권한 정책 (권한 요구 없음)</h2>
+        <p>단식시계는 이용자의 사생활 보호를 최우선으로 하여 스마트폰의 주요 권한을 일절 요구하지 않습니다.</p>
+        <ul>
+            <li>인터넷 권한 없음</li>
+            <li>카메라 및 마이크 권한 없음</li>
+            <li>저장소 사진/미디어/파일 접근 권한 없음</li>
+            <li>위치 정보 권한 없음</li>
+            <li>연락처 및 통화 기록 권한 없음</li>
+        </ul>
+
+        <h2>5. 아동의 개인정보 보호</h2>
+        <p>단식시계는 만 14세 미만 아동을 포함한 모든 연령층에서 안전하게 이용할 수 있으며, 어떠한 연령대의 개인정보도 수집하지 않습니다.</p>
+
+        <h2>6. 개인정보 보호책임자 및 문의처</h2>
+        <p>본 애플리케이션의 개인정보 처리방침과 관련하여 문의사항이 있으신 경우 아래로 연락 주시기 바랍니다.</p>
+        <ul>
+            <li>담당: 단식시계 운영지원팀</li>
+            <li>문의: support@ttalkkag.com</li>
+        </ul>
+
+        <h2>7. 처리방침의 변경</h2>
+        <p>본 개인정보 처리방침은 법령, 정책 또는 보안 기술의 변경에 따라 내용이 추가, 삭제 및 수정될 수 있으며, 변경 시 애플리케이션 업데이트 및 공지사항을 통해 고지할 것입니다.</p>
+
+        <footer>
+            &copy; 2026 ttalkkag. 단식시계 (16:8 간헐적 단식 타이머). 모든 권리 보유.
+        </footer>
+    </div>
+</body>
+</html>
