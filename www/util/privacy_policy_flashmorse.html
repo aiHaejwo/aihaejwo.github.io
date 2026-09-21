@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashMorse 개인정보처리방침 (Privacy Policy)</title>
+    <style>
+        :root {
+            --bg-color: #0d0d11;
+            --card-bg: #15151b;
+            --accent-color: #ffd500;
+            --text-primary: #f0f0f5;
+            --text-secondary: #a0a0b0;
+            --border-color: #242430;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 24px 16px;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            color: var(--accent-color);
+            font-size: 26px;
+            margin-top: 0;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 16px;
+        }
+        h2 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-top: 28px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+        strong {
+            color: var(--text-primary);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255, 213, 0, 0.15);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .highlight-box {
+            background: #1c1c24;
+            border-left: 4px solid var(--accent-color);
+            padding: 16px 18px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 13px;
+            color: #707082;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">PRIVACY & HARDWARE UTILITY GUARANTEE</div>
+        <h1>FlashMorse 개인정보처리방침</h1>
+        <p><strong>시행일자:</strong> 2026년 9월 21일</p>
+
+        <div class="highlight-box">
+            <strong>핵심 요약:</strong> FlashMorse는 불필요한 개인정보 수집 없이 단말기 하드웨어 손전등 및 모스부호 송출 기능을 제공하는 유틸리티입니다. 카메라 영상 촬영을 원천 배제하며, 회원가입 없이 안전하게 이용하실 수 있습니다.
+        </div>
+
+        <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+        <p>본 애플리케이션은 사용자의 민감한 개인정보를 직접 수집하거나 저장하지 않습니다.</p>
+        <ul>
+            <li>회원가입, 로그인, 계정 연동 기능이 없습니다.</li>
+            <li>사용자의 이름, 이메일, 연락처, 주민번호 등을 수집하지 않습니다.</li>
+            <li>앱 내 Google AdMob 배너 광고 송출을 위해 익명의 광고 식별자 및 네트워크 연결 상태 정보가 활용될 수 있습니다.</li>
+        </ul>
+
+        <h2>2. 단말기 하드웨어 권한 사용 목적</h2>
+        <p>FlashMorse는 오직 단말기의 하드웨어 유틸리티 기능(손전등 점등, 모스부호 비상 신호 송출)을 수행하기 위한 최소 필수 권한만을 사용합니다.</p>
+        <ul>
+            <li><strong>카메라 플래시 제어 (FLASHLIGHT / CAMERA):</strong> 단말기 후면 카메라의 LED 플래시 하드웨어를 켜고 끄거나 밝기를 조절하기 위한 목적으로만 사용됩니다. 카메라 센서를 통한 이미지 촬영, 동영상 녹화, 메모리 버퍼 캡처는 기술적으로 원천 배제되어 있으며 절대 실행되지 않습니다.</li>
+            <li><strong>진동 제어 (VIBRATE):</strong> 모스부호 송출 시 점(·)과 선(―)의 신호 주기에 맞춰 햅틱 진동 피드백을 사용자에게 전달하기 위해 사용됩니다.</li>
+            <li><strong>절전 모드 방지 (WAKE_LOCK):</strong> 비상 상황, 야간 조난, 모스부호 송출 도중 화면이 꺼지거나 신호가 중단되지 않도록 방지하기 위해서만 활성화되며, 신호 송출이 종료되면 즉시 해제됩니다.</li>
+        </ul>
+
+        <h2>3. 로컬 데이터의 저장 및 관리</h2>
+        <p>앱 내에서 사용자가 설정한 값(예: 앱 실행 즉시 점등 옵션 토글, 마지막으로 입력한 모스부호 텍스트)은 사용자의 단말기 내부 로컬 저장소(SharedPreferences)에만 저장됩니다. 이 정보는 단말기 외부로 일절 유출되거나 전송되지 않으며, 앱 삭제 시 함께 영구 파기됩니다.</p>
+
+        <h2>4. 광고 서비스(Google AdMob) 및 제3자 라이브러리 안내</h2>
+        <p>FlashMorse는 서비스 운영 및 무료 유틸리티 제공을 위해 <strong>구글 애드몹(Google AdMob)</strong> 배너 광고를 포함하고 있습니다.</p>
+        <ul>
+            <li>구글 애드몹은 관련성 높은 광고 제공 및 사기 방지, 광고 성과 측정을 위해 익명의 기기 식별자(구글 광고 ID - ADID) 또는 네트워크 연결 상태 정보를 활용할 수 있습니다.</li>
+            <li>구글의 개인정보 처리에 대한 자세한 내용은 <a href="https://policies.google.com/technologies/ads" target="_blank" style="color: var(--accent-color);">구글 광고 및 개인정보 보호정책</a>을 참고하시기 바랍니다.</li>
+            <li>애드몹 광고 외에 별도의 회원가입, 자체 수집 데이터, 또는 제3자 추적기는 일절 포함되어 있지 않습니다.</li>
+        </ul>
+
+        <h2>5. 개인정보 보호책임자 및 문의처</h2>
+        <p>개인정보 처리 및 앱 이용과 관련한 문의사항은 아래 연락처로 문의해 주시기 바랍니다.</p>
+        <ul>
+            <li><strong>개발자/운영팀:</strong> FlashMorse 팀 (ttalkkag)</li>
+            <li><strong>이메일:</strong> support@ttalkkag.com</li>
+        </ul>
+
+        <div class="footer">
+            &copy; 2026 FlashMorse. All rights reserved. Zero-Network Offline Utility.
+        </div>
+    </div>
+</body>
+</html>
