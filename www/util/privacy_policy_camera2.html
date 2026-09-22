@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보 처리방침 - 무음카메라</title>
+  <style>
+    :root {
+      --bg-color: #0f1117;
+      --card-bg: #1a1d26;
+      --text-main: #e8ecf3;
+      --text-muted: #9aa3b2;
+      --accent: #3897f0;
+      --border: #292d3b;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard', Roboto, 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 32px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 28px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+    h2 {
+      font-size: 18px;
+      color: var(--accent);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+    }
+    p, ul {
+      margin-bottom: 14px;
+      font-size: 15px;
+      color: var(--text-main);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .badge {
+      display: inline-block;
+      background-color: rgba(56, 151, 240, 0.15);
+      color: var(--accent);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>개인정보 처리방침</h1>
+    <div class="meta">
+      <strong>앱 이름:</strong> 무음카메라 (com.ttalkkag.silentcamera)<br>
+      <strong>최종 개정일:</strong> 2026년 9월 17일
+    </div>
+
+    <p>딸깍(이하 '개발자')은 사용자의 개인정보를 매우 소중히 여기며, 「개인정보 보호법」 및 관련 법령을 준수합니다. 본 방침은 '무음카메라' 앱(이하 '본 앱')이 사용자의 정보를 어떻게 취급하는지 투명하게 설명합니다.</p>
+
+    <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+    <p><strong>본 앱은 사용자의 어떠한 개인 식별 정보나 민감한 정보를 자체 서버로 수집, 저장, 전송하지 않습니다.</strong></p>
+    <p>본 앱은 회원가입이나 로그인을 요구하지 않으며, 모든 사진 촬영 및 이미지 처리는 사용자의 스마트폰 기기 내부에서 로컬로만 실행됩니다.</p>
+
+    <h2>2. 기기 접근 권한 및 이용 목적</h2>
+    <p>본 앱은 정상적인 카메라 기능 제공을 위해 다음과 같은 최소한의 기기 접근 권한을 요청합니다:</p>
+    <ul>
+      <li><span class="badge">카메라 (CAMERA)</span>: 뷰파인더 화면 출력 및 무음 사진 촬영을 위해 필수적으로 사용됩니다.</li>
+      <li><span class="badge">사진 저장 (미디어 스토리지)</span>: 촬영된 고화질 사진을 기기 내 'SilentCamera' 앨범에 안전하게 저장합니다. 안드로이드 최신 Scoped Storage 표준을 준수하여 사용자의 기존 갤러리/사진 읽기 권한(READ_MEDIA_IMAGES)을 일체 요구하지 않습니다.</li>
+      <li><span class="badge">오디오 설정 (MODIFY_AUDIO_SETTINGS)</span>: 촬영 순간 셔터 소음 없는 무음 촬영 환경을 제공하기 위해 시스템 스트림을 제어하는 목적으로만 일시적으로 사용됩니다.</li>
+      <li><span class="badge">진동 (VIBRATE)</span>: 소리 없는 촬영 시 사진이 정상적으로 찍혔음을 손끝으로 인지할 수 있도록 햅틱 피드백을 제공합니다.</li>
+      <li><span class="badge">네트워크 (INTERNET / ACCESS_NETWORK_STATE)</span>: Google Mobile Ads 광고 로드 및 Google Play 스토어 인앱 업데이트 유무를 확인하기 위해 사용됩니다.</li>
+    </ul>
+
+    <h2>3. 제3자 서비스 및 광고 정책</h2>
+    <p>본 앱은 무료 서비스를 유지하기 위해 Google AdMob(Google Mobile Ads SDK)을 탑재하고 있습니다.</p>
+    <ul>
+      <li>Google Mobile Ads는 광고 게재 및 최적화를 위해 비식별 광고 ID(ADID) 및 기기 기본 정보(OS 버전, 기기 모델 등)를 수집할 수 있습니다.</li>
+      <li>수집된 정보는 Google의 개인정보처리방침에 따라 안전하게 처리되며, 자세한 내용은 <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent);">Google 개인정보처리방침</a>에서 확인하실 수 있습니다.</li>
+    </ul>
+
+    <h2>4. 개인정보의 보유 및 파기</h2>
+    <p>본 앱은 서버를 운영하지 않으므로 사용자의 개인정보를 저장하거나 보유하지 않습니다. 촬영된 사진은 사용자의 기기 로컬 갤러리에 저장되며, 사용자가 기기에서 직접 삭제하는 즉시 완전히 파기됩니다.</p>
+
+    <h2>5. 이용자의 권리 및 불법 사용 금지</h2>
+    <p>본 앱은 조용한 도서관, 박물관, 수면 중인 아기나 반려동물 촬영, 회의실 등 정숙이 필요한 공공장소에서의 합법적이고 건전한 사용을 위해 제작되었습니다.</p>
+    <p><strong>※ 타인의 동의 없는 신체 촬영, 사생활 침해, 불법 촬영 등 악의적이거나 불법적인 용도로의 사용을 엄격히 금지하며, 이에 따른 민형사상 모든 법적 책임은 행위자 본인에게 있습니다.</strong></p>
+
+    <h2>6. 아동의 개인정보 보호</h2>
+    <p>본 앱은 만 14세 미만 아동의 개인 식별 정보를 고의로 수집하지 않습니다.</p>
+
+    <h2>7. 개인정보 보호책임자 및 문의처</h2>
+    <p>본 앱의 개인정보 처리와 관련하여 문의사항이나 의견이 있으신 경우 아래의 연락처로 문의해 주시기 바랍니다.</p>
+    <ul>
+      <li><strong>개발/운영:</strong> 딸깍 (ttalkkag)</li>
+      <li><strong>이메일:</strong> support@ttalkkag.com</li>
+    </ul>
+
+    <footer>
+      &copy; 2026 ttalkkag. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
