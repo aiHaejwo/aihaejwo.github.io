@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>순수 꿈해몽 - 개인정보처리방침 (Privacy Policy)</title>
+    <style>
+        :root {
+            --bg-color: #0F172A;
+            --card-bg: #1E293B;
+            --accent-gold: #F59E0B;
+            --accent-lavender: #A78BFA;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border-color: #334155;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 40px 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .badge {
+            display: inline-block;
+            background-color: rgba(245, 158, 11, 0.15);
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .update-date {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        section {
+            margin-bottom: 28px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.3px;
+        }
+        p {
+            font-size: 14.5px;
+            color: #CBD5E1;
+            margin-bottom: 12px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 12px;
+        }
+        li {
+            font-size: 14px;
+            color: #CBD5E1;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        li::before {
+            content: "•";
+            color: var(--accent-lavender);
+            position: absolute;
+            left: 6px;
+            font-weight: bold;
+        }
+        .highlight-box {
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-gold);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+            margin-top: 40px;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">100% 무권한 오프라인 라이프 유틸리티</div>
+            <h1>순수 꿈해몽 개인정보처리방침</h1>
+            <div class="update-date">시행 일자: 2026년 9월 21일</div>
+        </header>
+
+        <section>
+            <div class="highlight-box">
+                <p><strong>핵심 원칙:</strong> '순수 꿈해몽'(이하 '앱')은 이용자의 어떠한 개인정보도 수집, 전송, 저장 또는 제3자와 공유하지 않는 <strong>완전 무권한(Zero-Permission) 및 100% 오프라인 동작</strong> 애플리케이션입니다.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>1. 수집하는 개인정보의 항목 및 수집 방법</h2>
+            <p>본 앱은 인터넷 통신 권한(INTERNET permission)을 포함하여 일체의 권한을 요구하지 않으며, 아래와 같은 원칙을 엄격히 준수합니다.</p>
+            <ul>
+                <li><strong>개인식별정보 미수집:</strong> 이름, 전화번호, 이메일, 계정 정보 등을 일절 요구하거나 수집하지 않습니다.</li>
+                <li><strong>기기 정보 및 위치정보 미수집:</strong> IMEI, 고유식별자(UUID), IP 주소, GPS 위치 정보를 수집하지 않습니다.</li>
+                <li><strong>네트워크 통신 일체 없음:</strong> 외부 서버와의 API 통신, 광고 추적 SDK(AdMob 등), 애널리틱스(Firebase 등)를 전혀 탑재하지 않았습니다.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. 로컬 데이터 처리 및 저장 안내</h2>
+            <p>이용자가 직접 작성하는 '꿈 일기장(Dream Journal)' 데이터는 이용자 기기 내부의 로컬 SQLite 데이터베이스에만 암호화/격리 저장됩니다.</p>
+            <ul>
+                <li><strong>로컬 전용 저장:</strong> 꿈 일기 제목, 본문 내용, 선명도, 감정 상태는 전적으로 사용자의 스마트폰 내부 파일 시스템에만 영구 보관됩니다.</li>
+                <li><strong>외부 유출 불가:</strong> 앱 개발사 및 외부 제3자는 이용자의 꿈 일기 내용에 접근하거나 열람할 수 있는 기술적 통로가 존재하지 않습니다.</li>
+                <li><strong>완전 삭제 권한:</strong> 이용자가 앱 내에서 일기를 삭제하거나 앱을 기기에서 삭제(제거)할 경우 기기 내부의 모든 데이터는 즉시 복구 불가능하게 파기됩니다.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. 인앱 업데이트(In-App Update) 관련</h2>
+            <p>본 앱은 구글 플레이(Google Play) 공식 API를 통해 새로운 버전 출시 여부만을 기기 자체에서 확인합니다. 이 과정에서 사용자 개인정보는 전혀 취급되지 않으며, 구글 플레이 스토어 자체의 안전한 보안 프로토콜을 따릅니다.</p>
+        </section>
+
+        <section>
+            <h2>4. 제3자 제공 및 외부 위탁</h2>
+            <p>본 앱은 외부 서버로 데이터를 송신하지 않으므로, 어떠한 개인정보도 제3자에게 제공하거나 위탁하지 않습니다.</p>
+        </section>
+
+        <section>
+            <h2>5. 이용자의 권리 및 행사 방법</h2>
+            <p>이용자는 언제든지 앱 내부의 삭제 기능을 통해 기록된 꿈 일기를 개별적 또는 일괄적으로 영구 삭제할 수 있으며, 기기 설정의 애플리케이션 관리에서 앱 데이터를 삭제하거나 앱을 삭제함으로써 모든 저장 정보를 즉시 파기할 수 있습니다.</p>
+        </section>
+
+        <section>
+            <h2>6. 개인정보 보호책임자 및 문의처</h2>
+            <p>앱 이용 중 문의사항이나 제안이 있으신 경우 아래의 연락처로 문의해주시기 바랍니다.</p>
+            <ul>
+                <li><strong>서비스명:</strong> 순수 꿈해몽 (DreamBook)</li>
+                <li><strong>개발/운영팀:</strong> 딸깍(ttalkkag) 유틸리티 사업팀</li>
+                <li><strong>패키지명:</strong> com.ttalkkag.dreambook</li>
+                <li><strong>문의 이메일:</strong> support@ttalkkag.com</li>
+            </ul>
+        </section>
+
+        <footer>
+            본 개인정보처리방침은 2026년 9월 21일부터 적용되며, 관련 법령 및 구글 플레이 정책 변경 시 수정될 수 있습니다.
+            <br>&copy; 2026 ttalkkag. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
