@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보 처리방침 - QR Master</title>
+  <style>
+    :root {
+      --bg-color: #0f1117;
+      --card-bg: #1a1e29;
+      --text-main: #f0f3f8;
+      --text-muted: #8b95a5;
+      --accent: #6366f1;
+      --border: #282e3e;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+      margin: 0;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--card-bg);
+      padding: 36px 32px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-size: 26px;
+      margin-top: 0;
+      color: var(--text-main);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+    p, li {
+      color: var(--text-muted);
+      font-size: 14.5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .highlight-box {
+      background: rgba(99, 102, 241, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+    .footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>개인정보 처리방침 (Privacy Policy)</h1>
+    <p>QR Master(이하 "본 앱")는 이용자의 개인정보를 매우 소중하게 생각하며, 관련 법령을 준수하기 위하여 다음과 같은 개인정보 처리방침을 수립 및 공개합니다.</p>
+
+    <div class="highlight-box">
+      <strong>핵심 원칙:</strong> 본 앱은 스캔된 QR 코드 및 바코드 정보, 생성된 QR 코드 데이터를 외부 서버로 전송하지 않으며, 모든 데이터는 사용자의 기기 내부(Local Storage)에서만 안전하게 보관 및 처리됩니다.
+    </div>
+
+    <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+    <p>본 앱은 기본적으로 회원가입 없이 사용할 수 있으며, 개인 식별이 가능한 정보(이름, 주민등록번호, 연락처 등)를 강제 수집하거나 서버에 저장하지 않습니다.</p>
+    <ul>
+      <li><strong>스캔 및 생성 데이터:</strong> 사용자가 스캔하거나 생성한 QR 코드/바코드 텍스트 및 관련 설정은 단말기 내부 저장소에만 암호화/로컬 저장됩니다.</li>
+      <li><strong>자동 생성 정보:</strong> 서비스 안정성 및 오류 분석을 위해 비식별화된 기기 정보(OS 버전, 기기 모델명, 크래시 로그)가 수집될 수 있습니다.</li>
+    </ul>
+
+    <h2>2. 앱 권한(Permission) 사용 목적</h2>
+    <p>본 앱은 원활한 서비스 제공을 위해 최소한의 기기 권한만을 요청하며, 본래의 목적 외에는 일체 사용되지 않습니다.</p>
+    <ul>
+      <li><strong>카메라 권한 (CAMERA):</strong> 실시간 QR 코드 및 바코드 스캔 기능을 수행하기 위해서만 사용됩니다. 카메라 영상 스트림은 단말기 내부에서 실시간 처리된 후 즉시 소멸되며 외부에 전송 또는 저장되지 않습니다.</li>
+      <li><strong>저장소 및 사진 권한 (READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE):</strong> 사용자가 갤러리에 저장된 이미지에서 QR 코드를 인식하거나, 생성된 QR 이미지를 기기 앨범에 다운로드/저장할 때에만 사용됩니다.</li>
+      <li><strong>진동 권한 (VIBRATE):</strong> QR 코드 인식 완료 시 사용자 피드백(햅틱 진동)을 제공하기 위해 사용됩니다.</li>
+      <li><strong>네트워크 권한 (INTERNET):</strong> 스토어 인앱 업데이트 확인 및 제3자 광고 표시를 위해서만 사용됩니다.</li>
+    </ul>
+
+    <h2>3. 제3자 서비스 및 광고 네트워크</h2>
+    <p>본 앱은 무료 서비스 제공 및 앱 개선을 위해 제3자 광고 네트워크를 포함할 수 있습니다. 해당 제공자는 자체 개인정보 처리방침에 따라 비식별 광고 식별자(ADID/IDFA)를 수집 및 처리할 수 있습니다.</p>
+    <ul>
+      <li><strong>Google AdMob:</strong> 광고 송출 및 성과 측정을 위해 비식별 기기 식별자를 활용할 수 있습니다. (구글 개인정보 보호정책 참조)</li>
+      <li><strong>Google Play Services:</strong> 인앱 업데이트 및 핵심 서비스 제공을 위해 연결됩니다.</li>
+    </ul>
+
+    <h2>4. 개인정보의 보유 및 파기</h2>
+    <p>본 앱의 모든 기록(히스토리)은 사용자의 스마트폰 로컬 저장소에 저장되므로, 사용자가 앱 내 [기록 및 보관함]에서 삭제하거나 앱을 삭제(제거)하는 즉시 모든 데이터가 완전하게 영구 파기됩니다.</p>
+
+    <h2>5. 이용자의 권리와 행사 방법</h2>
+    <p>이용자는 스마트폰 설정에서 언제든지 카메라 및 사진 접근 권한을 거부하거나 허용할 수 있습니다. 또한 앱 내 설정 메뉴에서 데이터 초기화 및 테마/진동 설정을 자유롭게 관리할 수 있습니다.</p>
+
+    <h2>6. 방침의 변경</h2>
+    <p>법령 또는 서비스 정책 변경에 따라 본 개인정보 처리방침이 변경될 수 있으며, 개정 시 본 페이지 또는 앱 내 공지를 통하여 안내합니다.</p>
+
+    <div class="footer">
+      <p>공고일자: 2026년 9월 28일 | 시행일자: 2026년 9월 28일</p>
+      <p>QR Master - All Rights Reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
