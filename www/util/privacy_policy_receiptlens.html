@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureReceipt 개인정보처리방침</title>
+    <style>
+        :root {
+            --primary: #1E293B;
+            --accent: #059669;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-main: #0F172A;
+            --text-sub: #475569;
+            --border: #E2E8F0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 32px 16px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #ECFDF5;
+            color: var(--accent);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            border: 1px solid #A7F3D0;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 0 0 8px 0;
+        }
+        .date {
+            color: var(--text-sub);
+            font-size: 13px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 28px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background-color: var(--accent);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+        p, li {
+            color: var(--text-sub);
+            font-size: 15px;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .highlight-box {
+            background-color: #F1F5F9;
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: #94A3B8;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="badge">100% 로컬 온디바이스 안심 앱</span>
+            <h1>PureReceipt 개인정보처리방침</h1>
+            <div class="date">시행일자: 2026년 9월 28일 | 최종 개정일자: 2026년 9월 28일</div>
+        </div>
+
+        <div class="highlight-box">
+            <strong>핵심 요약:</strong> PureReceipt(순수 영수증)는 사용자의 금융 정보 및 영수증 증빙 데이터를 보호하기 위해 <strong>인터넷 통신 권한(INTERNET)을 사용하지 않는 완전한 독립형 오프라인 유틸리티</strong>입니다. 어떠한 개인정보나 결제 정보도 외부 서버로 전송되거나 수집되지 않습니다.
+        </div>
+
+        <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+        <p>PureReceipt 앱은 회원가입, 로그인, 외부 계정 연동 및 분석 추적기(SDK)를 전혀 사용하지 않으며, 일체의 개인정보를 외부 서버로 수집하거나 전송하지 않습니다.</p>
+        <ul>
+            <li><strong>수집하는 개인정보:</strong> 없음</li>
+            <li><strong>자동 생성 정보:</strong> 접속 로그, 쿠키, 광고 식별자(ADID/IDFA) 등을 일절 수집하지 않습니다.</li>
+        </ul>
+
+        <h2>2. 온디바이스 AI(OCR) 및 데이터 저장 원칙</h2>
+        <p>본 앱에서 제공하는 모든 핵심 기능은 단말기 내부(On-Device) 하드웨어와 로컬 데이터베이스만을 통해 구동됩니다.</p>
+        <ul>
+            <li><strong>영수증 이미지 스캔 및 텍스트 인식:</strong> 촬영 또는 선택된 영수증 이미지는 단말기 내장 신경망(ML Kit Text Recognition)을 통해서만 처리되며, 이미지 원본 및 추출된 텍스트는 네트워크를 거치지 않습니다.</li>
+            <li><strong>데이터 보관 위치:</strong> 입력된 가맹점명, 결제 일자, 금액, 메모 및 영수증 이미지는 사용자의 기기 내부 샌드박스 저장소(SQLite DB 및 로컬 앱 디렉터리)에만 안전하게 암호화 보관됩니다.</li>
+            <li><strong>데이터 파기:</strong> 사용자가 앱 내에서 영수증을 삭제하거나 앱을 기기에서 제거할 경우, 기기 내에 보관된 모든 영수증 데이터와 이미지 파일은 즉시 영구 파기됩니다.</li>
+        </ul>
+
+        <h2>3. 기기 접근 권한 안내</h2>
+        <p>PureReceipt는 서비스 제공 및 광고 송출을 위해 필요한 최소한의 디바이스 권한만을 요청합니다.</p>
+        <ul>
+            <li><strong>카메라 (선택):</strong> 실물 영수증을 즉석에서 촬영하여 온디바이스 OCR 텍스트 인식을 수행하기 위해 사용됩니다.</li>
+            <li><strong>사진 / 미디어 (선택):</strong> 기기 갤러리에 저장된 영수증 사진을 앱으로 불러와 텍스트를 인식하기 위해 사용됩니다.</li>
+            <li><strong>인터넷 / 네트워크 상태:</strong> 배너 및 전면 광고(Google AdMob) 송출 및 스토어 인앱 업데이트 확인을 위해 사용됩니다. 영수증 원본 사진 및 인식된 지출 내역은 일체 외부로 전송되지 않습니다.</li>
+        </ul>
+
+        <h2>4. 제3자 서비스 및 광고 식별자 안내</h2>
+        <p>본 앱은 무료 서비스 제공 및 지속적인 유지보수를 위해 구글 애드몹(Google AdMob) 광고 서비스를 탑재하고 있습니다.</p>
+        <ul>
+            <li><strong>제휴 서비스:</strong> Google LLC (AdMob)</li>
+            <li><strong>수집 및 활용 정보:</strong> 구글 정책에 따라 맞춤형 또는 비맞춤형 광고 송출을 위해 기기 광고 식별자(ADID), 대략적인 기기 정보 및 광고 노출/클릭 통계가 Google 시스템에 의해 처리될 수 있습니다.</li>
+            <li><strong>금융/영수증 데이터 분리:</strong> 구글 애드몹 SDK는 사용자의 영수증 이미지, 금액, 가맹점명 등의 내부 데이터에 일절 접근할 수 없으며 완벽히 분리되어 보호됩니다.</li>
+        </ul>
+
+        <h2>5. 사용자의 권리와 데이터 관리</h2>
+        <p>사용자는 언제든지 자신의 영수증 데이터에 대한 완전한 통제권을 가집니다.</p>
+        <ul>
+            <li>앱 내에서 등록된 영수증 내역을 직접 확인, 수정, 삭제할 수 있습니다.</li>
+            <li>생성된 지출 결의서 PDF 및 CSV 파일은 사용자가 직접 선택한 공유 수단(메신저, 이메일 앱 등)을 통해서만 사용자의 명시적 의사에 따라 전송됩니다.</li>
+            <li>앱 삭제 시 앱 샌드박스에 저장된 모든 데이터는 완전 소멸됩니다.</li>
+        </ul>
+
+        <h2>6. 개인정보처리방침의 변경</h2>
+        <p>본 개인정보처리방침은 법령 또는 서비스 변경 사항을 반영하기 위해 개정될 수 있으며, 개정 시 앱 업데이트 배포 페이지를 통해 공지됩니다.</p>
+
+        <div class="footer">
+            PureReceipt • 100% 로컬 오프라인 영수증 정산 유틸리티
+        </div>
+    </div>
+</body>
+</html>
