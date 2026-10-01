@@ -18,13 +18,23 @@ APPS = (
     (5, '채굴캐시', '광맥을 채굴하고 포인트를 받아보세요', '광맥 채굴'),
     (6, '뽑기캐시', '캡슐을 뽑아 포인트를 받아보세요', '캡슐 뽑기'),
 )
-SCREENS = (
+MINING_SCREENS = (
     ('screenshot_01_home.png', '광맥 채굴 홈', '홈에서 보유 포인트와 오늘 남은 채굴 횟수를 확인하고 광맥 채굴에 참여합니다. 채굴 후 포인트와 남은 횟수가 갱신됩니다.'),
     ('screenshot_02_charge_station.png', '목표·미션 선택', '홈 하단에서 상품·출금 목표와 무료충전소 참여 목표를 확인합니다. 출석체크, 룰렛, 보물찾기 및 충전하기 진입 버튼을 제공합니다.'),
     ('screenshot_03_roulette.png', '룰렛', '룰렛 화면에서 GO 버튼을 선택해 리워드 미션에 참여합니다. 화면에는 포인트 보상 구간이 표시됩니다.'),
     ('screenshot_04_treasure.png', '보물찾기', '황금 광석 중 하나를 선택해 보물찾기 미션에 참여합니다. 현재 보상 포인트를 화면에서 확인할 수 있습니다.'),
     ('screenshot_05_store.png', '포인트 상점', '보유 포인트와 상품별 필요 포인트, 신청 가능 여부를 확인합니다. 현금 출금·상품 교환 항목과 무료충전소 참여 조건을 안내하며, 신청은 접수 후 운영자 확인을 거칩니다.'),
 )
+SCREENS = {
+    5: MINING_SCREENS,
+    6: (
+        ('screenshot_01_home.png', '캡슐 뽑기 홈', '홈에서 보유 포인트와 남은 캡슐 수를 확인하고 캡슐 뽑기에 참여합니다. 상품·출금 목표와 무료충전소 참여 목표도 함께 확인합니다.'),
+        ('screenshot_02_charge_station.png', '혜택·무료충전소', '혜택 탭에서 무료충전소 시작 버튼을 선택합니다. 제공되는 혜택에 참여해 포인트를 적립하는 기능의 진입 화면입니다.'),
+        MINING_SCREENS[2],
+        ('screenshot_04_treasure.png', '캡슐 보물찾기', '뽑기 캡슐 중 하나를 선택해 보물찾기 미션에 참여합니다. 현재 보상 포인트를 화면에서 확인할 수 있습니다.'),
+        MINING_SCREENS[4],
+    ),
+}
 SCREEN_NOTE = '프로젝트에 저장된 앱 UI 테스트 캡처입니다. 포인트·상품은 테스트 예시이며 실제 이용자 정보는 포함하지 않습니다.'
 
 
@@ -92,15 +102,14 @@ def build_html(number, name, tagline, activity, scenario_only=False):
 <h2>리워드 이용 기준</h2><p>게스트모드는 화면 체험용입니다. 실제 서버 포인트 적립·교환·출금 신청은 회원 기능입니다.</p>
 <h2>회원가입·기존 로그인 흐름</h2><ol><li>카카오로 로그인: 신규 이용자와 기존 회원 모두 같은 버튼을 선택합니다.</li><li>카카오톡 네이티브 인증: 앱의 카카오 SDK가 카카오톡을 통해 인증을 진행합니다.</li><li>개인정보 제공 필수 동의: 카카오계정 전화번호를 회원가입 필수 항목으로 제공받도록 신청합니다. 승인 후 적용할 정책입니다.</li><li>회원 검증 및 계정 생성: 회원 식별과 기존 계정을 확인하고 신규 회원가입 또는 기존 회원 로그인을 완료합니다.</li><li>필수 동의·미보유 처리: 전화번호가 없거나 필수 제공에 동의하지 않으면 회원가입을 완료하지 않는 정책입니다.</li><li>가입 후 서비스 이용: {activity}·미션·광고 참여에 따른 포인트 적립 및 교환 기능으로 이동합니다.</li></ol>
 <p><a href="../../output/pdf/cashloop{number}_kakao_phone_signup_review.pdf">개인정보 없는 카카오 심사용 시나리오 PDF</a></p>'''
-    if number == 5:
-        service += f'<h2>상세 서비스 화면 및 이용 시나리오</h2><p class="notice">{SCREEN_NOTE}</p><div class="screens">'
-        for filename, title, description in SCREENS:
-            source = project / 'store' / filename
-            destination = ROOT / 'www/ttalkkag/review_assets/cashloop5' / filename
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(source, destination)
-            service += f'<figure><img src="review_assets/cashloop5/{filename}" alt="채굴캐시 {title} 테스트 화면" loading="lazy"><figcaption>{title}</figcaption><p>{description}</p></figure>'
-        service += '</div>'
+    service += f'<h2>상세 서비스 화면 및 이용 시나리오</h2><p class="notice">{SCREEN_NOTE}</p><div class="screens">'
+    for filename, title, description in SCREENS[number]:
+        source = project / 'store' / filename
+        destination = ROOT / f'www/ttalkkag/review_assets/cashloop{number}' / filename
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, destination)
+        service += f'<figure><img src="review_assets/cashloop{number}/{filename}" alt="{name} {title} 테스트 화면" loading="lazy"><figcaption>{title}</figcaption><p>{description}</p></figure>'
+    service += '</div>'
     folder = ROOT / 'www/ttalkkag'
     for filename, title, body in (
         (f'privacy_policy_loop{number}.html', f'{name} 개인정보처리방침', markdown_html(policy)),
@@ -120,19 +129,20 @@ def page_number(pdf, page, total):
     pdf.drawRightString(base.PAGE_WIDTH - 52, 31, f'{page} / {total}')
 
 
-def service_screens(pdf, service):
-    for page, start in enumerate(range(0, len(SCREENS), 2), 4):
+def service_screens(pdf, service, number, activity):
+    screens = SCREENS[number]
+    for page, start in enumerate(range(0, len(screens), 2), 4):
         pdf.showPage()
         base.chrome(pdf, service, page, f'0{page}. 상세 서비스 화면')
         base.heading(pdf, '전화번호 동의항목 심사 보완자료', '서비스 화면 및 이용 시나리오', '가입 후 제공하는 서비스의 주요 화면과 동작', service.accent)
         base.draw_text(pdf, SCREEN_NOTE, x=52, top=665, width=491, size=8.5, color=base.MUTED)
-        for column, (filename, title, description) in enumerate(SCREENS[start:start + 2]):
+        for column, (filename, title, description) in enumerate(screens[start:start + 2]):
             x = 52 + column * 258
             base.draw_text(pdf, title, x=x, top=617, width=233, size=12, color=service.accent)
-            pdf.drawImage(str(ROOT / 'www/ttalkkag/review_assets/cashloop5' / filename), x, 197, width=197, height=394, preserveAspectRatio=True, mask='auto')
+            pdf.drawImage(str(ROOT / f'www/ttalkkag/review_assets/cashloop{number}' / filename), x, 197, width=197, height=394, preserveAspectRatio=True, mask='auto')
             base.draw_text(pdf, description, x=x, top=175, width=233, size=9, leading=14)
         if start == 4:
-            base.draw_text(pdf, '신청 화면의 개인정보 입력 값은 첨부하지 않습니다.\n\n화면에 표시되는 금액·포인트는 테스트 캡처의 예시 값입니다. 실제 운영 상품과 신청 조건은 앱의 최신 안내를 기준으로 합니다.\n\n서비스 전체 흐름\n회원가입·로그인 → 채굴·미션 참여 → 포인트 적립 → 목표 확인 → 상점 상품 선택 → 신청·처리 상태 확인', x=310, top=571, width=233, size=10, leading=18)
+            base.draw_text(pdf, f'신청 화면의 개인정보 입력 값은 첨부하지 않습니다.\n\n화면에 표시되는 금액·포인트는 테스트 캡처의 예시 값입니다. 실제 운영 상품과 신청 조건은 앱의 최신 안내를 기준으로 합니다.\n\n서비스 전체 흐름\n회원가입·로그인 → {activity}·미션 참여 → 포인트 적립 → 목표 확인 → 상점 상품 선택 → 신청·처리 상태 확인', x=310, top=571, width=233, size=10, leading=18)
         page_number(pdf, page, 6)
 
 
@@ -171,7 +181,7 @@ def build_pdf(number, name, tagline, activity):
         base.draw_text(pdf, title, x=300, top=y + height - 22, width=229, size=10.5, color=service.accent)
         base.draw_text(pdf, body, x=300, top=y + height - 44, width=229, size=8.5, leading=13)
     base.draw_text(pdf, '이 문서에는 실제 이름, 이메일, 전화번호, 계정·계좌 정보가 없습니다.', x=52, top=150, width=491, size=9)
-    total = 6 if number == 5 else 3
+    total = 6
     page_number(pdf, 1, total)
     pdf.showPage()
     base.chrome(pdf, service, 2, '02. 승인 후 회원가입 흐름')
@@ -192,16 +202,15 @@ def build_pdf(number, name, tagline, activity):
     base.page_three(pdf, service)
     base.draw_text(pdf, '전화번호 항목은 권한 승인 후 적용할 회원가입 정책입니다.', x=52, top=83, width=491, size=8, color=base.MUTED)
     page_number(pdf, 3, total)
-    if number == 5:
-        service_screens(pdf, service)
+    service_screens(pdf, service, number, activity)
     pdf.save()
     reader = PdfReader(output)
     text = '\n'.join(page.extract_text() or '' for page in reader.pages)
     assert len(reader.pages) == total and name in text and service.package in text
-    if number == 5:
-        assert all(title in text for _, title, _ in SCREENS)
-        assert sum(len(page.images) for page in reader.pages) == len(SCREENS)
-        assert all(f'{index} / {total}' in page.extract_text() for index, page in enumerate(reader.pages, 1))
+    assert all(title in text for _, title, _ in SCREENS[number])
+    assert sum(len(page.images) for page in reader.pages) == len(SCREENS[number])
+    assert all(f'{index} / {total}' in page.extract_text() for index, page in enumerate(reader.pages, 1))
+    assert ('광맥' if number == 6 else '캡슐') not in text, 'Do not mix project-specific scenarios'
     assert '권한 승인 후' in text and '카카오계정(전화번호) · 필수' in text
     assert '걸음' not in text
     assert not re.search(
