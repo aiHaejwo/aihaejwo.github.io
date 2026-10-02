@@ -70,11 +70,11 @@ h1{{font-size:28px}}h2{{font-size:20px;margin-top:30px}}a{{color:#1f5aaf}}nav{{d
 </style></head><body><main><nav><a href="service_review_loop{number}.html">서비스 소개·가입 시나리오</a><a href="privacy_policy_loop{number}.html">개인정보처리방침</a><a href="terms_loop{number}.html">이용약관</a></nav><article>{body}</article></main></body></html>'''
 
 
-def cashloop5_policy():
+def reference_policy(number, name):
     policy = (ROOT / 'www/ttalkkag/privacy_policy_loop2.html').read_text()
-    policy = policy.replace('낚시캐시', '채굴캐시').replace('CashLoop2', 'CashLoop5').replace('com.ttalkkag.cashloop2', 'com.ttalkkag.cashloop5')
+    policy = policy.replace('낚시캐시', name).replace('CashLoop2', f'CashLoop{number}').replace('com.ttalkkag.cashloop2', f'com.ttalkkag.cashloop{number}')
     policy = policy.replace('버전 1.2 · 시행일: 2026년 8월 14일', '버전 1.3 · 시행일: 2026년 10월 2일')
-    policy = policy.replace('./privacy.html', './privacy_policy_loop5.html')
+    policy = policy.replace('./privacy.html', f'./privacy_policy_loop{number}.html')
     policy = policy.replace('카카오 로그인, Google 광고·알림', 'Google 광고·알림')
     policy = policy.replace('            <li>카카오: 카카오 로그인, 카카오계정 전화번호 제공.</li>\n', '')
     policy = policy.replace('Google, Kakao, TNK, Hostinger', 'Google, TNK, Hostinger')
@@ -85,21 +85,6 @@ def cashloop5_policy():
 
 def build_html(number, name, tagline, activity, scenario_only=False):
     project = PROJECTS / f'cashLoop{number}'
-    policy = (project / 'store/privacy_policy.md').read_text()
-    policy = policy.replace('버전 1.1 · 시행일: 2026년 7월 27일', f'버전 1.2 · 시행일: {DATE}')
-    policy = policy.replace('## 1. 개인정보처리자 및 개인정보 보호 담당', '## 1. 서비스 운영자 및 사업자 정보')
-    policy = policy.replace(f'- 개인정보처리자: {name} 운영팀\n- 개인정보 보호 담당: {name} 운영팀\n- 이메일: `support@aihaejwo.site`',
-        f'본 개인정보처리방침은 {name}(CashLoop{number}, 패키지명: com.ttalkkag.cashloop{number})에 적용됩니다.\n\n'
-        '- 상호: 에이아이해줘(aiHaejwo)\n- 사업자등록번호: 457-06-03603\n- 개인정보 문의: aihaejwo@gmail.com\n'
-        f'- {name}는 에이아이해줘(aiHaejwo)가 운영합니다.')
-    policy = policy.replace('- 회원 및 로그인 관리:', '- 회원가입 신청 항목(필수): 카카오계정 전화번호. 회원가입, 계정 관리 및 중복·부정 이용 방지 목적으로 처리합니다.\n- 회원 및 로그인 관리:')
-    policy = policy.replace('## 3. 개인정보의 처리 및 보유 기간',
-        '### 카카오계정 전화번호 회원가입 정책\n\n' + PLAN + '\n\n'
-        '카카오 로그인 동의 화면에서 전화번호 제공에 동의한 경우 카카오 API를 통해 전달받습니다. 단말의 전화번호 권한이나 직접 입력 방식은 사용하지 않습니다.\n\n'
-        '카카오계정에 전화번호가 없거나 필수 제공에 동의하지 않는 경우 리워드 회원가입을 완료하지 않습니다. 게스트 모드는 화면 확인만 가능하며 실제 포인트 적립·교환·출금 신청을 제공하지 않습니다.\n\n'
-        '전화번호는 회원 탈퇴 시 삭제하며, 법령상 별도 보존 의무가 있는 정보는 해당 기간 후 파기합니다.\n\n'
-        '## 3. 개인정보의 처리 및 보유 기간')
-    policy = policy.replace('support@aihaejwo.site', 'aihaejwo@gmail.com')
     terms = (project / 'store/terms_of_service.md').read_text().replace('support@aihaejwo.site', 'aihaejwo@gmail.com')
     terms = terms.replace('버전 1.1 · 시행일: 2026년 7월 27일', f'버전 1.2 · 시행일: {DATE}')
     terms = terms.replace('## 제 4 조 (회원 및 이용)', '## 제 4 조 (회원 및 이용)\n\n' + PLAN + '\n\n카카오계정 전화번호를 회원가입 필수 항목으로 처리하며, 전화번호가 없거나 제공에 동의하지 않으면 회원가입을 완료하지 않습니다.\n')
@@ -125,13 +110,13 @@ def build_html(number, name, tagline, activity, scenario_only=False):
     service += '</div>'
     folder = ROOT / 'www/ttalkkag'
     for filename, title, body in (
-        (f'privacy_policy_loop{number}.html', f'{name} 개인정보처리방침', markdown_html(policy)),
+        (f'privacy_policy_loop{number}.html', f'{name} 개인정보처리방침', reference_policy(number, name)),
         (f'terms_loop{number}.html', f'{name} 이용약관', operator + markdown_html(terms)),
         (f'service_review_loop{number}.html', f'{name} 서비스 소개·가입 시나리오', service),
     ):
         if scenario_only and not filename.startswith('service_review_'):
             continue
-        output = cashloop5_policy() if number == 5 and filename.startswith('privacy_policy_') else page_html(title, body, number)
+        output = body if filename.startswith('privacy_policy_') else page_html(title, body, number)
         (folder / filename).write_text(output)
 
 
