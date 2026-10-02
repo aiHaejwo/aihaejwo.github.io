@@ -70,6 +70,19 @@ h1{{font-size:28px}}h2{{font-size:20px;margin-top:30px}}a{{color:#1f5aaf}}nav{{d
 </style></head><body><main><nav><a href="service_review_loop{number}.html">서비스 소개·가입 시나리오</a><a href="privacy_policy_loop{number}.html">개인정보처리방침</a><a href="terms_loop{number}.html">이용약관</a></nav><article>{body}</article></main></body></html>'''
 
 
+def cashloop5_policy():
+    policy = (ROOT / 'www/ttalkkag/privacy_policy_loop2.html').read_text()
+    policy = policy.replace('낚시캐시', '채굴캐시').replace('CashLoop2', 'CashLoop5').replace('com.ttalkkag.cashloop2', 'com.ttalkkag.cashloop5')
+    policy = policy.replace('버전 1.2 · 시행일: 2026년 8월 14일', '버전 1.3 · 시행일: 2026년 10월 2일')
+    policy = policy.replace('./privacy.html', './privacy_policy_loop5.html')
+    policy = policy.replace('카카오 로그인, Google 광고·알림', 'Google 광고·알림')
+    policy = policy.replace('            <li>카카오: 카카오 로그인, 카카오계정 전화번호 제공.</li>\n', '')
+    policy = policy.replace('Google, Kakao, TNK, Hostinger', 'Google, TNK, Hostinger')
+    assert '카카오 로그인 및 리워드 회원 가입 시(필수)' in policy and '카카오계정 전화번호' in policy
+    assert 'Kakao' not in policy and '<li>카카오:' not in policy and '낚시캐시' not in policy
+    return policy
+
+
 def build_html(number, name, tagline, activity, scenario_only=False):
     project = PROJECTS / f'cashLoop{number}'
     policy = (project / 'store/privacy_policy.md').read_text()
@@ -87,13 +100,6 @@ def build_html(number, name, tagline, activity, scenario_only=False):
         '전화번호는 회원 탈퇴 시 삭제하며, 법령상 별도 보존 의무가 있는 정보는 해당 기간 후 파기합니다.\n\n'
         '## 3. 개인정보의 처리 및 보유 기간')
     policy = policy.replace('support@aihaejwo.site', 'aihaejwo@gmail.com')
-    if number == 5:
-        # Kakao Login supplies account data; it is not a processor for this app.
-        policy = policy.replace('- Kakao: 카카오 로그인 인증.\n', '')
-        policy = policy.replace('카카오 로그인, Google 광고·알림', 'Google 광고·알림')
-        policy = policy.replace('Google, Kakao, TNK, Hostinger', 'Google, TNK, Hostinger')
-        policy = policy.replace(f'버전 1.2 · 시행일: {DATE}', '버전 1.3 · 시행일: 2026년 10월 2일')
-        assert 'Kakao' not in policy and '회원가입 신청 항목(필수): 카카오계정 전화번호' in policy
     terms = (project / 'store/terms_of_service.md').read_text().replace('support@aihaejwo.site', 'aihaejwo@gmail.com')
     terms = terms.replace('버전 1.1 · 시행일: 2026년 7월 27일', f'버전 1.2 · 시행일: {DATE}')
     terms = terms.replace('## 제 4 조 (회원 및 이용)', '## 제 4 조 (회원 및 이용)\n\n' + PLAN + '\n\n카카오계정 전화번호를 회원가입 필수 항목으로 처리하며, 전화번호가 없거나 제공에 동의하지 않으면 회원가입을 완료하지 않습니다.\n')
@@ -125,7 +131,8 @@ def build_html(number, name, tagline, activity, scenario_only=False):
     ):
         if scenario_only and not filename.startswith('service_review_'):
             continue
-        (folder / filename).write_text(page_html(title, body, number))
+        output = cashloop5_policy() if number == 5 and filename.startswith('privacy_policy_') else page_html(title, body, number)
+        (folder / filename).write_text(output)
 
 
 def page_number(pdf, page, total):
