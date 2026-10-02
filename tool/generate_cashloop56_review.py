@@ -87,6 +87,13 @@ def build_html(number, name, tagline, activity, scenario_only=False):
         '전화번호는 회원 탈퇴 시 삭제하며, 법령상 별도 보존 의무가 있는 정보는 해당 기간 후 파기합니다.\n\n'
         '## 3. 개인정보의 처리 및 보유 기간')
     policy = policy.replace('support@aihaejwo.site', 'aihaejwo@gmail.com')
+    if number == 5:
+        # Kakao Login supplies account data; it is not a processor for this app.
+        policy = policy.replace('- Kakao: 카카오 로그인 인증.\n', '')
+        policy = policy.replace('카카오 로그인, Google 광고·알림', 'Google 광고·알림')
+        policy = policy.replace('Google, Kakao, TNK, Hostinger', 'Google, TNK, Hostinger')
+        policy = policy.replace(f'버전 1.2 · 시행일: {DATE}', '버전 1.3 · 시행일: 2026년 10월 2일')
+        assert 'Kakao' not in policy and '회원가입 신청 항목(필수): 카카오계정 전화번호' in policy
     terms = (project / 'store/terms_of_service.md').read_text().replace('support@aihaejwo.site', 'aihaejwo@gmail.com')
     terms = terms.replace('버전 1.1 · 시행일: 2026년 7월 27일', f'버전 1.2 · 시행일: {DATE}')
     terms = terms.replace('## 제 4 조 (회원 및 이용)', '## 제 4 조 (회원 및 이용)\n\n' + PLAN + '\n\n카카오계정 전화번호를 회원가입 필수 항목으로 처리하며, 전화번호가 없거나 제공에 동의하지 않으면 회원가입을 완료하지 않습니다.\n')
