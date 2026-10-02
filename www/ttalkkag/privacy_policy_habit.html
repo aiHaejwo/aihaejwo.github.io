@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보 처리방침 - 습관 (Habit)</title>
+  <style>
+    :root {
+      --primary: #15803D;
+      --bg: #F9F9F8;
+      --card-bg: #FFFFFF;
+      --text: #1C1C1E;
+      --text-muted: #6B7280;
+      --border: #E5E7EB;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141416;
+        --card-bg: #1E1E22;
+        --text: #F2F2F7;
+        --text-muted: #9CA3AF;
+        --border: #2C2C30;
+      }
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 40px 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-block;
+      background-color: rgba(21, 128, 61, 0.12);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .date {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    p, ul {
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .highlight-box {
+      background-color: rgba(21, 128, 61, 0.06);
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+    .highlight-box strong {
+      color: var(--primary);
+    }
+    footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">100% 로컬 오프라인 데이터 보안</div>
+      <h1>개인정보 처리방침</h1>
+      <div class="date">시행일자: 2026년 9월 30일</div>
+    </header>
+
+    <div class="highlight-box">
+      <strong>핵심 원칙 (Zero-Network Policy):</strong><br>
+      본 애플리케이션 '습관(Habit)'은 사용자의 개인정보 보호를 최우선으로 설계된 100% 오프라인 생산성 유틸리티입니다. 어떠한 외부 통신(INTERNET) 권한도 사용하지 않으며, 사용자의 모든 기록은 기기 내부에만 영구 저장됩니다.
+    </div>
+
+    <h2>제1조 (개인정보의 수집 및 이용 목적)</h2>
+    <p>본 애플리케이션은 회원가입, 로그인, 외부 클라우드 동기화, 사용자 분석 도구 및 광고 SDK를 일절 사용하지 않습니다. 따라서 개발자 또는 제3자 서버로 전송되거나 수집되는 개인 식별 정보는 존재하지 않습니다.</p>
+
+    <h2>제2조 (처리하는 개인 데이터의 항목 및 보관 방식)</h2>
+    <p>사용자가 앱 내에서 입력하는 모든 정보는 오직 사용자 기기 내부의 로컬 데이터베이스(SQLite)에만 암호화 및 영구 보관됩니다.</p>
+    <ul>
+      <li><strong>습관 메타데이터:</strong> 습관 이름, 아이콘, 목표 빈도, 색상 테마, 알림 설정 시간</li>
+      <li><strong>실천 기록 데이터:</strong> 일별 습관 달성 여부, 완료 시간, 연속 달성 통계</li>
+    </ul>
+    <p>위의 모든 데이터는 기기 외부로 유출되거나 백업되지 않으며, 사용자 본인만이 기기에서 열람 및 제어할 수 있습니다.</p>
+
+    <h2>제3조 (기기 권한의 사용 안내)</h2>
+    <p>본 애플리케이션은 원활한 오프라인 기능 제공을 위해 최소한의 시스템 권한만을 요청합니다.</p>
+    <ul>
+      <li><strong>알림 권한 (POST_NOTIFICATIONS):</strong> 사용자가 직접 설정한 시간에 기기 자체 타이머를 통해 로컬 리마인더를 발송하기 위해 사용됩니다. 외부 푸시 서버(FCM/APNs)를 거치지 않는 순수 로컬 알림입니다.</li>
+      <li><strong>정확한 알람 권한 (SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM):</strong> 배터리 최적화 모드 및 잠금화면 상태에서도 사용자가 설정한 정각에 정확히 알림을 발생시키기 위해 사용됩니다.</li>
+      <li><strong>화면 켜기 및 잠금화면 표시:</strong> 잠금화면 상태에서도 바로 알림을 확인하고 완료 체크 액션을 수행할 수 있도록 지원합니다.</li>
+      <li><strong>인터넷 권한(INTERNET) 미사용:</strong> 본 앱은 인터넷 연결 권한을 보유하지 않으므로 외부와의 데이터 송수신 자체가 기술적으로 불가능합니다.</li>
+    </ul>
+
+    <h2>제4조 (개인정보의 제3자 제공 및 위탁)</h2>
+    <p>본 애플리케이션은 사용자의 어떠한 개인정보도 제3자에게 제공하거나 위탁하여 처리하지 않습니다.</p>
+
+    <h2>제5조 (개인정보의 파기 절차 및 방법)</h2>
+    <p>모든 데이터는 사용자 기기에만 보관되므로, 사용자가 애플리케이션을 삭제(제거)하거나 기기 설정에서 앱 데이터를 삭제할 경우 모든 습관 정보와 실천 기록은 복구 불가능하게 즉시 영구 파기됩니다.</p>
+
+    <h2>제6조 (개인정보 보호 관련 문의 및 권리 행사)</h2>
+    <p>본 앱은 서버를 운영하지 않고 기기 내부 데이터만을 다루므로 사용자는 언제든지 앱 내에서 직접 습관을 수정, 초기화 또는 삭제함으로써 모든 데이터를 스스로 제어할 수 있습니다.</p>
+    <p>기타 애플리케이션 관련 의견이나 기술적 문의사항은 구글 플레이 스토어의 피드백 채널 및 스토어 리뷰 기능을 통하여 접수하실 수 있습니다.</p>
+
+    <h2>제7조 (개인정보 처리방침의 변경)</h2>
+    <p>본 개인정보 처리방침은 관계 법령이나 서비스 기능 변경에 따라 개정될 수 있으며, 개정 시에는 애플리케이션 업데이트 및 배포 페이지를 통해 공지합니다.</p>
+
+    <footer>
+      &copy; 2026 습관 (Habit). 모든 권리 보유.
+    </footer>
+  </div>
+</body>
+</html>
