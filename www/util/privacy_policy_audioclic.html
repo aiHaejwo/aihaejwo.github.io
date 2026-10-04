@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보처리방침 - AudioClinic (오디오클리닉)</title>
+    <style>
+        :root {
+            --bg-color: #06090e;
+            --card-bg: #0f1523;
+            --card-inner: #161e31;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-cyan: #00e5ff;
+            --accent-blue: #2979ff;
+            --border-color: #26334d;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px 34px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 26px;
+            color: #ffffff;
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--accent-cyan);
+            padding-bottom: 14px;
+        }
+        .app-meta {
+            font-size: 14px;
+            color: var(--accent-cyan);
+            margin-bottom: 28px;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 19px;
+            color: #ffffff;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background: rgba(0, 229, 255, 0.08);
+            border-left: 4px solid var(--accent-cyan);
+            padding: 18px 22px;
+            margin: 24px 0;
+            border-radius: 0 12px 12px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 44px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>개인정보처리방침 (Privacy Policy)</h1>
+        <div class="app-meta">앱 이름: AudioClinic (오디오클리닉) | 패키지: com.ttalkkag.audiclinic</div>
+
+        <div class="highlight-box">
+            <p>AudioClinic(오디오클리닉)은 사용자의 민감한 청각 측정 데이터를 외부 서버로 일절 전송하지 않고 오직 기기 내부(On-Device SQLite)에만 안전하게 보관합니다.</p>
+        </div>
+
+        <h2>1. 개인정보의 수집 및 이용 항목</h2>
+        <p>본 애플리케이션은 회원가입이나 로그인을 요구하지 않으며, 사용자의 성명, 전화번호, 주민등록번호 등 직접적인 개인 식별 정보를 수집하지 않습니다. 다만, 무료 서비스 제공을 위한 구글 애드몹(Google AdMob) 광고 라이브러리가 포함되어 있어 광고 게재 및 최적화를 위해 구글 정책에 따른 익명의 광고 식별자(ADID) 및 기기 정보가 구글 시스템을 통해 처리될 수 있습니다.</p>
+
+        <h2>2. 온디바이스 로컬 데이터 보관</h2>
+        <p>측정된 청각 나이, 주파수별 가청 임계값(dB HL), 오디오그램 그래프 좌표 및 검사 일시는 오직 사용자의 스마트폰 내부 샌드박스 데이터베이스(SQLite)에만 국소적으로 저장되며, 광고 네트워크나 외부 클라우드로 일절 전송되지 않습니다. 본 데이터는 사용자가 앱 내 보관함에서 삭제하거나 앱을 삭제할 경우 기기 내부에서 영구히 파기됩니다.</p>
+
+        <h2>3. 기기 권한 사용 안내</h2>
+        <ul>
+            <li><strong>네트워크 접근 권한 (INTERNET, ACCESS_NETWORK_STATE):</strong> 구글 애드몹(Google AdMob) 광고 수신 및 인앱 업데이트 확인을 위해서만 사용됩니다.</li>
+            <li><strong>오디오 설정 제어 (MODIFY_AUDIO_SETTINGS):</strong> 정확한 청력 측정을 위한 오디오 세션 포커스 유지 및 이어폰/헤드폰 연결 상태를 감지하여 최적의 좌/우 스테레오 채널 출력을 제공하기 위해서만 사용됩니다.</li>
+        </ul>
+
+        <h2>4. 제3자 광고 서비스 제공 안내</h2>
+        <p>본 애플리케이션은 안정적인 서비스 운영을 위해 Google LLC에서 제공하는 Google AdMob 서비스를 사용합니다. Google AdMob의 개인정보 처리에 대한 자세한 내용은 Google 개인정보처리방침(https://policies.google.com/privacy)을 참조하시기 바랍니다. 사용자의 청각 건강 측정 기록은 어떠한 경우에도 광고 제공자에게 전달되지 않습니다.</p>
+
+        <h2>5. 아동의 개인정보 보호</h2>
+        <p>본 애플리케이션은 남녀노소 누구나 안전하게 청력을 점검할 수 있는 순수 측정 도구이며, 만 14세 미만 아동의 개인 식별 정보를 일절 수집하지 않습니다.</p>
+
+        <h2>6. 의료 기기 고지 및 면책 사항</h2>
+        <p>본 애플리케이션은 개인의 일상적인 청각 건강 자가 점검 및 스크리닝을 돕기 위해 개발된 건강 유틸리티입니다. 정밀 의료기기를 통한 공식 진료를 대체할 수 없으며, 청력 저하나 이명 등 이상 징후가 있을 경우 반드시 이비인후과 전문의의 정밀 진단 및 상담을 받으시기 바랍니다.</p>
+
+        <h2>7. 개인정보 보호 문의</h2>
+        <p>개인정보 처리방침과 관련된 문의사항이나 의견은 Google Play 스토어의 앱 리뷰 또는 고객지원 채널을 통해 남겨주시면 성실히 답변드리겠습니다.</p>
+
+        <h2>8. 처리방침의 변경</h2>
+        <p>본 방침은 관계 법령이나 앱 기능 개선에 따라 개정될 수 있으며, 개정 시에는 스토어 페이지 또는 앱 배포 내역을 통해 공지됩니다.</p>
+
+        <div class="footer">
+            공고일자: 2026년 10월 02일 | 시행일자: 2026년 10월 02일
+        </div>
+    </div>
+</body>
+</html>
