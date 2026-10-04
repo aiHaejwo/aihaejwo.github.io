@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreeThanks 개인정보처리방침</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      line-height: 1.7;
+      color: #2c241e;
+      background-color: #fbf8f2;
+      padding: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 24px;
+      border-bottom: 2px solid #c26733;
+      padding-bottom: 12px;
+      color: #2c241e;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 28px;
+      color: #c26733;
+    }
+    p, li {
+      font-size: 15px;
+      color: #4a3f35;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .badge {
+      display: inline-block;
+      background: #f6e8dd;
+      color: #c26733;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+    .box {
+      background: #ffffff;
+      border: 1px solid #ece5d8;
+      border-radius: 12px;
+      padding: 18px;
+      margin-top: 14px;
+    }
+    .footer {
+      margin-top: 40px;
+      border-top: 1px solid #ece5d8;
+      padding-top: 16px;
+      font-size: 13px;
+      color: #8c7f73;
+    }
+  </style>
+</head>
+<body>
+  <h1>ThreeThanks (하루 세 번 감사일기) 개인정보처리방침</h1>
+  <div class="badge">100% 온디바이스(On-Device) 일기 데이터 보호 원칙</div>
+
+  <p>ThreeThanks(이하 '앱')는 사용자의 프라이버시와 내밀한 감정 기록을 최우선으로 보호합니다. 본 앱에 작성되는 모든 일기 데이터는 외부 서버 전송 없이 100% 기기 내부 로컬 저장소에만 보관되며, 다음과 같은 원칙에 따라 운영됩니다.</p>
+
+  <div class="box">
+    <strong>핵심 프라이버시 선언:</strong><br>
+    사용자가 작성하는 모든 일기 데이터는 외부 서버나 클라우드로 절대 수집·전송되지 않으며, 오직 사용자의 기기 내부 로컬 저장소(SQLite)에만 안전하게 보관됩니다.
+  </div>
+
+  <h2>1. 수집하는 개인정보의 항목 및 수집 방법</h2>
+  <p>본 앱은 회원가입, 로그인, 사용자 식별, 프로필 생성 등의 절차가 전혀 없으며, 사용자의 개인 식별 정보(성명, 주민등록번호, 연락처 등)를 직접 수집하지 않습니다.</p>
+  <ul>
+    <li><strong>감사일기 데이터:</strong> 사용자가 작성한 감사일기 텍스트는 오직 사용자의 기기 내부 로컬 저장소(SQLite)에만 기록되며 외부로 전송되지 않습니다.</li>
+    <li><strong>수집하지 않는 항목:</strong> 회원 정보, 소셜 계정 정보, 위치 정보, 연락처 등 일체의 개인 식별 정보</li>
+  </ul>
+
+  <h2>2. 광고 서비스(Google AdMob) 및 네트워크 통신</h2>
+  <p>본 앱은 원활한 무료 서비스 제공을 위해 구글 모바일 광고(Google AdMob) SDK를 포함하고 있습니다.</p>
+  <ul>
+    <li><strong>광고 게재 목적:</strong> 배너 및 전면 광고 게재를 위해 인터넷 통신을 사용하며, Google AdMob 정책에 따라 익명화된 광고 식별자 및 진단 정보가 활용될 수 있습니다.</li>
+    <li><strong>일기 내용 비공개 원칙:</strong> 광고 SDK는 사용자가 작성한 감사일기 내용에 접근할 수 없으며, 일기 텍스트는 광고 목적으로 사용되거나 외부에 공유되지 않습니다.</li>
+    <li><strong>맞춤 광고 설정:</strong> 사용자는 스마트폰 기기 설정(설정 &gt; Google &gt; 광고)에서 맞춤형 광고를 재설정하거나 거부할 수 있습니다.</li>
+  </ul>
+
+  <h2>3. 생체 인식 및 보안 잠금 정보의 보호</h2>
+  <p>사용자가 설정한 생체 인식(지문/Face ID) 잠금 기능은 운영체제(Android BiometricPrompt, iOS LocalAuthentication)의 자체 보안 모듈에서만 처리됩니다.</p>
+  <ul>
+    <li>앱은 사용자의 지문이나 얼굴 이미지, 생체 원본 데이터를 보관하거나 열람할 권한이 없으며, 오직 일치 여부 결과(성공/실패)만을 전달받아 화면을 잠금 해제합니다.</li>
+    <li>사용자가 지정한 PIN 비밀번호는 안전한 암호화 해시(SHA-256) 형태로 기기 내부 저장소에만 보관됩니다.</li>
+  </ul>
+
+  <h2>4. 개인정보의 보유 및 파기</h2>
+  <p>모든 데이터는 사용자의 기기 내부에만 존재하므로 데이터의 파기 권한은 전적으로 사용자에게 있습니다.</p>
+  <ul>
+    <li>앱 내에서 특정 날짜의 감사일기를 삭제하거나 수정하면 기기 내부 데이터베이스에서 즉시 삭제·반영됩니다.</li>
+    <li>기기에서 앱을 삭제할 경우 기기 내 저장된 모든 일기 데이터베이스는 영구적으로 파기됩니다.</li>
+  </ul>
+
+  <h2>5. 데이터 백업 및 사용자 권리</h2>
+  <p>사용자는 자신이 작성한 일기 데이터의 완전한 소유권을 가집니다. 앱 내에서 제공되는 '텍스트 파일(.txt) 내보내기' 및 '엑셀 파일(.csv) 내보내기' 기능을 통해 언제든지 기기 로컬 파일로 백업할 수 있습니다.</p>
+
+  <h2>6. 개인정보처리방침의 변경</h2>
+  <p>본 개인정보처리방침은 법령 또는 서비스 변경사항을 반영하기 위해 수정될 수 있으며, 변경 시 앱 업데이트를 통해 고지됩니다.</p>
+
+  <div class="footer">
+    시행일자: 2026년 10월 2일<br>
+    ThreeThanks
+  </div>
+</body>
+</html>
