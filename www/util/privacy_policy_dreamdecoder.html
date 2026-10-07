@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드림디코더(DreamDecoder) 개인정보 처리방침</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+            line-height: 1.7;
+            color: #2b2b36;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 36px 28px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #121224;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 14px;
+            margin-bottom: 24px;
+        }
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1f1d38;
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+        p, li {
+            font-size: 14.5px;
+            color: #4a4a5a;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .badge {
+            display: inline-block;
+            background: #1e1b4b;
+            color: #ffd700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .notice-box {
+            background-color: #f1f5f9;
+            border-left: 4px solid #1e1b4b;
+            padding: 14px 16px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 13.5px;
+            color: #334155;
+        }
+        footer {
+            margin-top: 36px;
+            padding-top: 18px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 12px;
+            color: #8f8fa0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="badge">로컬 데이터 보호 • 투명한 개인정보 처리</span>
+        <h1>드림디코더 (DreamDecoder) 개인정보 처리방침</h1>
+
+        <div class="notice-box">
+            <strong>핵심 요약:</strong> 드림디코더는 사용자의 해몽 검색 내역과 비밀 꿈 일기장 기록을 어떠한 외부 서버로도 전송하지 않으며 오직 사용자의 스마트폰 내부(SQLite)에만 안전하게 보관합니다. 회원가입이나 개인 식별 정보의 입력을 요구하지 않습니다.
+        </div>
+
+        <h2>제1조 (개인정보의 처리 목적 및 수집 항목)</h2>
+        <p>드림디코더는 회원가입, 로그인, 외부 계정 연동을 요구하지 않으며, 성명, 주민등록번호, 연락처 등의 직접적인 개인정보를 일체 수집하지 않습니다.</p>
+
+        <h2>제2조 (기기 내 로컬 데이터의 저장 및 보관)</h2>
+        <p>사용자가 앱을 사용하며 생성하는 모든 데이터는 사용자의 단말기 내부 고유 스토리지(SQLite)에만 국한되어 저장됩니다.</p>
+        <ul>
+            <li><strong>검색 이력:</strong> 최근 검색어는 기기 내부 SQLite 테이블에 저장되며, 사용자가 언제든지 단일 삭제 또는 전체 삭제할 수 있습니다.</li>
+            <li><strong>꿈 일기장(Journal) 데이터:</strong> 사용자가 작성한 꿈 제목, 꿈의 내용, 감정 태그, 날짜 등은 오직 사용자 단말기 내부 데이터베이스에만 기록되며, 개발자를 포함한 그 누구도 접근할 수 없습니다.</li>
+        </ul>
+
+        <h2>제3조 (생체 인식 정보의 처리)</h2>
+        <p>드림디코더는 비밀 꿈 일기장을 안전하게 보호하기 위해 생체 인증(지문인식, Face ID) 기능을 지원합니다.</p>
+        <ul>
+            <li>생체 인증은 안드로이드 및 iOS 운영체제의 보안 저장소(Android BiometricPrompt, Apple LocalAuthentication Framework)를 통해 기기 자체적으로만 검증됩니다.</li>
+            <li>앱은 사용자의 지문이나 얼굴 이미지, 원본 생체 데이터를 절대 직접 획득하거나 저장하지 않으며, 운영체제가 반환하는 인증 성공/실패 여부 신호만을 활용합니다.</li>
+        </ul>
+
+        <h2>제4조 (광고 서비스 및 제3자 모듈의 정보 처리)</h2>
+        <p>드림디코더는 무료 서비스 유지를 위해 Google AdMob 광고 서비스를 탑재하고 있습니다.</p>
+        <ul>
+            <li><strong>제공업체:</strong> Google LLC (AdMob)</li>
+            <li><strong>처리 항목:</strong> 구글 모바일 광고 SDK는 광고 노출 및 부정 클릭 방지, 통계 측정을 위해 구글 광고 식별자(AD_ID), 기기 기본 정보, 대략적인 네트워크 상태를 처리할 수 있습니다.</li>
+            <li>사용자의 꿈 일기 내용이나 검색어 데이터는 광고 시스템과 일절 결합되거나 전달되지 않습니다.</li>
+            <li>사용자는 스마트폰 설정(설정 &gt; Google &gt; 광고)에서 맞춤형 광고 수신 여부를 직접 설정하거나 광고 식별자를 초기화할 수 있습니다.</li>
+        </ul>
+
+        <h2>제5조 (사용자의 권리 및 데이터 삭제)</h2>
+        <p>사용자는 자신이 작성한 모든 데이터에 대해 완전한 통제권을 가집니다.</p>
+        <ul>
+            <li>앱 내부의 일기장 보관함에서 개별 일기를 즉시 영구 삭제할 수 있습니다.</li>
+            <li>단말기 설정에서 앱 데이터를 삭제하거나 애플리케이션을 삭제하면 기기에 저장된 모든 로컬 데이터베이스가 즉시 영구적으로 파기됩니다.</li>
+        </ul>
+
+        <h2>제6조 (개인정보 처리방침의 변경)</h2>
+        <p>본 개인정보 처리방침은 법령 또는 서비스 정책의 변경에 따라 개정될 수 있으며, 개정 시 앱 업데이트 고지 또는 스토어 안내를 통해 투명하게 공지합니다.</p>
+
+        <footer>
+            공고일자: 2026년 10월 7일<br>
+            시행일자: 2026년 10월 7일<br>
+            드림디코더 (DreamDecoder) 개발팀
+        </footer>
+    </div>
+</body>
+</html>
