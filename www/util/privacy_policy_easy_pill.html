@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 처리방침 - 이지필 (EasyPill)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+            line-height: 1.7;
+            color: #222222;
+            background-color: #FBF9F5;
+            margin: 0;
+            padding: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 36px 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            border: 1px solid #E5E0D5;
+        }
+        h1 {
+            font-size: 26px;
+            color: #1565C0;
+            border-bottom: 2px solid #1565C0;
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            color: #2E7D32;
+            margin-top: 28px;
+            border-bottom: 1px solid #ECE7DE;
+            padding-bottom: 6px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #444444;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .highlight {
+            background-color: #E3F2FD;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 4px solid #1565C0;
+            margin: 16px 0;
+        }
+        .footer {
+            margin-top: 36px;
+            font-size: 13px;
+            color: #888888;
+            text-align: center;
+            border-top: 1px solid #EEEEEE;
+            padding-top: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>이지필 (EasyPill) 개인정보 처리방침</h1>
+    <p>본 개인정보 처리방침은 이지필(EasyPill, 이하 '앱')이 이용자의 개인정보를 어떻게 처리하고 보호하는지 설명합니다. 본 앱은 시니어 및 보호자의 소중한 프라이버시를 최우선으로 존중하며, 기기 내 로컬 저장을 원칙으로 합니다.</p>
+
+    <div class="highlight">
+        <strong>핵심 요약:</strong> 본 앱은 회원가입이나 로그인을 요구하지 않으며, 이용자의 복약 기록이나 건강 정보를 외부 원격 서버로 수집하거나 전송하지 않고 단말기 내부에만 안전하게 보관합니다.
+    </div>
+
+    <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+    <p>본 앱은 다음과 같은 정보를 이용자 단말기 내부(SQLite 데이터베이스)에만 저장합니다.</p>
+    <ul>
+        <li><strong>복약 일정 정보:</strong> 약 이름, 복약 예정 시간, 복용 안내 문구, 알림 설정 여부</li>
+        <li><strong>복약 수행 기록:</strong> 복약 완료 여부, 복약 체크 일시</li>
+    </ul>
+    <p>위의 모든 데이터는 이용자의 기기 내부에만 암호화 및 샌드박스 처리되어 보관되며, 당사의 외부 서버로 전송되지 않습니다.</p>
+
+    <h2>2. 개인정보의 이용 목적</h2>
+    <p>수집 및 저장된 정보는 오직 다음의 목적을 위해서만 사용됩니다.</p>
+    <ul>
+        <li>지정된 시간에 기기 자체 푸시 알림 및 알람 울림</li>
+        <li>메인 화면에서 오늘의 복약 상태 및 다음 약 안내 표시</li>
+        <li>보호자용 복약 달력 화면에서 월별 복약 순응도 및 기록 조회</li>
+    </ul>
+
+    <h2>3. 제3자 서비스 및 광고</h2>
+    <p>본 앱은 무료 서비스 제공을 위해 구글 모바일 광고(Google AdMob) SDK를 포함하고 있습니다. Google AdMob은 맞춤형 또는 비맞춤형 광고 게재를 위해 기기 식별자(광고 ID) 및 비개인화된 기기 정보를 처리할 수 있습니다.</p>
+    <ul>
+        <li>Google 개인정보 처리방침: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+        <li>Google 광고 관련 정책: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a></li>
+    </ul>
+
+    <h2>4. 앱에서 사용하는 기기 권한 안내</h2>
+    <p>본 앱은 원활한 복약 알림 기능 제공을 위해 다음 권한을 필요로 합니다.</p>
+    <ul>
+        <li><strong>알림 권한 (POST_NOTIFICATIONS):</strong> 설정한 복약 시간에 정확한 푸시 알림을 발송하기 위해 사용됩니다.</li>
+        <li><strong>정확한 알람 권한 (SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM):</strong> 약 복용 시간에 오차 없이 정확히 알람을 울리기 위해 사용됩니다.</li>
+        <li><strong>부팅 완료 수신 (RECEIVE_BOOT_COMPLETED):</strong> 단말기를 재부팅하더라도 설정해 둔 복약 알람 일정이 취소되지 않고 자동으로 재등록되도록 하기 위해 사용됩니다.</li>
+        <li><strong>진동 권한 (VIBRATE):</strong> 어르신이 복약 체크 버튼을 눌렀을 때 손끝으로 감지할 수 있는 촉각 햅틱 피드백을 제공하기 위해 사용됩니다.</li>
+    </ul>
+
+    <h2>5. 개인정보의 보유 및 파기</h2>
+    <p>모든 복약 기록과 설정 정보는 사용자가 앱 내에서 개별 삭제하거나, 단말기에서 앱을 삭제(제거)할 때 즉시 영구적으로 파기됩니다.</p>
+
+    <h2>6. 이용자의 권리와 행사 방법</h2>
+    <p>이용자는 언제든지 앱 내부의 [약 관리] 메뉴를 통해 저장된 복약 정보를 열람, 수정, 삭제할 수 있으며, 기기의 애플리케이션 설정 메뉴에서 저장공간 데이터를 초기화하여 모든 기록을 삭제할 수 있습니다.</p>
+
+    <h2>7. 개인정보 보호 문의 및 고객 지원</h2>
+    <p>개인정보 처리방침에 관한 문의사항이나 앱 이용 관련 피드백은 구글 플레이 스토어 앱 상세 페이지의 개발자 문의 채널 또는 앱 내 안내 창구를 통해 접수하실 수 있습니다.</p>
+
+    <div class="footer">
+        공고일자: 2026년 10월 8일 | 시행일자: 2026년 10월 8일<br>
+        이지필 (EasyPill) All rights reserved.
+    </div>
+</div>
+</body>
+</html>
