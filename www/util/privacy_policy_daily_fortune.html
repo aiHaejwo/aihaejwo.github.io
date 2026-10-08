@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보 처리방침 - DailyFortune</title>
+  <style>
+    :root {
+      --bg-color: #0d1117;
+      --card-bg: #161b22;
+      --border-color: #30363d;
+      --text-primary: #f0f6fc;
+      --text-secondary: #8b949e;
+      --accent-color: #f59e0b;
+      --success-color: #10b981;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      line-height: 1.7;
+      padding: 30px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 26px;
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--success-color);
+      color: var(--success-color);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .update-date {
+      color: var(--text-secondary);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 18px;
+      color: var(--accent-color);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    p, li {
+      color: #c9d1d9;
+      font-size: 14.5px;
+    }
+    ul {
+      margin-left: 20px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    strong {
+      color: var(--text-primary);
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>개인정보 처리방침 (Privacy Policy)</h1>
+      <div class="badge">100% 로컬 연산 및 온디바이스 프라이버시 보호</div>
+      <p class="update-date">시행 일자: 2026년 10월 6일</p>
+    </header>
+
+    <section>
+      <h2>1. 개요 및 개인정보 보호 원칙</h2>
+      <p>
+        DailyFortune(이하 "본 앱")은 사용자의 소중한 개인정보를 안전하게 보호하는 것을 최우선 가치로 삼고 있습니다.
+        본 앱은 별도의 회원가입 절차가 없으며, 사용자가 입력한 모든 사주 정보(생년월일, 태어난 시간, 성별 등)는 개발자의 외부 서버나 클라우드로 전송되지 않고 사용자 기기 내부(Local Storage)에서만 100% 자체 연산 처리됩니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. 처리하는 개인정보 항목 및 처리 목적</h2>
+      <p>본 앱은 운세 및 타로 매칭 기능을 제공하기 위해 아래의 정보만을 기기 내부에 저장합니다.</p>
+      <ul>
+        <li><strong>처리 항목:</strong> 사용자 닉네임, 생년월일, 양력/음력 구분, 태어난 시간, 성별</li>
+        <li><strong>처리 목적:</strong> 기기 내 결정론적 알고리즘을 통한 일일 운세(총운, 재물운, 애정운, 건강운) 계산 및 행운의 요소 추천</li>
+        <li><strong>저장 위치:</strong> 사용자 기기 내부 SharedPreferences 및 로컬 SQLite 데이터베이스</li>
+      </ul>
+      <p>위 항목들은 앱 외부의 어떠한 서버로도 전송되지 않으며 제3자에게 공유되지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2>3. 개인정보의 보유 및 파기 절차</h2>
+      <p>
+        본 앱은 서버를 운영하지 않으므로 사용자의 정보를 원격 서버에 보관하지 않습니다.
+        사용자가 앱 내 프로필 설정에서 정보를 변경하는 즉시 기기 내부의 기존 정보가 갱신되며,
+        사용자가 앱을 삭제(제거)하거나 기기 설정에서 앱 데이터를 삭제할 경우 기기에 저장된 모든 정보는 즉시 영구적으로 파기됩니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. 제3자 제공 및 외부 연동 배제</h2>
+      <p>
+        본 앱은 개인정보를 외부에 판매, 공유, 위탁하지 않습니다.
+        외부 백엔드 데이터베이스 서버 연동이 일절 없으며, 모든 운세 텍스트와 타로 카드 해석은 앱 설치 패키지 내부에 압축 내장되어 오프라인 상태에서도 동작합니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. 광고 SDK 및 제3자 서비스 라이브러리 안내</h2>
+      <p>
+        본 앱은 무료 서비스 제공 및 지속 가능한 앱 유지를 위해 구글 모바일 광고(Google AdMob) SDK를 탑재하고 있습니다.
+        구글 애드몹 SDK는 광고 송출 및 부정 트래픽 방지 목적으로 구글 정책에 따라 익명화된 기기 식별자 및 광고 상호작용 데이터를 수집할 수 있습니다.
+      </p>
+      <ul>
+        <li><strong>수집 주체:</strong> Google LLC (Google AdMob)</li>
+        <li><strong>수집 항목:</strong> 광고 ID, 기기 모델, OS 버전, 광고 노출 및 클릭 로그</li>
+        <li><strong>관련 방침:</strong> 구글 개인정보처리방침(https://policies.google.com/privacy) 준수</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. 이용자의 권리와 행사 방법</h2>
+      <p>
+        사용자는 언제든지 앱 메인 화면 상단의 설정 아이콘을 눌러 입력된 프로필 정보를 확인, 수정할 수 있습니다.
+        또한 스마트폰 설정 내 [애플리케이션] - [DailyFortune] - [저장공간] - [데이터 삭제] 메뉴를 통해 저장된 모든 데이터를 직접 즉각 삭제할 수 있습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. 개인정보 처리방침의 변경</h2>
+      <p>
+        본 방침은 관련 법령 및 앱의 기능 개선에 따라 개정될 수 있으며, 개정 시 본 문서를 통해 변경 사항을 공지합니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. 고객 지원 및 문의</h2>
+      <p>
+        본 앱의 이용 및 개인정보 보호와 관련된 문의는 구글 플레이 스토어(Google Play Store)의 앱 다운로드 페이지에 마련된 개발자 지원 채널 및 리뷰 창구를 통해 확인하실 수 있습니다.
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 DailyFortune. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
