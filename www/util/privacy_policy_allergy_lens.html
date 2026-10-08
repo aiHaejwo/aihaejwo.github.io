@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보처리방침 - 알레르기 렌즈 (AllergyLens)</title>
+    <style>
+        :root {
+            --primary: #0D1B2A;
+            --accent: #007AFF;
+            --text-main: #2D3748;
+            --text-muted: #718096;
+            --bg-body: #F8F9FA;
+            --bg-card: #FFFFFF;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Roboto, "Noto Sans KR", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 32px 16px;
+        }
+        .container {
+            max-width: 840px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #E2E8F0;
+        }
+        header {
+            border-bottom: 2px solid #EDF2F7;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        .highlight-box {
+            background-color: #EBF8FF;
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 28px;
+            font-size: 15px;
+            color: #2B6CB0;
+        }
+        h2 {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-left: 8px;
+            border-left: 3px solid var(--primary);
+        }
+        p, ul {
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: #4A5568;
+        }
+        ul {
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #EDF2F7;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>알레르기 렌즈 (AllergyLens) 개인정보처리방침</h1>
+            <div class="subtitle">최종 개정일: 2026년 10월 6일 | 시행일: 2026년 10월 6일</div>
+        </header>
+
+        <div class="highlight-box">
+            <strong>100% 온디바이스(On-Device) 프라이버시 원칙:</strong><br>
+            알레르기 렌즈는 사용자의 건강 및 알레르기 민감 데이터를 최우선으로 보호합니다. 카메라로 촬영되는 모든 식품 성분표 이미지와 광학문자인식(OCR) 텍스트 분석, 사용자 필터 설정은 오직 이용자의 기기 내부 메모리에서만 100% 로컬 연산으로 처리되며 어떠한 외부 클라우드나 원격 서버로도 일절 전송되지 않습니다.
+        </div>
+
+        <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+        <p>본 애플리케이션은 회원가입, 로그인, 주민등록번호나 실명 등 이용자를 직접 식별할 수 있는 어떠한 개인 식별 정보도 수집하거나 서버에 저장하지 않습니다.</p>
+        <ul>
+            <li><strong>카메라 영상 데이터:</strong> 식품 원재료명 라벨 문자인식(OCR)을 위해 카메라 프레임 버퍼를 임시 사용하며, 분석 완료 즉시 메모리에서 휘발 소멸되고 서버로 전송되거나 저장되지 않습니다.</li>
+            <li><strong>알레르기 설정 프로필:</strong> 이용자가 등록한 알레르기 유발물질 선택 목록, 맞춤 키워드, 프로필 이름은 기기 내부의 안전한 로컬 데이터베이스(SQLite)에만 단독 저장됩니다.</li>
+        </ul>
+
+        <h2>2. 개인정보의 처리 목적</h2>
+        <p>본 앱은 수집된 어떠한 데이터도 마케팅이나 타겟 광고 목적으로 제3자에게 판매하거나 공유하지 않습니다. 모든 기기 내 데이터는 다음 목적에 한해서만 사용됩니다.</p>
+        <ul>
+            <li>기기 내부 로컬 OCR 엔진을 통한 식품 성분표 텍스트 추출</li>
+            <li>식약처 지정 21대 알레르기 및 사용자 지정 기피 성분과의 온디바이스 실시간 대조</li>
+            <li>가족 구성원별 알레르기 필터 프로필의 로컬 기기 보존 및 전환</li>
+        </ul>
+
+        <h2>3. 기기 접근 권한 안내</h2>
+        <p>원활한 헬스케어 유틸리티 서비스 제공을 위해 다음 필수/선택적 기기 권한을 사용합니다.</p>
+        <ul>
+            <li><strong>카메라 권한 (android.permission.CAMERA):</strong> 식품 포장지의 성분표 라벨 텍스트를 실시간으로 스캔하고 인식하기 위해 필수적으로 사용됩니다.</li>
+            <li><strong>진동 권한 (android.permission.VIBRATE):</strong> 위험 알레르기 유발 성분이 검출되었을 때 사용자에게 즉각적인 촉각 경고를 전달하기 위해 사용됩니다.</li>
+        </ul>
+
+        <h2>4. 제3자 서비스 및 광고 플랫폼 정책</h2>
+        <p>본 애플리케이션은 무료 서비스 운영을 위해 Google AdMob 광고 SDK 및 Google Play 인앱 업데이트 라이브러리를 포함하고 있습니다. 이들 서비스는 구글의 개인정보처리방침에 따라 기기 식별자 및 비식별 진단 데이터를 수집할 수 있습니다.</p>
+        <ul>
+            <li><strong>Google AdMob:</strong> 광고 제공을 위한 익명화된 광고 식별자 처리 (<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">구글 광고 정책 확인</a>)</li>
+            <li><strong>Google Play In-App Update:</strong> 최신 스토어 버전 확인 및 보안 업데이트 다운로드</li>
+        </ul>
+        <p>※ 단, 사용자의 알레르기 정보, 스캔한 식품 내용 등 건강 관련 정보는 광고 플랫폼을 포함한 어떠한 외부 업체에도 절대 공유되지 않습니다.</p>
+
+        <h2>5. 개인정보의 파기 절차 및 방법</h2>
+        <p>애플리케이션 내의 모든 설정값 및 프로필 데이터는 이용자의 기기 내부에만 존재하므로, 앱 내에서 프로필을 삭제하거나 애플리케이션을 삭제(Uninstall)할 경우 기기 내부 저장소의 모든 데이터는 복구 불가능하게 영구 파기됩니다.</p>
+
+        <h2>6. 이용자의 권리와 행사 방법</h2>
+        <p>이용자는 언제든지 앱 내부의 프로필 설정 화면을 통해 저장된 알레르기 유발물질 정보 및 커스텀 키워드를 자유롭게 조회, 수정, 초기화 또는 삭제할 수 있습니다.</p>
+
+        <h2>7. 개인정보 보호책임 및 정책 변경 고지</h2>
+        <p>본 개인정보처리방침은 법령 또는 서비스 정책의 변경에 따라 내용이 수정될 수 있으며, 개정 시 애플리케이션 업데이트 및 스토어 공지를 통하여 신속히 안내합니다.</p>
+
+        <div class="footer">
+            &copy; 2026 알레르기 렌즈 (AllergyLens). All rights reserved. 100% On-Device Privacy Guaranteed.
+        </div>
+    </div>
+</body>
+</html>
