@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 - PalmInsight (손금 인사이트)</title>
+  <style>
+    :root {
+      --bg-color: #060913;
+      --card-bg: #0D1527;
+      --text-main: #F8FAFC;
+      --text-sub: #94A3B8;
+      --accent-gold: #FFD700;
+      --accent-cyan: #00F0FF;
+      --border-color: #1E2D4A;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      line-height: 1.7;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 36px 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+      color: var(--accent-gold);
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 16px;
+    }
+    .effective-date {
+      color: var(--accent-cyan);
+      font-size: 13px;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+    h2 {
+      color: var(--accent-cyan);
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    p, li {
+      color: var(--text-sub);
+      font-size: 14.5px;
+      margin-bottom: 12px;
+      word-break: keep-all;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .highlight-box {
+      background: rgba(0, 240, 255, 0.05);
+      border-left: 4px solid var(--accent-cyan);
+      padding: 14px 18px;
+      margin: 18px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .highlight-box p {
+      color: var(--text-main);
+      font-weight: 600;
+      margin: 0;
+    }
+    .footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-sub);
+      font-size: 12.5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>개인정보처리방침</h1>
+    <div class="effective-date">시행일자: 2026년 10월 6일 | PalmInsight (손금 인사이트)</div>
+
+    <div class="highlight-box">
+      <p>PalmInsight는 사용자의 생체 정보와 개인정보를 최우선으로 보호하며, 촬영된 손바닥 이미지를 일절 외부 서버로 전송하거나 영구 저장하지 않는 100% 온디바이스(On-Device) 로컬 처리 원칙을 준수합니다.</p>
+    </div>
+
+    <h2>1. 수집하는 개인정보 항목 및 처리 목적</h2>
+    <p>PalmInsight는 서비스 이용 시 필요한 최소한의 정보만을 처리하며, 주요 항목은 다음과 같습니다.</p>
+    <ul>
+      <li><strong>카메라 촬영 이미지:</strong> 기기 내 컴퓨터 비전 알고리즘(Canny Edge Detection)을 통한 손바닥의 3대 주요 선(감정선, 두뇌선, 생명선) 궤적 추출 목적으로만 단말기 메모리(RAM)에서 일시 사용됩니다. 분석이 완료되는 즉시 메모리에서 영구 파기되며, 어떠한 외부 서버로도 전송되지 않고 단말기 파일 저장소에도 남지 않습니다.</li>
+      <li><strong>운세 분석 결과 데이터:</strong> 추출된 선의 길이 및 곡률 수치, 운세 해석 텍스트, 5축 레이더 차트 스코어는 사용자가 과거 기록을 다시 확인할 수 있도록 단말기 내부 로컬 데이터베이스(SQLite)에만 저장됩니다.</li>
+      <li><strong>비식별 기기 및 광고 식별자:</strong> 앱 내 광고 제공(Google AdMob)을 위하여 구글 모바일 광고 SDK가 수집하는 광고 ID(ADID), 기기 모델명, OS 버전 등의 비식별 기술 정보가 포함될 수 있습니다.</li>
+    </ul>
+
+    <h2>2. 카메라 접근 권한 안내</h2>
+    <p>손금 분석을 위하여 기기의 카메라 접근 권한(CAMERA)을 요청합니다. 본 권한은 실시간 손바닥 감지 및 엣지 추출용으로만 국한되며, 사진 앨범 무단 접근이나 백그라운드 촬영, 마이크 녹음은 일체 수행하지 않습니다.</p>
+
+    <h2>3. 개인정보의 보유 및 파기 절차</h2>
+    <ul>
+      <li><strong>손바닥 원본 사진:</strong> 분석 프로세스 종료 즉시 단말기 휘발성 메모리(RAM)에서 완전 삭제 및 소멸 처리됩니다.</li>
+      <li><strong>로컬 운세 기록:</strong> 사용자의 기기 내부 로컬 저장소에만 보관되며, 사용자가 앱 내 '로컬 운세 기록장' 화면에서 개별 항목 삭제 또는 '전체 삭제'를 실행하거나 앱을 삭제하는 경우 즉시 완전히 파기됩니다.</li>
+    </ul>
+
+    <h2>4. 제3자 제공 및 외부 위탁에 관한 사항</h2>
+    <p>PalmInsight는 사용자의 생체 정보나 손금 분석 결과를 외부에 제공하거나 위탁하지 않습니다. 단, 무료 서비스 제공 유지를 위해 구글 모바일 광고 SDK(Google AdMob)를 탑재하고 있으며, 해당 SDK의 정책에 따라 비식별 광고 데이터가 처리될 수 있습니다. 구글의 개인정보 보호정책은 Google 개인정보처리방침 웹페이지를 통해 확인하실 수 있습니다.</p>
+
+    <h2>5. 정보주체의 권리 및 행사 방법</h2>
+    <p>사용자는 언제든지 기기의 앱 설정 메뉴를 통해 카메라 권한 허용 여부를 변경하거나 철회할 수 있으며, 앱 내부에서 언제든지 모든 분석 기록을 직접 삭제할 수 있습니다.</p>
+
+    <h2>6. 안전성 확보 조치</h2>
+    <p>PalmInsight는 사용자의 개인정보와 생체 프라이버시 보호를 위해 다음과 같은 안전 조치를 이행하고 있습니다.</p>
+    <ul>
+      <li>원천적인 네트워크 업로드 배제: 손바닥 이미지 데이터에 대한 외부 전송 파이프라인 부재</li>
+      <li>메모리 무보존 정책: 특징 추출 완료 즉시 이미지 버퍼 초기화 및 메모리 할당 해제</li>
+      <li>로컬 샌드박스 보안: 단말기 로컬 데이터베이스(SQLite)의 앱 전용 샌드박스 영역 보관</li>
+    </ul>
+
+    <h2>7. 개인정보 보호 문의 창구</h2>
+    <p>본 개인정보처리방침에 관한 문의사항이나 의견은 구글 플레이 스토어 앱 상세 페이지의 개발자 문의 안내 창구 또는 앱 내 피드백 지원을 통하여 접수해 주시면 성실히 안내해 드리겠습니다.</p>
+
+    <h2>8. 고지의 의무</h2>
+    <p>본 개인정보처리방침의 내용 추가, 삭제 및 수정이 있을 시에는 개정 최소 7일 전 앱 내 공지 또는 업데이트 릴리즈 노트를 통해 고지할 것입니다.</p>
+
+    <div class="footer">
+      &copy; 2026 PalmInsight. All rights reserved. 100% On-Device AI Vision Utility.
+    </div>
+  </div>
+</body>
+</html>
