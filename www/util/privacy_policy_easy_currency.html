@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 처리방침 - 이지 커런시 (EasyCurrency)</title>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --text-main: #1E293B;
+            --text-muted: #475569;
+            --bg-page: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --border-color: #E2E8F0;
+            --accent: #2563EB;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 36px 28px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 12px;
+        }
+        .effective-date {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+        h2 {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 28px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        p, ul {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .highlight-box {
+            background-color: #EFF6FF;
+            border-left: 4px solid var(--accent);
+            padding: 14px 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            font-size: 14px;
+            color: #1E40AF;
+        }
+        footer {
+            margin-top: 36px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>개인정보 처리방침 (Privacy Policy)</h1>
+        <div class="effective-date">시행일자: 2026년 10월 6일 | 앱 명칭: 이지 커런시 (EasyCurrency)</div>
+
+        <div class="highlight-box">
+            이지 커런시(EasyCurrency)는 사용자의 개인정보와 프라이버시를 최우선으로 보호합니다. 본 앱은 회원가입이나 로그인을 요구하지 않으며, 사용자의 개인 식별 정보를 수집·보관·판매하지 않는 오프라인 중심 유틸리티입니다.
+        </div>
+
+        <h2>1. 수집하는 개인정보의 항목 및 수집 방법</h2>
+        <p>본 앱은 서비스 제공을 위해 어떠한 개인 식별 정보(이름, 주민등록번호, 연락처, 주소, 위치 정보 등)도 수집하거나 서버로 전송하지 않습니다.</p>
+        <ul>
+            <li><strong>회원가입 없음:</strong> 별도의 계정 생성 없이 앱 설치 즉시 모든 기능을 사용하실 수 있습니다.</li>
+            <li><strong>금융 정보 미수집:</strong> 환율 계산을 위해 입력하신 금액이나 선택 국가 정보는 기기 내부 메모리 및 저장소에만 일시 보관되며 외부로 유출되지 않습니다.</li>
+        </ul>
+
+        <h2>2. 기기 내 로컬 데이터 저장 (오프라인 캐시)</h2>
+        <p>본 앱은 인터넷 연결이 없는 해외 여행지나 비행기 내에서도 정상적인 환율 계산 기능을 제공하기 위해 아래 정보만을 사용자의 기기 내부 저장소(SharedPreferences)에 로컬 저장합니다.</p>
+        <ul>
+            <li>사용자가 마지막으로 선택한 국가 통화 코드</li>
+            <li>사용자가 명시적으로 다운로드한 각국 환율 정보 및 최종 업데이트 일시</li>
+        </ul>
+        <p>해당 정보는 오직 기기 내부에서만 활용되며, 앱 삭제 시 기기에서 완전히 제거됩니다.</p>
+
+        <h2>3. 네트워크 통신 및 외부 API 이용</h2>
+        <p>본 앱은 불필요한 백그라운드 데이터 소모 및 로밍 요금 발생을 방지하기 위해 백그라운드 네트워크 동기화를 수행하지 않습니다.</p>
+        <ul>
+            <li>사용자가 직접 화면 상단의 [환율 받기] 버튼을 터치할 때에 한하여 공개 환율 API를 1회성으로 호출하여 최신 환율을 기기에 저장합니다.</li>
+            <li>환율 갱신 시 전송되는 패킷에는 사용자 식별 정보나 기기 고유 식별자가 일절 포함되지 않습니다.</li>
+        </ul>
+
+        <h2>4. 제3자 광고 서비스 (Google AdMob)</h2>
+        <p>본 앱은 무료 서비스 제공 및 유지 관리를 위해 Google AdMob 광고를 게재합니다.</p>
+        <ul>
+            <li>Google AdMob은 광고 제공 및 맞춤형 광고 제한 정책 준수를 위해 Google 모바일 광고 SDK 표준에 따라 익명화된 광고 식별자(ADID) 및 기기 기본 정보(OS 버전, 기기 모델 등)를 처리할 수 있습니다.</li>
+            <li>사용자는 기기의 설정(Google 설정 &gt; 광고)에서 맞춤형 광고 수신 여부를 언제든지 직접 제어하거나 재설정할 수 있습니다.</li>
+            <li>Google의 개인정보 보호 정책에 대한 자세한 내용은 Google 개인정보 보호 및 약관 페이지에서 확인하실 수 있습니다.</li>
+        </ul>
+
+        <h2>5. 개인정보의 파기 절차 및 방법</h2>
+        <p>본 앱은 별도의 회원 DB나 중앙 서버를 운영하지 않으므로, 사용자가 스마트폰 설정에서 앱 데이터를 삭제하거나 앱을 삭제(제거)하는 즉시 기기에 저장된 모든 로컬 설정 및 캐시 데이터가 영구히 파기됩니다.</p>
+
+        <h2>6. 이용자의 권리와 행사 방법</h2>
+        <p>이용자는 언제든지 앱을 삭제함으로써 데이터 저장 및 서비스 이용을 즉각 중단할 수 있습니다.</p>
+
+        <h2>7. 문의 및 의견 수렴</h2>
+        <p>본 개인정보 처리방침 또는 앱 사용과 관련된 문의사항이나 건의사항은 구글 플레이 스토어(Google Play Store)의 앱 상세 페이지 내 개발자 지원 및 리뷰 창구를 통해 접수하실 수 있습니다.</p>
+
+        <footer>
+            &copy; 2026 이지 커런시 (EasyCurrency). All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
