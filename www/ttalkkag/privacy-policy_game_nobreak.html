@@ -134,13 +134,14 @@
         <h1>개인정보처리방침</h1>
         <div class="meta">
             <span class="meta-item"><strong>앱 이름:</strong>&nbsp;노브레이크: 폰 던짐 주의 러닝 액션 (NoBrakes)</span>
-            <span class="meta-item"><strong>패키지명:</strong>&nbsp;com.ttalkkag.nobrakes</span>
-            <span class="meta-item"><strong>시행일자:</strong>&nbsp;2026년 9월 9일</span>
+            <span class="meta-item"><strong>Android:</strong>&nbsp;com.ttalkkag.nobrakes</span>
+            <span class="meta-item"><strong>iOS:</strong>&nbsp;com.ttalkkag.nobreakios</span>
+            <span class="meta-item"><strong>시행일자:</strong>&nbsp;2026년 10월 12일</span>
         </div>
     </header>
 
     <section>
-        <p><strong>Ttalkkag</strong>(이하 "개발사")는 <strong>노브레이크: 폰 던짐 주의 러닝 액션</strong>(영문명 NoBrakes, 이하 "본 앱") 이용자의 개인정보를 소중히 보호하며, 「개인정보 보호법」 및 관련 법령, Google Play 개발자 정책을 준수합니다.</p>
+        <p><strong>Ttalkkag</strong>(이하 "개발사")는 <strong>노브레이크: 폰 던짐 주의 러닝 액션</strong>(영문명 NoBrakes, 이하 "본 앱") 이용자의 개인정보를 소중히 보호하며, 「개인정보 보호법」 및 관련 법령, Google Play 및 Apple App Store 개발자 정책을 준수합니다.</p>
         <p>본 앱은 별도의 회원가입이나 자체 백엔드 서버 없이 구동되는 오프라인 플레이 지원 캐주얼 아케이드 레이싱 게임입니다. 본 방침은 게임 이용 과정에서 데이터가 어떻게 처리되는지 투명하게 알리기 위해 마련되었습니다.</p>
     </section>
 
@@ -165,19 +166,21 @@
             <li><strong>누적 통계:</strong> 총 플레이 횟수, 아슬아슬 근접 추월(Near-Miss) 횟수, 회피한 장애물 통계(돌, 오일, 차선 변경 차량, 버스, 역주행 차량, 공사 구간 등)</li>
             <li><strong>환경설정:</strong> 조작 방식(상대 드래그 조향), 조향 감도, 음향(Sound) 활성화 여부, 햅틱 진동(Haptics) 활성화 여부, 화면 흔들림 효과 활성화 여부</li>
         </ul>
+        <p>iOS 버전의 게임 저장 폴더는 iCloud 백업 대상에서 제외하며, 개발사는 게임 기록을 자체 서버로 전송하거나 플랫폼 간 동기화하지 않습니다. 운영체제 또는 기기 이전 기능에 의한 처리에는 각 플랫폼의 정책이 적용됩니다.</p>
         <p>※ 위 데이터는 이용자의 기기 내부에만 보관되며 외부 서버로 전송되지 않습니다. 앱을 삭제(언인스톨)하거나 앱 저장소 데이터를 초기화할 경우 즉시 영구 파기됩니다.</p>
     </section>
 
     <section>
-        <h2>3. 제3자 서비스 및 비식별 데이터 처리 (광고 및 업데이트)</h2>
-        <p>본 앱은 무료 게임 플레이 환경 제공, 보상형 보너스(부활, 코인 2배, 시승 등) 제공, 최신 버전 배포 확인을 위해 검증된 <strong>Google 공식 SDK</strong>를 사용합니다. 해당 제3자 서비스는 각 사의 개인정보처리방침에 따라 비식별 기술 데이터 및 진단 데이터를 자동으로 처리할 수 있습니다.</p>
+        <h2>3. 제3자 서비스의 데이터 처리 (광고 및 업데이트)</h2>
+        <p>본 앱은 무료 게임 플레이 환경 제공, 보상형 보너스(부활, 코인 2배, 시승 등) 제공, 최신 버전 배포 확인을 위해 검증된 <strong>Google 공식 SDK</strong>를 사용합니다. 해당 제3자 서비스는 각 사의 개인정보처리방침에 따라 광고 식별자, 기기 관련 기술 데이터 및 진단 데이터를 처리할 수 있습니다. 광고 식별자는 기기 또는 이용자와 연결될 수 있으며, 자체 서버를 운영하지 않는다는 설명이 제3자 광고 서비스의 데이터 처리가 없다는 의미는 아닙니다.</p>
         
         <ul>
             <li>
                 <strong>Google AdMob (구글 모바일 광고)</strong>
                 <ul>
-                    <li><strong>목적:</strong> 게임 내 전면 광고 및 플레이어 선택에 따른 리워드(보상형) 광고 송출</li>
-                    <li><strong>처리 가능 항목:</strong> 구글 광고 식별자(Google Advertising ID / GAID), 대략적인 IP 주소(국가/도시 단위 및 부정클릭 방지), 기기 모델명, OS 버전, 광고 시청 및 상호작용 지표</li>
+                    <li><strong>목적:</strong> 게임 내 배너·전면 광고 및 플레이어 선택에 따른 리워드(보상형) 광고 송출, 광고 효과 측정 및 부정 사용 방지</li>
+                    <li><strong>처리 가능 항목:</strong> Android 광고 식별자(GAID), iOS 광고 식별자(IDFA, 추적 허용 시), 앱·개발자 범위의 기기 식별자, IP 주소를 통한 대략적인 위치, 기기 모델명 및 OS 버전, 광고 노출·시청·상호작용 정보, 충돌 로그와 성능·진단 데이터</li>
+                    <li><strong>보관 및 삭제:</strong> 광고·진단 데이터의 보관 기간과 삭제 처리는 Google의 정책에 따릅니다. 관련 사항은 아래 Google 개인정보처리방침에서 확인할 수 있습니다.</li>
                     <li><strong>개인정보처리방침:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
                     <li><strong>구글 파트너 기술 이용 안내:</strong> <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a></li>
                 </ul>
@@ -185,11 +188,11 @@
             <li>
                 <strong>Google UMP (User Messaging Platform)</strong>
                 <ul>
-                    <li><strong>목적:</strong> 유럽 경제 지역(EEA) 및 영국(UK) 사용자를 위한 GDPR 규정 준수 개인정보 동의 관리 플랫폼 제공</li>
+                    <li><strong>목적:</strong> 설정된 지역별 개인정보 메시지의 표시와 동의 선택 관리. iOS에서는 광고 요청 전 동의 상태를 확인하며, 동의가 필요한 경우 메시지를 표시합니다. 다시 선택할 수 있는 지역에서는 게임 설정의 Ad Privacy 버튼으로 광고 개인정보 옵션을 열 수 있습니다.</li>
                 </ul>
             </li>
             <li>
-                <strong>Google Play In-App Update (Play Core)</strong>
+                <strong>Google Play In-App Update (Play Core, Android 전용)</strong>
                 <ul>
                     <li><strong>목적:</strong> 구글 플레이 스토어와 통신하여 최신 앱 버전 배포 여부를 확인하고 인앱 즉시 업데이트 지원</li>
                 </ul>
@@ -202,27 +205,29 @@
         <p>본 앱은 게임 구동에 반드시 필요한 최소한의 시스템 권한만을 선언하고 사용합니다. 카메라, 마이크, 연락처, 저장공간 파일 접근, 정밀 위치 등 민감한 권한은 일절 요청하지 않습니다.</p>
         <ul>
             <li><code>android.permission.INTERNET</code>: Google AdMob 광고 로드 및 수신, UMP 동의 폼 수신, 구글 플레이 최신 버전 확인에 사용됩니다. (인터넷이 연결되지 않은 오프라인 상태에서도 광고를 제외한 기본 게임 플레이는 정상 이용 가능합니다.)</li>
+            <li><strong>iOS 추적 권한(선택):</strong> 맞춤형 광고 및 광고 효과 측정을 위한 광고 식별자 접근 시 Apple의 App Tracking Transparency 안내를 표시합니다. 허용하지 않아도 게임을 플레이할 수 있으며, 카메라·마이크·연락처·정밀 위치 접근은 요청하지 않습니다.</li>
             <li><code>android.permission.VIBRATE</code>: 차량 충돌 및 아슬아슬 근접 추월(Near-Miss) 발생 시 생생한 햅틱 진동 피드백을 전달하기 위해 사용됩니다. 게임 내 설정 메뉴(SETTING)에서 언제든지 진동을 켜거나 끌 수 있습니다.</li>
         </ul>
     </section>
 
     <section>
         <h2>5. 맞춤형 광고 거부 및 광고 식별자 제어</h2>
-        <p>이용자는 안드로이드 기기 설정을 통해 언제든지 맞춤형(개인화) 광고 수신을 거부하거나 광고 식별자를 재설정할 수 있습니다.</p>
+        <p>이용자는 기기 설정을 통해 언제든지 맞춤형(개인화) 광고 수신을 거부하거나 광고 식별자를 재설정할 수 있습니다.</p>
         <ul>
             <li><strong>안드로이드 기기 설정:</strong> 기기 [설정] &gt; [Google] &gt; [광고] &gt; <em>"광고 ID 재설정"</em> 또는 <em>"광고 ID 삭제"</em> 선택</li>
-            <li><strong>유럽 경제 지역(EEA) 및 영국 이용자:</strong> 최초 실행 시 제공되는 UMP 동의 팝업을 통해 광고 개인화 동의 여부를 언제든 재설정할 수 있습니다.</li>
+            <li><strong>iOS 기기 설정:</strong> [설정] &gt; [개인정보 보호 및 보안] &gt; [추적]에서 본 앱의 추적 허용 여부를 변경할 수 있습니다. 추적을 허용하지 않아도 기본 게임을 이용할 수 있습니다.</li>
+            <li><strong>광고 동의 관리:</strong> 동의가 필요한 지역에서는 UMP 메시지로 선택할 수 있습니다. iOS에서 개인정보 옵션이 요구되는 경우 게임 설정의 <em>Ad Privacy</em> 버튼으로 선택을 변경할 수 있습니다.</li>
         </ul>
     </section>
 
     <section>
         <h2>6. 어린이 개인정보 보호 (COPPA 준수)</h2>
-        <p>본 앱은 전 연령이 이용할 수 있는 전체 이용가 게임입니다. 본 앱은 만 14세 미만(또는 해당 국가/지역의 법정 아동 연령 기준) 아동의 개인 식별 정보를 고의로 수집하지 않습니다. 아동이 부모의 동의 없이 타사 서비스에 개인정보를 제공한 것으로 의심되는 경우 아래 문의처로 연락해 주시면 즉각적인 조치를 취하겠습니다.</p>
+        <p>본 앱은 어린이를 주 대상으로 설계한 앱이 아니며, 스토어의 연령 등급 안내에 따라 이용할 수 있는 캐주얼 게임입니다. 본 앱은 만 14세 미만(또는 해당 국가/지역의 법정 아동 연령 기준) 아동의 개인 식별 정보를 고의로 수집하지 않습니다. 아동이 부모의 동의 없이 타사 서비스에 개인정보를 제공한 것으로 의심되는 경우 아래 문의처로 연락해 주시면 즉각적인 조치를 취하겠습니다.</p>
     </section>
 
     <section>
         <h2>7. 개인정보처리방침의 변경</h2>
-        <p>본 개인정보처리방침은 관련 법령, 구글 플레이 정책 변경 또는 게임 기능 업데이트에 따라 수정될 수 있습니다. 방침이 변경되는 경우 본 페이지를 통해 공지하며, 상단의 "시행일자"를 갱신합니다.</p>
+        <p>본 개인정보처리방침은 관련 법령, 스토어 정책 변경 또는 게임 기능 업데이트에 따라 수정될 수 있습니다. 방침이 변경되는 경우 본 페이지를 통해 공지하며, 상단의 "시행일자"를 갱신합니다.</p>
     </section>
 
     <section class="contact-box">
@@ -230,7 +235,7 @@
         <p>본 개인정보처리방침 및 게임 이용과 관련하여 문의사항, 의견, 불만 처리가 필요하신 경우 아래 연락처로 언제든지 문의해 주시기 바랍니다.</p>
         <p style="margin-top: 10px;">
             <strong>개발팀 / 개발자:</strong> Ttalkkag<br>
-            <strong>이메일:</strong> <a href="mailto:support@ttalkkag.com">support@ttalkkag.com</a><br>
+            <strong>이메일:</strong> <a href="mailto:aihaejwo@gmail.com">aihaejwo@gmail.com</a><br>
             <strong>웹사이트:</strong> <a href="https://aihaejwo.site" target="_blank" rel="noopener noreferrer">https://aihaejwo.site</a>
         </p>
     </section>
