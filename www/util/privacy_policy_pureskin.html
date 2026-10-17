@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PureSkin (순수 피부) - 개인정보처리방침</title>
+  <style>
+    :root {
+      --bg-color: #FDFBF9;
+      --card-bg: #FFFFFF;
+      --text-primary: #1F2421;
+      --text-secondary: #4A5550;
+      --border-color: #EDE5E0;
+      --accent-color: #C88A7B;
+      --mint-bg: #F2F9F6;
+      --mint-accent: #4A9B82;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", Roboto, sans-serif;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 32px 24px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid var(--border-color);
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 12px;
+    }
+    .date {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+    p, li {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .highlight-box {
+      background-color: var(--mint-bg);
+      border-left: 4px solid var(--mint-accent);
+      padding: 14px 16px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .footer {
+      margin-top: 36px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+    a {
+      color: var(--mint-accent);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>개인정보처리방침 (Privacy Policy)</h1>
+    <div class="date">시행일자: 2026년 10월 18일 | 서비스명: PureSkin - 순수 피부 AI 피부 나이 진단기 (com.ttalkkag.pureskin)</div>
+
+    <div class="highlight-box">
+      <strong>핵심 프라이버시 원칙 (100% 온디바이스 AI 분석):</strong> "PureSkin(순수 피부)"은 이용자의 민감한 안면 사진 및 생체 정보를 외부 서버로 절대 전송하거나 저장하지 않습니다. 촬영되거나 선택된 얼굴 이미지는 오직 이용자의 스마트폰 내부 메모리(RAM)에서만 온디바이스(On-Device)로 분석되며, 분석 완료 즉시 메모리 및 임시 파일에서 영구 파기됩니다.
+    </div>
+
+    <h2>1. 수집 및 처리하는 정보 항목과 이용 목적</h2>
+    <p>본 애플리케이션은 별도의 회원가입 절차 없이 운영되며, 피부 나이 측정 및 스킨케어 다이어리 기능을 제공하기 위해 아래의 정보를 이용자의 단말기 내부에서만 처리합니다.</p>
+    <ul>
+      <li><strong>카메라 촬영 및 갤러리 사진 (안면 이미지):</strong> 온디바이스 AI 얼굴 랜드마크 검출(Google ML Kit) 및 피부 바이오마커(주름·탄력, 수분·광채, 트러블·잡티, 피부 톤 균일도) 산출 목적으로만 단말기 내부 메모리(RAM)에서 일시 처리되며, 분석 직후 즉시 삭제됩니다. 외부 서버로 전송되거나 수집되지 않습니다.</li>
+      <li><strong>이용자 설정 나이 및 피부 진단 수치 기록:</strong> 상대적 피부 나이 비교를 위해 이용자가 설정한 나이 및 '다이어리에 기록하기'를 선택한 진단 결과 수치(피부 나이, 종합 점수, 4대 지표 점수, 측정 일시)는 이용자의 기기 내부 로컬 데이터베이스(SQLite 및 SharedPreferences)에만 보관됩니다.</li>
+    </ul>
+
+    <h2>2. 기기 접근 권한 안내</h2>
+    <ul>
+      <li><strong>카메라 (android.permission.CAMERA):</strong> 실시간 안면 가이드 정렬 및 피부 상태 스캔 촬영을 위해 사용됩니다.</li>
+      <li><strong>인터넷 및 광고 식별자 (INTERNET, AD_ID):</strong> Google AdMob 모바일 광고 송출 및 Google Play 인앱 업데이트 확인 목적으로만 사용되며, 이용자의 사진이나 피부 진단 데이터를 외부로 전송하는 데에는 일절 사용되지 않습니다.</li>
+    </ul>
+
+    <h2>3. 개인정보의 보유 기간 및 파기 방법</h2>
+    <p>본 애플리케이션은 중앙 서버에 이용자의 사진이나 피부 기록을 저장하지 않습니다.</p>
+    <ul>
+      <li><strong>안면 촬영 사진:</strong> 피부 수치 산출 완료 즉시 단말기 캐시 및 RAM 메모리에서 자동 영구 파기됩니다.</li>
+      <li><strong>스킨케어 다이어리 기록:</strong> 이용자의 기기 내부에만 저장되며, 앱 내 '스킨케어 다이어리' 화면에서 개별 기록을 직접 삭제하거나 애플리케이션을 기기에서 삭제(Uninstall)하면 모든 로컬 데이터가 즉시 영구 파기됩니다.</li>
+    </ul>
+
+    <h2>4. 제3자 제공 및 외부 SDK 활용 안내</h2>
+    <p>본 애플리케이션은 이용자의 얼굴 사진이나 개인 식별 정보를 제3자에게 판매하거나 제공하지 않습니다. 단, 무료 앱 서비스 운영을 위한 광고 게재 및 앱 업데이트 확인을 위해 아래의 신뢰할 수 있는 제3자 SDK를 포함하고 있습니다.</p>
+    <ul>
+      <li><strong>Google AdMob (Google LLC):</strong> 배너 및 전면 광고 제공, 광고 성과 측정 및 부정 클릭 방지를 위해 기기 광고 식별자(AD_ID), 대략적인 기기 정보 및 광고 상호작용 데이터를 수집·처리할 수 있습니다. 자세한 내용은 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 개인정보처리방침</a>을 참조하시기 바랍니다.</li>
+      <li><strong>Google ML Kit Face Detection:</strong> 단말기 내부(On-Device)에서 오프라인으로 얼굴 영역과 랜드마크 좌표를 인식하는 용도로만 작동하며 얼굴 이미지를 외부로 전송하지 않습니다.</li>
+      <li><strong>Google Play In-App Update:</strong> 최신 버전 유지 및 보안 업데이트 확인을 위해 Google Play 스토어 프레임워크와 통신합니다.</li>
+    </ul>
+
+    <h2>5. 이용자의 권리 및 행사 방법</h2>
+    <p>이용자는 언제든지 앱 내 설정에서 기준 나이를 변경하거나 스킨케어 다이어리에 저장된 기록을 열람·삭제할 수 있습니다. 또한 단말기 설정에서 카메라 권한을 철회하거나 광고 ID(AD_ID) 재설정 및 맞춤형 광고 제한을 설정할 수 있으며, 앱 삭제를 통해 모든 로컬 데이터를 완전히 제거할 수 있습니다.</p>
+
+    <h2>6. 아동 및 청소년의 개인정보 보호</h2>
+    <p>본 애플리케이션은 만 13세 이상 이용자를 포함한 일반 이용자(전체이용가)가 안전하게 사용할 수 있도록 설계되었으며, 아동 및 청소년의 개인 식별 정보를 온라인 서버로 수집하지 않습니다.</p>
+
+    <h2>7. 개인정보 보호책임자 및 문의처</h2>
+    <p>개인정보처리방침 및 서비스 이용과 관련하여 문의사항이 있으신 경우 아래의 연락처로 문의해 주시기 바랍니다.</p>
+    <ul>
+      <li><strong>개발자 / 운영 주체:</strong> AI해줘 (aiHaejwo)</li>
+      <li><strong>이메일:</strong> <a href="mailto:aiplease.dev@gmail.com">aiplease.dev@gmail.com</a></li>
+      <li><strong>웹사이트:</strong> <a href="https://aihaejwo.site" target="_blank" rel="noopener noreferrer">https://aihaejwo.site</a></li>
+    </ul>
+
+    <h2>8. 개인정보처리방침의 변경</h2>
+    <p>법령, 정책 또는 서비스 기능의 변경에 따라 본 개인정보처리방침의 내용이 추가, 삭제 또는 수정될 경우, 본 웹페이지를 통해 고지합니다.</p>
+
+    <div class="footer">
+      © 2026 PureSkin (순수 피부) · <a href="https://aihaejwo.site" target="_blank" rel="noopener noreferrer">https://aihaejwo.site</a> · Contact: aiplease.dev@gmail.com
+    </div>
+  </div>
+</body>
+</html>
