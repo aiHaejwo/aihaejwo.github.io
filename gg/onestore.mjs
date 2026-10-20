@@ -1,0 +1,82 @@
+const privacyPath = './privacy.html';
+
+// The injected SDK/environment also let the lifecycle contract run in Node tests.
+export function createBridge(sdk, env) {
+  let initialized = false;
+  let started = false;
+  let pauseCallback;
+  let resumeCallback;
+  let snapshot;
+  const bridge = {
+    paused: false,
+    ringerSilent: false,
+    bind(pause, resume, serialize) {
+      pauseCallback = pause;
+      resumeCallback = resume;
+      snapshot = serialize;
+    },
+    async initialize() {
+      sdk.on('pause', () => {
+        bridge.paused = true;
+        pauseCallback?.();
+      });
+      sdk.on('resume', (event) => {
+        if (typeof event.ringerSilent === 'boolean') {
+          bridge.ringerSilent = event.ringerSilent;
+        }
+        bridge.paused = false;
+        resumeCallback?.();
+      });
+      sdk.on('exit', () => {
+        bridge.paused = true;
+        pauseCallback?.();
+        if (snapshot) env.save(snapshot());
+      });
+      const info = await sdk.initializeAsync();
+      if (info.err) {
+        // Standalone browsers are a playable preview; host failures still reject.
+        if (info.err !== 'Platform Not Supported') throw new Error(info.err);
+        return;
+      }
+      initialized = true;
+      bridge.ringerSilent = info.ringerSilent === true;
+      env.safeArea(info.safeArea);
+      bridge.loadingProgress(0);
+    },
+    loadingProgress(progress) {
+      if (initialized) sdk.setLoadingProgress(progress);
+    },
+    async startGame() {
+      if (!initialized || started) return;
+      bridge.loadingProgress(100);
+      await sdk.startGameAsync();
+      started = true;
+    },
+    async openPrivacyPolicy() {
+      if (initialized) await sdk.openDeeplink(env.privacyUrl);
+      else env.open(env.privacyUrl);
+    },
+  };
+  return bridge;
+}
+
+export async function initializeOneStore() {
+  const { createSDK } = await import(
+    'https://h5sdk.onestore.net/lib/v1.1.0/onestore-h5-sdk.min.js'
+  );
+  const bridge = createBridge(createSDK(), {
+    privacyUrl: new URL(privacyPath, document.baseURI).href,
+    save: (value) => localStorage.setItem(
+      'flutter.mythic_roll_defense_save_v2', JSON.stringify(value)),
+    safeArea: (area = {}) => {
+      for (const edge of ['top', 'bottom', 'left', 'right']) {
+        const inset = Number(area[edge]);
+        document.body.style.setProperty(`--safe-${edge}`,
+          `${Number.isFinite(inset) ? Math.max(0, inset) : 0}px`);
+      }
+    },
+    open: (url) => window.open(url, '_blank', 'noopener,noreferrer'),
+  });
+  window.mythicOneStore = bridge;
+  await bridge.initialize();
+}

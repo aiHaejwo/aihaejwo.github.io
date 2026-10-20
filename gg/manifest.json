@@ -1,0 +1,35 @@
+{
+  "name": "신화각 : 핀볼 바운스 디펜스",
+  "short_name": "신화각",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0A0E19",
+  "theme_color": "#0A0E19",
+  "description": "영웅 구슬을 소환하고 합쳐 30웨이브를 돌파하는 핀볼 디펜스 게임",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/Icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
