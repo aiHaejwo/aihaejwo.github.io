@@ -41604,20 +41604,21 @@ break
 case 1:return A.A(q,r)}})
 return A.B($async$cz,r)},
 jK(a,b,c,d){return this.TE(a,b,c,d)},
-TE(a,b,c,d){var s=0,r=A.C(t.y),q,p=2,o=[],n=[],m=this,l,k,j,i,h
+TE(a,b,c,d){var s=0,r=A.C(t.y),q,p=2,o=[],n=[],m=this,l,k,j,i,h,g
 var $async$jK=A.D(function(e,f){if(e===1){o.push(f)
 s=p}for(;;)switch(s){case 0:if(m.r){q=!1
 s=1
-break}if(!v.G.mythicOneStore.rewardedAvailable){q=!1
+break}j=v.G
+if(!j.mythicOneStore.rewardedAvailable){q=!1
 s=1
 break}m.r=!0
-j=$.aV()
-j.jl(B.d4)
+i=$.aV()
+i.jl(B.d4)
 p=4
 s=7
 return A.q(A.a0e(),$async$jK)
 case 7:l=f
-if(l&&a.e!=null){j.iA()
+if(l&&a.e!=null){i.iA()
 b.$0()
 q=!0
 n=[1]
@@ -41627,8 +41628,8 @@ n.push(6)
 s=5
 break
 case 4:p=3
-h=o.pop()
-k=A.ae(h)
+g=o.pop()
+k=A.ae(g)
 A.QD().$1("ONE store reward verification: "+A.m(k))
 if(a.e!=null)a.aj(t.Pu).f.te(B.Ro)
 n.push(6)
@@ -41636,8 +41637,9 @@ s=5
 break
 case 3:n=[2]
 case 5:p=2
-m.r=!1
-if($.a1.k2$===B.aQ)$.aV().jl(B.aQ)
+i=m.r=!1
+j=j.mythicOneStore
+if(!j.paused?$.a1.k2$===B.aQ:i)$.aV().jl(B.aQ)
 s=n.pop()
 break
 case 6:q=!1

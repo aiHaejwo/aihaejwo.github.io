@@ -3,5 +3,5 @@
 export const adConfig = {
   interstitialPlacementId: '',
   rewardedPlacementId: '',
-  rewardServerUrl: '',
+  rewardServerUrl: 'https://gg-onestore-rewards.aiplease-dev.workers.dev',
 };
