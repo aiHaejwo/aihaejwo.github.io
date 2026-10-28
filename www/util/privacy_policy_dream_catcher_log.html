@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>드림캐처 로그 개인정보처리방침</title>
+  <style>
+    :root {
+      --bg: #07080c;
+      --card: #0d0f1e;
+      --border: #242849;
+      --text: #e4cfab;
+      --muted: #9c8b74;
+      --accent: #d99a4e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 26px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 24px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+    }
+    h2 {
+      margin-top: 28px;
+      font-size: 18px;
+      color: var(--accent);
+    }
+    p, li {
+      font-size: 14.5px;
+      color: var(--text);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .meta {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>드림캐처 로그 개인정보처리방침</h1>
+    <p>
+      드림캐처 로그(이하 "앱")는 이용자의 사생활과 내면의 꿈 기록을 안전하게 보호하기 위해 관련 개인정보 보호 법령을 준수하며, 다음과 같이 개인정보처리방침을 안내합니다.
+    </p>
+
+    <h2>1. 수집 및 저장하는 정보에 관한 안내</h2>
+    <p>
+      본 앱은 별도의 회원가입이나 로그인 절차 없이 동작하는 로컬 기반 유틸리티 애플리케이션입니다. 이용자가 작성하거나 녹음한 다음 데이터는 외부 서버로 전송되지 않으며 오직 이용자의 단말기 내부 저장소에만 보관됩니다.
+    </p>
+    <ul>
+      <li>기상 직후 녹음한 꿈 음성 파일(단말기 내부 전용 보안 폴더 내 저장)</li>
+      <li>이용자가 직접 입력한 꿈 제목, 줄거리 메모, 선명도 점수, 꿈 유형 및 키워드 해시태그</li>
+      <li>앱 내 초저조도 화면 보호 설정 등 로컬 환경 설정값</li>
+    </ul>
+
+    <h2>2. 기기 권한 사용 목적</h2>
+    <ul>
+      <li><strong>마이크 녹음 권한(RECORD_AUDIO):</strong> 이용자가 녹음 버튼을 눌렀을 때 꿈 이야기를 음성 파일로 기기 내부에 기록하기 위한 목적으로만 사용됩니다. 백그라운드에서 임의로 녹음하거나 외부 클라우드 음성인식 서버로 음성을 전송하지 않습니다.</li>
+      <li><strong>진동 제어 권한(VIBRATE):</strong> 어두운 환경에서 녹음 시작·종료 및 키워드 선택 상태를 촉각 진동으로 안내하기 위해 사용됩니다.</li>
+      <li><strong>네트워크 및 광고 식별자 권한(INTERNET, ACCESS_NETWORK_STATE, AD_ID):</strong> Google AdMob 광고 송출 및 Google Play 스토어 인앱 업데이트 버전 확인을 위해서만 사용됩니다.</li>
+    </ul>
+
+    <h2>3. 제3자 서비스(광고 및 스토어 업데이트) 이용 안내</h2>
+    <p>
+      본 앱은 무료 서비스 유지를 위해 Google AdMob 광고 SDK와 Google Play 인앱 업데이트 API를 포함하고 있습니다. 해당 모듈은 광고 노출과 앱 최신 버전 확인을 위해 기기 광고 식별자(AD_ID) 및 기본 네트워크 상태 정보를 처리할 수 있으며, 이용자의 꿈 음성 파일이나 꿈 일기 텍스트에는 접근하지 않습니다.
+    </p>
+
+    <h2>4. 데이터의 보유 및 파기</h2>
+    <p>
+      모든 꿈 음성 파일과 일기 기록은 이용자의 스마트폰 내부 데이터베이스(SQLite) 및 앱 전용 디렉토리에만 저장됩니다. 이용자가 앱 내 보관함에서 개별 꿈 기록을 삭제하거나 단말기에서 앱을 삭제하면 저장된 모든 음성 파일과 기록 데이터는 즉시 영구 파기됩니다.
+    </p>
+
+    <h2>5. 이용자의 권리와 관리 방법</h2>
+    <p>
+      이용자는 언제든지 앱 내 꿈 보관함 화면에서 자신이 기록한 음성 파일과 메모를 열람·수정·삭제할 수 있으며, 스마트폰 운영체제의 애플리케이션 설정 메뉴를 통해 마이크 권한을 철회하거나 앱 저장 데이터를 초기화할 수 있습니다.
+    </p>
+
+    <h2>6. 개인정보처리방침의 변경</h2>
+    <p>
+      법령이나 서비스 기능 변경에 따라 본 개인정보처리방침이 수정될 경우, 앱 배포 페이지 및 본 문서를 통해 변경 사항을 공지합니다.
+    </p>
+
+    <div class="meta">
+      <p>시행일자: 2026년 10월 27일</p>
+      <p>관련 문의 및 안내는 구글 플레이 스토어 앱 등록 페이지의 공식 지원 안내를 통해 확인하실 수 있습니다.</p>
+    </div>
+  </div>
+</body>
+</html>
