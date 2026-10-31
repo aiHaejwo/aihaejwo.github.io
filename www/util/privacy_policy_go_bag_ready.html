@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개인정보처리방침 - 고백 레디 (GoBagReady)</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --border: #334155;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #ffffff;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+    h2 {
+      margin-top: 28px;
+      font-size: 18px;
+      color: var(--accent);
+    }
+    p, li {
+      font-size: 15px;
+      color: #e2e8f0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .meta {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>개인정보처리방침</h1>
+    <p>
+      <strong>고백 레디 (GoBagReady)</strong>(이하 "앱")는 이용자의 개인정보와 가계 안전 데이터를 소중하게 보호하며, 관련 법령 및 Google Play 개발자 프로그램 정책을 준수합니다. 본 개인정보처리방침은 앱이 어떤 정보를 어떻게 처리하고 보호하는지 안내합니다.
+    </p>
+
+    <h2>1. 회원가입 및 개인식별정보 비수집 원칙</h2>
+    <p>
+      본 앱은 별도의 회원가입, 로그인, 계정 생성 절차 없이 모든 핵심 기능을 즉시 이용할 수 있도록 설계되었습니다. 개발자는 이용자의 성명, 주민등록번호, 전화번호, 위치 좌표 등 개인식별정보를 외부 서버로 수집하거나 전송하지 않습니다.
+    </p>
+
+    <h2>2. 기기 내부 로컬 데이터 저장 (SQLite)</h2>
+    <p>
+      이용자가 앱 내에 직접 입력하는 모든 재난 대비 데이터는 이용자의 스마트폰 단말기 내부 저장소(SQLite 데이터베이스)에만 저장됩니다.
+    </p>
+    <ul>
+      <li>비상 생존가방 체크리스트 품목, 수량, 보관 위치 및 유통기한 정보</li>
+      <li>보조배터리 및 충전식 장비의 90일 주기 충전 점검 기록</li>
+      <li>가구 구성원 인원수 설정(성인, 영유아, 노약자, 반려동물)</li>
+      <li>비상 현금 보관 권종별 내역, 비상 집결지 메모, 가구원 응급 의료 메모</li>
+    </ul>
+    <p>
+      위 데이터는 외부 클라우드나 개발자 서버로 전송되지 않으며, 앱을 삭제하거나 기기 내 앱 데이터를 초기화하면 단말기에서 즉시 영구 삭제됩니다.
+    </p>
+
+    <h2>3. 기기 권한 사용 안내</h2>
+    <ul>
+      <li><strong>로컬 알림 권한 (POST_NOTIFICATIONS, SCHEDULE_EXACT_ALARM, RECEIVE_BOOT_COMPLETED)</strong>: 비축 물품의 유통기한 만료 30일 전(롤링스톡 소비 안내), 7일 전(교체 시급 안내) 및 보조배터리 90일 충전 점검 주기를 기기 내부에서 알림으로 전달하기 위해 사용됩니다.</li>
+      <li><strong>네트워크 및 광고 표시 권한 (INTERNET, ACCESS_NETWORK_STATE)</strong>: Google AdMob 광고 로드 및 Google Play 스토어 인앱 업데이트 버전 확인을 위해서만 제한적으로 사용됩니다.</li>
+    </ul>
+
+    <h2>4. 제3자 서비스(광고 및 스토어 업데이트) 이용 안내</h2>
+    <p>
+      본 앱은 무료 서비스 제공 및 최신 버전 유지를 위해 아래의 Google 공식 SDK를 포함하고 있습니다.
+    </p>
+    <ul>
+      <li><strong>Google AdMob (Google Mobile Ads SDK)</strong>: 앱 하단 배너 및 전면 광고 제공을 위해 기기의 광고 식별자(Advertising ID), 비식별 기기 정보, 광고 상호작용 데이터를 처리할 수 있습니다. 이용자는 안드로이드 기기 설정의 개인정보 및 광고 메뉴에서 맞춤형 광고 설정을 변경하거나 광고 ID를 재설정할 수 있습니다.</li>
+      <li><strong>Google Play In-App Updates API</strong>: Google Play 스토어에 배포된 최신 버전코드 및 버전명을 확인하여 안정적인 업데이트를 안내합니다.</li>
+    </ul>
+
+    <h2>5. 아동의 개인정보 보호</h2>
+    <p>
+      본 앱은 만 13세 미만 아동으로부터 고의로 개인식별정보를 수집하지 않으며, 모든 체크리스트 및 가계 대비 메모는 이용자의 단말기 내부에서만 관리됩니다.
+    </p>
+
+    <h2>6. 개인정보처리방침의 변경 및 문의 안내</h2>
+    <p>
+      법령이나 서비스 기능 변경에 따라 본 개인정보처리방침이 수정될 경우, 앱 업데이트 또는 스토어 등록정보 페이지를 통해 공지합니다. 앱 이용 및 개인정보 보호와 관련한 문의사항은 Google Play 스토어 해당 앱 상세 페이지의 개발자 지원 창구를 통해 접수하실 수 있습니다.
+    </p>
+
+    <div class="meta">
+      시행일자: 2026년 11월 1일<br />
+      적용 대상 패키지: com.ttalkkag.gobagready
+    </div>
+  </div>
+</body>
+</html>
